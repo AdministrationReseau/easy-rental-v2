@@ -1,0 +1,14 @@
+{
+  "landing": {
+    "welcome": "Welcome to Easy Rental",
+    "home": "Home",
+    "vehicles": "Vehicles",
+    "login": "Login",
+    "register": "Register",
+    "language": "Language",
+    "theme": "Theme",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "logout": "Logout"
+  }
+}

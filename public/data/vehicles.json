@@ -1,0 +1,58 @@
+// src/data/vehicles.json
+[
+  {
+    "id": "v1",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year": 2022,
+    "type": "sedan",
+    "price": 75,
+    "available": true,
+    "imageUrl": "/images/vehicles/corolla.jpg",
+    "features": ["Automatic", "5 seats", "Air conditioning", "Bluetooth", "GPS"]
+  },
+  {
+    "id": "v2",
+    "brand": "Honda",
+    "model": "CR-V",
+    "year": 2021,
+    "type": "suv",
+    "price": 95,
+    "available": true,
+    "imageUrl": "/images/vehicles/crv.jpg",
+    "features": ["Automatic", "5 seats", "Air conditioning", "Bluetooth", "Sunroof", "AWD"]
+  },
+  {
+    "id": "v3",
+    "brand": "Ford",
+    "model": "F-150",
+    "year": 2022,
+    "type": "truck",
+    "price": 120,
+    "available": false,
+    "imageUrl": "/images/vehicles/f150.jpg",
+    "features": ["Automatic", "5 seats", "Air conditioning", "Bluetooth", "4x4", "Trailer hitch"]
+  },
+  {
+    "id": "v4",
+    "brand": "Tesla",
+    "model": "Model 3",
+    "year": 2023,
+    "type": "sedan",
+    "price": 150,
+    "available": true,
+    "imageUrl": "/images/vehicles/model3.jpg",
+    "features": ["Electric", "5 seats", "Autopilot", "Supercharging", "Premium sound system"]
+  },
+  {
+    "id": "v5",
+    "brand": "Chevrolet",
+    "model": "Suburban",
+    "year": 2022,
+    "type": "suv",
+    "price": 135,
+    "available": true,
+    "imageUrl": "/images/vehicles/suburban.jpg",
+    "features": ["Automatic", "8 seats", "Air conditioning", "Bluetooth", "DVD player", "Tow package"]
+  }
+]
