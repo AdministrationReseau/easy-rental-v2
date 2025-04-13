@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "dashboard": "Dashboard",
+    "vehicles": "Vehicle Fleet",
+    "drivers": "Drivers",
+    "bookings": "Bookings",
+    "analytics": "Analytics",
+    "profile": "Profile",
+    "notifications": "Notifications"
+  },
+  "dashboard": {
+    "welcome": "Welcome to Your Organization Dashboard",
+    "total_vehicles": "Total Vehicles",
+    "active_bookings": "Active Bookings",
+    "revenue": "Total Revenue",
+    "quick_actions": "Quick Actions"
+  }
+}

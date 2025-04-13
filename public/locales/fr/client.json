@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "home": "Acceuil",
+    "vehicles": "Véhicules",
+    "agencies": "Agencies",
+    "contact": "Contact",
+    "about": "About Us",
+    "bookings": "Mes Réservations",
+    "profile": "Profil",
+    "notifications": "Notifications",
+    "favorites": "Favoris"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue sur votre Tableau de bord",
+    "quick_actions": "Actions Rapides",
+    "recent_bookings": "Réservations Récentes",
+    "vehicle_status": "État des Véhicules"
+  }
+}

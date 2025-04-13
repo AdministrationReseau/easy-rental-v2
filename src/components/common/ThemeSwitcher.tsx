@@ -1,25 +1,16 @@
-// src/providers/ThemeProvider.tsx
-import React, { createContext, useState, useContext, useEffect } from 'react';
+// src/components/common/ThemeSwitcher.tsx
+'use client'
+
+import React, { useState, useEffect } from 'react';
+import { FaMoon, FaSun } from 'react-icons/fa';
 
 type Theme = 'light' | 'dark';
 
-interface ThemeContextType {
-	theme: Theme;
-	setTheme: (theme: Theme) => void;
-	toggleTheme: () => void;
-}
-
-const ThemeContext = createContext<ThemeContextType>({
-	theme: 'light',
-	setTheme: () => {},
-	toggleTheme: () => {}
-});
-
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const ThemeSwitcher: React.FC = () => {
 	const [theme, setTheme] = useState<Theme>('light');
 
 	useEffect(() => {
-		// Check saved theme or system preference
+		// Check for saved theme or system preference
 		const savedTheme = localStorage.getItem('theme') as Theme;
 		const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -55,18 +46,25 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 		applyTheme(nextTheme);
 	};
 
+	const themeIcons = {
+		light: <FaSun />,
+		dark: <FaMoon />
+	};
+
 	return (
-		<ThemeContext.Provider value={{ theme, setTheme: applyTheme, toggleTheme }}>
-			{children}
-		</ThemeContext.Provider>
+		<button
+			onClick={toggleTheme}
+			className="
+        p-2 rounded-full
+        bg-neutral-100
+        text-text-light/70
+        transition-colors
+      "
+			aria-label="Toggle theme"
+		>
+			{themeIcons[theme]}
+		</button>
 	);
 };
 
-// Custom hook for using theme
-export const useTheme = () => {
-	const context = useContext(ThemeContext);
-	if (!context) {
-		throw new Error('useTheme must be used within a ThemeProvider');
-	}
-	return context;
-};
+export default ThemeSwitcher;

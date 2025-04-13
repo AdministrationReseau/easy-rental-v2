@@ -1,0 +1,19 @@
+{
+  "navbar": {
+    "home": "Home",
+    "vehicles": "Vehicles",
+    "agencies": "Agencies",
+    "contact": "Contact",
+    "about": "About Us",
+    "bookings": "My Bookings",
+    "profile": "Profile",
+    "notifications": "Notifications",
+    "favorites": "Favorites"
+  },
+  "dashboard": {
+    "welcome": "Welcome to Your Dashboard",
+    "quick_actions": "Quick Actions",
+    "recent_bookings": "Recent Bookings",
+    "vehicle_status": "Vehicle Status"
+  }
+}

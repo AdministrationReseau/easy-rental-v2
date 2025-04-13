@@ -3,17 +3,17 @@
 
 import { ReactNode } from 'react';
 import { ThemeProvider } from './ThemeProvider';
-import { LanguageProvider } from './LanguageProvider';
 import { AuthProvider } from './AuthProvider';
+import I18nProvider from "@/providers/I18nProvider";
 
 export function Providers({ children }: { children: ReactNode }) {
 	return (
 		<ThemeProvider>
-			<LanguageProvider>
+			<I18nProvider>
 				<AuthProvider>
 					{children}
 				</AuthProvider>
-			</LanguageProvider>
+			</I18nProvider>
 		</ThemeProvider>
 	);
 }

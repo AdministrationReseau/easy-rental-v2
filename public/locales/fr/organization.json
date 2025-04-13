@@ -1,0 +1,18 @@
+{
+  "navbar": {
+    "dashboard": "Tableau de bord",
+    "vehicles": "Parc de véhicules",
+    "drivers": "Conducteurs",
+    "bookings": "Réservations",
+    "analytics": "Analytique",
+    "profile": "Profil",
+    "notifications": "Notifications"
+  },
+  "dashboard": {
+    "welcome": "Bienvenue sur le Tableau de bord de votre Organisation",
+    "total_vehicles": "Total des Véhicules",
+    "active_bookings": "Réservations Actives",
+    "revenue": "Revenu Total",
+    "quick_actions": "Actions Rapides"
+  }
+}

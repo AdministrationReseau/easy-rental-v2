@@ -2,23 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* src/styles/globals.css */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1F2937;
+  --text-light: #1F2937;
+  --text-dark: #F9FAFB;
+  --text-neutral: #404040;
+  --background-light: #FFFFFF;
+  --background-dark: #0F172A;
+  --background-neutral: #F5F5F5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Optional: Dark mode specific variables */
+.dark {
+  --foreground: #F9FAFB;
+  --text-light: #F9FAFB;
+  --text-dark: #1F2937;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.neutral {
+  --foreground: #404040;
+  --text-light: #404040;
 }
+
 
 @layer utilities {
   .text-balance {
