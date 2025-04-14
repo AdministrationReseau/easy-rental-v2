@@ -7,10 +7,12 @@ import { useTranslation } from 'react-i18next';
 import {
 	FaHome,
 	FaCar,
-	FaCalendarAlt,
 	FaHeart,
 	FaBell,
-	FaUser, FaBuilding, FaPhone, FaInfo, FaInfoCircle
+	FaUser,
+	FaBuilding,
+	FaPhone,
+	FaInfoCircle
 } from 'react-icons/fa';
 import LanguageSwitcher from '../common/LanguageSwitcher';
 import ThemeSwitcher from '../common/ThemeSwitcher';
@@ -31,7 +33,7 @@ const ClientNavbar: React.FC = () => {
 
 				{/* Navigation Links */}
 				<div className="flex items-center space-x-10">
-					<nav className="flex space-x-8 items-center">
+					<nav className="flex space-x-4 items-center">
 						<Link
 							href="/client"
 							className="flex flex-col items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
@@ -53,13 +55,6 @@ const ClientNavbar: React.FC = () => {
 						>
 							<FaBuilding className="mr-2" />
 							{t('navbar.agencies')}
-						</Link>
-						<Link
-							href="/client/bookings"
-							className="flex flex-col items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
-						>
-							<FaCalendarAlt className="mr-2" />
-							{t('navbar.bookings')}
 						</Link>
 						<Link
 							href="/client/contact"

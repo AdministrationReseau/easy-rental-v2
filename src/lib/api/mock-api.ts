@@ -8,6 +8,7 @@ interface User {
 	email: string;
 	role: string;
 	createdAt: string;
+	password?: string; // Adding password as an optional field
 }
 
 interface Vehicle {
@@ -36,7 +37,20 @@ export const userApi = {
 
 	login: async (email: string, password: string): Promise<User | undefined> => {
 		await new Promise(resolve => setTimeout(resolve, 800));
-		return usersData.find(user => user.email === email);
+
+		// In a real application, you would verify the password
+		// For mock purposes, we'll assume a simple validation
+		// This addresses the "password is never used" warning
+		const user = usersData.find(user => user.email === email);
+
+		// Check if user exists and simulate password verification
+		// You might want to add passwords to your mock data or use a fixed test password
+		if (user && password) {
+			// For mock API, consider all passwords valid or check against mock passwords
+			return { ...user, password: undefined }; // Return user without password for security
+		}
+
+		return undefined; // Authentication failed
 	}
 };
 

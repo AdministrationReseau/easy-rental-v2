@@ -4,56 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a808345-a257-4b92-be6f-206c01f0e8e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/locales/en/client.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/en/organization.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/fr/client.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/locales/fr/organization.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/client/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/organization/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/LanguageSwitcher.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/ThemeSwitcher.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/ClientNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/OrganizationNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/DocumentList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/VehicleFeatures.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/alert.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/badge.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/dialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/input.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/label.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/pagination.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/select.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/sheet.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/switch.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/table.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/tabs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/use-toast.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/action/i18n.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/providers/I18nProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="4a808345-a257-4b92-be6f-206c01f0e8e6" name="Changes" comment="auth changes">
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/signin/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/signup/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(client)/profile/logout/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/unauthorized/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/auth/AuthLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/auth/RouteGuard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/AuthContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/auth/useAuth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/permissions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/fr/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/common.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/ProtectedRoute.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/LanguageSwitcher.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/Button.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/api-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/api-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/client/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/ClientNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/ClientNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/OrganizationNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/OrganizationNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/DocumentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/DocumentList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/label.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/label.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/pagination.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/pagination.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/roles.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/auth/useProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth/useProtectedRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/LanguageProvider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/ThemeProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/ThemeProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/api/mock-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/api/mock-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/providers/providers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/providers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +50,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Ntye"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AdministrationReseau/easy-rental-v2.git",
+    "accountId": "1d65622c-e95b-406d-b0c9-17acf3344644"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -86,8 +77,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/ntyen/Documents/Projets 4GI S1/Admin/easy-rental-v2/src/components/ui",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/ntyen/Documents/Projets 4GI S1/Admin/easy-rental-v2/src/components/auth",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -99,11 +90,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\components\auth" />
+      <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\app" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\components\ui" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\public\locales\fr" />
-      <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\app" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\public" />
-      <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\app\(client)\profile" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -122,11 +116,15 @@
       <option name="presentableId" value="Default" />
       <updated>1743712943401</updated>
       <workItem from="1743712946026" duration="28644000" />
-      <workItem from="1744562490168" duration="345000" />
+      <workItem from="1744562490168" duration="13232000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="auth changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth changes" />
   </component>
 </project>

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import {KeyIcon} from "lucide-react";
+import {BiKey} from "react-icons/bi";
+
 
 interface Documents {
     registration_certificate: string;
@@ -66,7 +67,7 @@ export const DocumentList: React.FC<DocumentListProps> = ({ documents }) => {
                         className="flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-200"
                     >
                         <div className="flex items-center space-x-3">
-                            <KeyIcon className="h-5 w-5 text-gray-500" />
+                            <BiKey className="h-5 w-5 text-gray-500" />
                             <span>{documentLabels[key] || key}</span>
                         </div>
                         <div className="text-right">

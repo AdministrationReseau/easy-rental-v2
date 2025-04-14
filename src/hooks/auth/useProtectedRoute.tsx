@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
-import { useAuth } from '@/providers/AuthProvider';
+import {useAuth} from "@/hooks/auth/useAuth";
 
 export function useProtectedRoute(requiredRole: 'admin' | 'user' | undefined = undefined) {
 	const { user, isAuthenticated, isLoading } = useAuth();

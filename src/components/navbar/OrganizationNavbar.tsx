@@ -34,7 +34,7 @@ const OrganizationNavbar: React.FC = () => {
 				<div className="flex items-center space-x-6">
 					<nav className="flex space-x-4 items-center">
 						<Link
-							href="/organization/dashboard"
+							href="/organization/"
 							className="flex items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
 						>
 							<FaHome className="mr-2" />

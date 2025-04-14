@@ -1,3 +1,4 @@
+// src/utils/permissions.ts
 export type UserRole = 'admin' | 'user' | 'guest';
 
 export interface RoutePermission {
@@ -6,10 +7,10 @@ export interface RoutePermission {
 }
 
 export const routePermissions: RoutePermission[] = [
-	{ path: '/dashboard', allowedRoles: ['admin', 'user'] },
-	{ path: '/dashboard/admin', allowedRoles: ['admin'] },
-	{ path: '/dashboard/vehicles/manage', allowedRoles: ['admin'] },
-	{ path: '/dashboard/users', allowedRoles: ['admin'] },
+	{ path: '/', allowedRoles: ['admin', 'user'] },
+	{ path: '/admin', allowedRoles: ['admin'] },
+	{ path: '/vehicles/manage', allowedRoles: ['admin'] },
+	{ path: '/users', allowedRoles: ['admin'] },
 	// Routes publiques (non listées ici) sont accessibles à tous
 ];
 
@@ -23,5 +24,5 @@ export function hasPermission(path: string, role: UserRole | null): boolean {
 	if (!permission) return true;
 	if (!role) return false;
 
-	return permission.allowedRoles.includes(role) || role === 'admin';
+	return permission.allowedRoles.includes(role);
 }
