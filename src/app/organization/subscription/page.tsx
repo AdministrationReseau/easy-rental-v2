@@ -1,13 +1,14 @@
 // pages/subscription.tsx
 "use client";
 import { useState } from 'react';
-import router, { useRouter } from 'next/router';
+import router from 'next/router';
 import Head from 'next/head';
 import SubscriptionPlan from '@/components/subscription/subscriptionPlan';
 // import PaymentForm from '../components/PaymentForm.tsx';
 // import LoadingSpinner from '../components/ui/LoadingSpinner.tsx';
 import React from 'react';
 import PaymentForm from '@/components/payment/PaymentForm';
+import { Payment } from '@/types/payment';
 
 // Types pour notre application
 type Plan = {
@@ -110,7 +111,7 @@ export default function SubscriptionPage() {
   };
 
   // Fonction pour traiter le paiement
-  const processPayment = async (paymentDetails: any) => {
+  const processPayment = async (paymentDetails: Payment) => {
     setIsLoading(true);
     setError(null);
 
@@ -214,23 +215,23 @@ export default function SubscriptionPage() {
         {/* Étape 2: Informations de l'organisation */}
         {currentStep === 2 && (
           <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-4">Informations de l'organisation</h2>
+            <h2 className="text-xl font-semibold mb-4">Informations de l&apos;organisation</h2>
             <form onSubmit={(e) => {
               e.preventDefault();
               const formData = new FormData(e.currentTarget);
               const orgData = {
-                id: formData.get('id') as string,
-                name: formData.get('name') as string,
-                businessActorId: formData.get('businessActorId') as string,
-                email: formData.get('email') as string,
+              id: formData.get('id') as string,
+              name: formData.get('name') as string,
+              businessActorId: formData.get('businessActorId') as string,
+              email: formData.get('email') as string,
               };
               handleOrganizationSubmit(orgData);
             }}>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700">Nom de l'organisation</label>
-                <input
-                  type="text"
-                  name="name"
+              <label className="block text-sm font-medium text-gray-700">Nom de l&apos;organisation</label>
+              <input
+                type="text"
+                name="name"
                   required
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 />

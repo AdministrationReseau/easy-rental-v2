@@ -1,8 +1,9 @@
 // components/PaymentForm.tsx
+import { Payment } from '@/types/payment';
 import React, { useState } from 'react';
 
 type Props = {
-  onSubmit: (paymentDetails: any) => void;
+  onSubmit: (paymentDetails: Payment) => void;
 };
 
 const PaymentForm = ({ onSubmit }: Props) => {
@@ -127,7 +128,7 @@ const PaymentForm = ({ onSubmit }: Props) => {
           
           <div className="grid grid-cols-2 gap-4">
             <div className="mb-4">
-              <label className="block text-sm font-medium text-gray-700">Date d'expiration</label>
+              <label className="block text-sm font-medium text-gray-700">Date d&apos;expiration</label>
               <input
                 type="text"
                 value={expiry}
