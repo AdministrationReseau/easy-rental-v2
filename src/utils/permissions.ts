@@ -7,7 +7,7 @@ export interface RoutePermission {
 }
 
 export const routePermissions: RoutePermission[] = [
-	{ path: '/', allowedRoles: ['admin', 'user'] },
+	{ path: '/profile', allowedRoles: ['admin', 'user'] },
 	{ path: '/admin', allowedRoles: ['admin'] },
 	{ path: '/vehicles/manage', allowedRoles: ['admin'] },
 	{ path: '/users', allowedRoles: ['admin'] },

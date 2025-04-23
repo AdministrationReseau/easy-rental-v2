@@ -9,7 +9,7 @@ import { UserRole } from '@/types/auth';
 export default function SignIn() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const returnUrl = searchParams.get('returnUrl') || '/';
+    const returnUrl = searchParams?.get('returnUrl') || '/';
 
     const { login, isLoading, error, isAuthenticated } = useAuth();
     const [formData, setFormData] = useState({
