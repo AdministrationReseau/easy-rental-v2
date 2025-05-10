@@ -1,4 +1,7 @@
+'use client';
+
 import React, { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface DialogProps {
     open: boolean;
@@ -42,7 +45,7 @@ export const Dialog: React.FC<DialogProps> = ({
     return (
         <>
             <div
-                className="fixed inset-0 bg-black bg-opacity-50 transition-opacity z-40"
+                className="fixed inset-0 bg-black/60 dark:bg-black/80 transition-opacity z-40"
                 onClick={() => onOpenChange(false)}
             />
             <div
@@ -60,8 +63,11 @@ export const DialogContent: React.FC<{
     className?: string;
 }> = ({ children, className = '' }) => (
     <div className={`
-    bg-white rounded-lg shadow-xl w-full max-w-md
+    bg-card-light dark:bg-card-dark
+    text-text-light dark:text-text-dark
+    rounded-card shadow-xl w-full max-w-md
     max-h-[85vh] overflow-y-auto
+    border border-border-light dark:border-border-dark
     animate-in fade-in-0 zoom-in-95
     ${className}
   `}>
@@ -73,7 +79,7 @@ export const DialogHeader: React.FC<{
     children: React.ReactNode;
     className?: string;
 }> = ({ children, className = '' }) => (
-    <div className={`px-6 py-4 border-b ${className}`}>
+    <div className={`px-6 py-4 border-b border-border-light dark:border-border-dark ${className}`}>
         {children}
     </div>
 );
@@ -81,11 +87,14 @@ export const DialogHeader: React.FC<{
 export const DialogTitle: React.FC<{
     children: React.ReactNode;
     className?: string;
-}> = ({ children, className = '' }) => (
-    <h2 className={`text-lg font-semibold ${className}`}>
-        {children}
-    </h2>
-);
+}> = ({ children, className = '' }) => {
+
+    return (
+        <h2 className={`text-lg font-semibold text-text-light dark:text-text-dark ${className}`}>
+            {children}
+        </h2>
+    );
+};
 
 export const DialogTrigger: React.FC<{
     asChild?: boolean;
@@ -105,6 +114,8 @@ export const DialogTrigger: React.FC<{
 
 const DialogClose = React.forwardRef<HTMLButtonElement, DialogCloseProps>(
     ({ children, asChild = false, className = '' }, ref) => {
+        const { t } = useTranslation();
+
         const handleClose = () => {
             // Find the closest dialog element
             const dialogElement = document.querySelector('[role="dialog"]');
@@ -133,7 +144,8 @@ const DialogClose = React.forwardRef<HTMLButtonElement, DialogCloseProps>(
                 type="button"
                 ref={ref}
                 onClick={handleClose}
-                className={`${className}`}
+                className={`text-text-light-secondary dark:text-text-light-secondary hover:text-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${className}`}
+                aria-label={t('common:close')}
             >
                 {children}
             </button>

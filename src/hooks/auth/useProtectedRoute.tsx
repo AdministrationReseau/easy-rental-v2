@@ -7,7 +7,7 @@ import {useAuth} from "@/hooks/auth/useAuth";
 export function useProtectedRoute(requiredRole: 'admin' | 'user' | undefined = undefined) {
 	const { user, isAuthenticated, isLoading } = useAuth();
 	const router = useRouter();
-	const pathname = usePathname();
+	const pathname = usePathname() || '';
 
 	useEffect(() => {
 		if (!isLoading) {

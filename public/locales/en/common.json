@@ -1,0 +1,42 @@
+{
+    "vehicle_card": {
+        "available": "Available",
+        "unavailable": "Unavailable",
+        "add_favorite": "Add to favorites",
+        "remove_favorite": "Remove from favorites",
+        "seats": "{{count}} seats",
+        "not_available": "N/A",
+        "per_day": "/day",
+        "edit": "Edit",
+        "delete": "Delete",
+        "book": "Book Now"
+    },
+    "stepper": {
+        "steps": {
+            "personal_info": "Personal Information",
+            "payment": "Payment",
+            "confirmation": "Confirmation"
+        }
+    },
+    "documents": {
+        "document_viewer": "Document Viewer",
+        "pdf_viewer": "PDF Viewer",
+        "close": "Close",
+        "view": "View",
+        "document_types": {
+            "registration_certificate": "Registration Certificate",
+            "technical_inspection": "Technical Inspection",
+            "insurance": "Insurance",
+            "tax_sticker": "Tax Sticker"
+        }
+    },
+    "close": "close",
+    "loading": "Loading...",
+    "loading_steps": {
+        "vehicle_check": "Checking vehicle",
+        "preparation": "Preparing your rental",
+        "location_setup": "Setting up location",
+        "keys_ready": "Keys ready",
+        "ready": "Ready for pickup"
+    }
+}
