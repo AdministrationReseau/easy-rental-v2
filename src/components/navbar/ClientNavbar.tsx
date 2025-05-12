@@ -5,17 +5,15 @@ import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import {
-	FaHome,
 	FaCar,
 	FaHeart,
 	FaBell,
 	FaUser,
 	FaBuilding,
-	FaPhone,
-	FaInfoCircle
+	FaHome,
 } from 'react-icons/fa';
-import LanguageSwitcher from '../common/LanguageSwitcher';
-import ThemeSwitcher from '../common/ThemeSwitcher';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
+import ThemeSwitcher from '../ui/ThemeSwitcher';
 
 const ClientNavbar: React.FC = () => {
 	const { t } = useTranslation('client');
@@ -36,14 +34,14 @@ const ClientNavbar: React.FC = () => {
 					<nav className="flex space-x-4 items-center">
 						<Link
 							href="/client"
-							className="flex flex-col items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
+							className="flex flex-row items-center font-bold text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
 						>
 							<FaHome className="mr-2" />
 							{t('navbar.home')}
 						</Link>
 						<Link
 							href="/client/vehicles"
-							className="flex flex-col items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
+							className="flex flex-row items-center font-bold text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
 						>
 							<FaCar className="mr-2" />
 							{t('navbar.vehicles')}
@@ -51,24 +49,10 @@ const ClientNavbar: React.FC = () => {
 
 						<Link
 							href="/client/agencies"
-							className="flex flex-col items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
+							className="flex flex-row items-center font-bold text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
 						>
 							<FaBuilding className="mr-2" />
 							{t('navbar.agencies')}
-						</Link>
-						<Link
-							href="/client/contact"
-							className="flex flex-col items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
-						>
-							<FaPhone className="mr-2" />
-							{t('navbar.contact')}
-						</Link>
-						<Link
-							href="/client/about"
-							className="flex flex-col items-center text-text-light/70 dark:text-text-dark/70 hover:text-primary-500 transition"
-						>
-							<FaInfoCircle className="mr-2" />
-							{t('navbar.about')}
 						</Link>
 					</nav>
 

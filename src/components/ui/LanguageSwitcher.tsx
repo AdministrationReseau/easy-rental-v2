@@ -105,7 +105,7 @@ const LanguageSwitcher: React.FC = () => {
 		<div className="relative" ref={dropdownRef}>
 			<button
 				onClick={() => setIsOpen(!isOpen)}
-				className="flex items-center space-x-2 px-3 py-2 rounded border border-gray-200"
+				className="flex items-center space-x-2 px-3 py-2 rounded border dark:border-text-dark/70 border-gray-200"
 			>
 				<Flag
 					code={currentLanguage.flag}

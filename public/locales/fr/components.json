@@ -1,0 +1,73 @@
+{
+  "_comment": "ceci concerne les textes dans les composants, classés selon les noms des dossiers puis le nom du composant",
+
+  "auth": {
+
+  },
+
+  "bookings": {
+
+  },
+
+  "drivers":{
+
+  },
+
+  "navbar": {
+    "client_navbar": {
+      "home": "Accueil",
+      "vehicles": "Véhicules",
+      "agencies": "Agences",
+      "contact": "Contact",
+      "about": "À propos",
+      "bookings": "Mes réservations",
+      "profile": "Profil",
+      "notifications": "Notifications",
+      "favorites": "Favoris"
+    },
+
+    "agency_navbar": {
+      "home": "Accueil",
+      "vehicles": "Véhicules",
+      "agencies": "Agences",
+      "contact": "Contact",
+      "about": "À propos",
+      "bookings": "Mes réservations",
+      "profile": "Profil",
+      "notifications": "Notifications",
+      "favorites": "Favoris"
+    },
+
+    "organization_navbar": {
+      "home": "Accueil",
+      "vehicles": "Véhicules",
+      "agencies": "Agences",
+      "contact": "Contact",
+      "about": "À propos",
+      "bookings": "Mes réservations",
+      "profile": "Profil",
+      "notifications": "Notifications",
+      "favorites": "Favoris"
+    }
+  },
+
+  "payment": {
+
+  },
+
+  "staff": {
+
+  },
+
+  "subscription": {
+
+  },
+
+  "ui": {
+
+  },
+
+  "vehicles": {
+
+  }
+}

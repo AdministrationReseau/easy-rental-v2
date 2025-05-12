@@ -124,7 +124,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 		setIsLoading(true);
 		setError(null);
 		try {
-			const userData = await loginUser(email, password, role);
+			const userData = await loginUser(email, password);
 			setUser(userData);
 			localStorage.setItem('user', JSON.stringify(userData));
 		} catch (e) {

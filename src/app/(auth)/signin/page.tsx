@@ -14,8 +14,7 @@ export default function SignIn() {
     const { login, isLoading, error, isAuthenticated } = useAuth();
     const [formData, setFormData] = useState({
         email: '',
-        password: '',
-        role: 'user' as UserRole
+        password: ''
     });
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -31,7 +30,8 @@ export default function SignIn() {
         setErrorMessage(null);
 
         try {
-            await login(formData.email, formData.password, formData.role);
+            // No need to pass a role parameter - it will be determined by the backend
+            await login(formData.email, formData.password);
             // Redirect to the return URL after successful login
             router.push(returnUrl);
         } catch (err) {

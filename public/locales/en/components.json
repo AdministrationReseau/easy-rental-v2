@@ -1,0 +1,73 @@
+{
+  "_comment": "these are for the texts in the components and are classified according to their folder names then the component name",
+
+  "auth": {
+
+  },
+
+  "bookings": {
+
+  },
+
+  "drivers":{
+
+  },
+
+  "navbar": {
+    "client_navbar": {
+      "home": "Home",
+      "vehicles": "Vehicles",
+      "agencies": "Agencies",
+      "contact": "Contact",
+      "about": "About Us",
+      "bookings": "My Bookings",
+      "profile": "Profile",
+      "notifications": "Notifications",
+      "favorites": "Favorites"
+    },
+
+    "agency_navbar": {
+      "home": "Home",
+      "vehicles": "Vehicles",
+      "agencies": "Agencies",
+      "contact": "Contact",
+      "about": "About Us",
+      "bookings": "My Bookings",
+      "profile": "Profile",
+      "notifications": "Notifications",
+      "favorites": "Favorites"
+    },
+
+    "organization_navbar": {
+      "home": "Home",
+      "vehicles": "Vehicles",
+      "agencies": "Agencies",
+      "contact": "Contact",
+      "about": "About Us",
+      "bookings": "My Bookings",
+      "profile": "Profile",
+      "notifications": "Notifications",
+      "favorites": "Favorites"
+    }
+  },
+
+  "payment": {
+
+  },
+
+  "staff": {
+
+  },
+
+  "subscription": {
+
+  },
+
+  "ui": {
+
+  },
+
+  "vehicles": {
+
+  }
+}

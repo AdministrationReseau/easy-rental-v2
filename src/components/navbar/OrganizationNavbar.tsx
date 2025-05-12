@@ -13,8 +13,8 @@ import {
 	FaBell,
 	FaUser
 } from 'react-icons/fa';
-import LanguageSwitcher from '../common/LanguageSwitcher';
-import ThemeSwitcher from '../common/ThemeSwitcher';
+import LanguageSwitcher from '../ui/LanguageSwitcher';
+import ThemeSwitcher from '../ui/ThemeSwitcher';
 
 const OrganizationNavbar: React.FC = () => {
 	const { t } = useTranslation('organization');
