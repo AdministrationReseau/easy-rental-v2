@@ -1,6 +1,6 @@
 import React from 'react';
 
-type VariantType = 'default' | 'secondary' | 'destructive' | 'outline' | 'success';
+type VariantType = 'default' | 'secondary' | 'success' | 'error' | 'warning' | 'outline';
 
 interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
     variant?: VariantType;
@@ -11,17 +11,19 @@ interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
     ({ variant = 'default', className = '', children, ...props }, ref) => {
         const variantClasses = {
-            default: 'bg-primary text-primary-foreground',
-            secondary: 'bg-secondary text-secondary-foreground',
-            destructive: 'bg-destructive text-destructive-foreground',
-            outline: 'border border-input bg-transparent text-foreground',
-            success: 'bg-green-100 text-green-800 border border-green-200',
+            default: 'bg-primary-100 text-primary-700',
+            secondary: 'bg-gray-100 text-gray-800',
+            success: 'bg-success-100 text-success-700',
+            error: 'bg-error-100 text-error-700',
+            warning: 'bg-warning-100 text-warning-700',
+            outline: 'border border-border-light dark:border-border-dark bg-transparent text-text-light dark:text-text-dark',
         };
 
         return (
             <div
                 ref={ref}
-                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${variantClasses[variant]} ${className}`}
+                role="status"
+                className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors ${variantClasses[variant]} ${className}`}
                 {...props}
             >
                 {children}
