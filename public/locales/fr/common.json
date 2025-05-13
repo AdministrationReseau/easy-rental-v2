@@ -1,0 +1,42 @@
+{
+    "vehicle_card": {
+        "available": "Disponible",
+        "unavailable": "Indisponible",
+        "add_favorite": "Ajouter aux favoris",
+        "remove_favorite": "Retirer des favoris",
+        "seats": "{{count}} places",
+        "not_available": "N/A",
+        "per_day": "/jour",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "book": "Réserver"
+    },
+    "stepper": {
+        "steps": {
+            "personal_info": "Informations Personnelles",
+            "payment": "Paiement",
+            "confirmation": "Confirmation"
+        }
+    },
+    "documents": {
+        "document_viewer": "Visualisateur de document",
+        "pdf_viewer": "Visualisateur PDF",
+        "close": "Fermer",
+        "view": "Voir",
+        "document_types": {
+            "registration_certificate": "Certificat d'immatriculation",
+            "technical_inspection": "Contrôle technique",
+            "insurance": "Assurance",
+            "tax_sticker": "Vignette fiscale"
+        }
+    },
+    "close": "Fermer",
+    "loading": "Chargement...",
+    "loading_steps": {
+        "vehicle_check": "Vérification du véhicule",
+        "preparation": "Préparation en cours",
+        "location_setup": "Configuration de la location",
+        "keys_ready": "Clés prêtes",
+        "ready": "Prêt pour la remise"
+    }
+}

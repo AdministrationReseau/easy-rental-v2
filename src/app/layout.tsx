@@ -1,16 +1,9 @@
 // src/app/layout.tsx
-import {
-  Inter,
-  Plus_Jakarta_Sans,
-  Poppins,
-  Montserrat,
-  Roboto,
-  Merriweather
-} from 'next/font/google'
+
 import './globals.css';
 import { Providers } from '@/providers/providers';
 
-const inter = Inter({
+/*const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter'
 })
@@ -46,7 +39,7 @@ const merriweather = Merriweather({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-merriweather',
-});
+});*/
 
 export const metadata = {
   title: 'Easy Rental',
@@ -59,14 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`
-      ${inter.variable} 
-      ${plusJakartaSans.variable} 
-      ${poppins.variable} 
-      ${montserrat.variable}
-      ${roboto.variable} 
-      ${merriweather.variable}`
-    }>
+    <html lang="en">
     <body>
     <Providers>
       {children}
