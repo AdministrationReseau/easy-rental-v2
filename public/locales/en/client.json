@@ -1,19 +1,337 @@
 {
-  "navbar": {
-    "home": "Home",
-    "vehicles": "Vehicles",
-    "agencies": "Agencies",
-    "contact": "Contact",
-    "about": "About Us",
-    "bookings": "My Bookings",
-    "profile": "Profile",
-    "notifications": "Notifications",
-    "favorites": "Favorites"
-  },
-  "dashboard": {
-    "welcome": "Welcome to Your Dashboard",
-    "quick_actions": "Quick Actions",
-    "recent_bookings": "Recent Bookings",
-    "vehicle_status": "Vehicle Status"
-  }
+    "navbar": {
+        "home": "Home",
+        "vehicles": "Vehicles",
+        "agencies": "Agencies",
+        "contact": "Contact",
+        "about": "About",
+        "profile": "Profile",
+        "favorites": "Favorites",
+        "notifications": "Notifications",
+        "bookings": "My Bookings"
+    },
+    "home": {
+        "hero": {
+            "title": "Welcome back, {{name}}!",
+            "subtitle": "Find the perfect vehicle for your next journey"
+        },
+        "search": {
+            "location": "Location",
+            "all_locations": "All Locations",
+            "pickup_date": "Pickup Date",
+            "return_date": "Return Date",
+            "vehicle_type": "Vehicle Type",
+            "price_range": "Price Range",
+            "search_button": "Search Vehicles"
+        },
+        "featured": {
+            "title": "Featured Vehicles",
+            "subtitle": "Popular choices from our collection",
+            "per_day": "/day",
+            "rent_now": "Rent Now",
+            "unavailable": "Unavailable",
+            "view_all": "View All Vehicles",
+            "filter": {
+                "title": "Filter by",
+                "price": "Price",
+                "type": "Type",
+                "brand": "Brand",
+                "availability": "Availability",
+                "apply": "Apply Filters",
+                "clear": "Clear Filters"
+            }
+        },
+        "stats": {
+            "vehicles": "Available Vehicles",
+            "locations": "Service Locations",
+            "rating": "Average Rating",
+            "support": "Customer Support"
+        },
+        "features": {
+            "wide_selection": {
+                "title": "Wide Vehicle Selection",
+                "description": "Choose from our extensive fleet of well-maintained vehicles"
+            },
+            "flexible_booking": {
+                "title": "Flexible Booking",
+                "description": "Book vehicles with flexible pickup and return options"
+            },
+            "best_service": {
+                "title": "Best in Service",
+                "description": "Exceptional customer service and support 24/7"
+            }
+        },
+        "testimonials": {
+            "title": "What Our Customers Say",
+            "subtitle": "Don't just take our word for it",
+            "read_more": "Read More Testimonials"
+        },
+        "download_app": {
+            "title": "Get the Easy Rental App",
+            "subtitle": "Book and manage rentals on the go",
+            "android": "Download for Android",
+            "ios": "Download for iOS"
+        }
+    },
+    "vehicles": {
+        "title": "Browse Vehicles",
+        "subtitle": "Find the perfect vehicle for your needs",
+        "search": "Search vehicles...",
+        "sort": {
+            "label": "Sort by",
+            "price_low": "Price: Low to High",
+            "price_high": "Price: High to Low",
+            "newest": "Newest First",
+            "rating": "Customer Rating"
+        },
+        "filter": {
+            "title": "Filters",
+            "price_range": "Price Range",
+            "vehicle_type": "Vehicle Type",
+            "brand": "Brand",
+            "seats": "Number of Seats",
+            "transmission": "Transmission",
+            "features": "Features",
+            "apply": "Apply Filters",
+            "clear": "Clear Filters"
+        },
+        "per_day": "/day",
+        "view_details": "View Details",
+        "book_now": "Book Now",
+        "no_results": "No vehicles found matching your criteria",
+        "try_again": "Try adjusting your filters",
+        "pagination": {
+            "prev": "Previous",
+            "next": "Next",
+            "page": "Page",
+            "of": "of"
+        }
+    },
+    "vehicle_details": {
+        "back": "Back to Vehicles",
+        "book_now": "Book Now",
+        "add_favorite": "Add to Favorites",
+        "remove_favorite": "Remove from Favorites",
+        "share": "Share",
+        "overview": "Overview",
+        "features": "Features",
+        "specifications": "Specifications",
+        "reviews": "Reviews",
+        "available": "Available",
+        "unavailable": "Unavailable",
+        "similar": "Similar Vehicles",
+        "view_all_photos": "View All Photos",
+        "specs": {
+            "brand": "Brand",
+            "model": "Model",
+            "year": "Year",
+            "type": "Type",
+            "seats": "Seats",
+            "doors": "Doors",
+            "transmission": "Transmission",
+            "fuel": "Fuel Type",
+            "consumption": "Fuel Consumption",
+            "engine": "Engine"
+        },
+        "booking": {
+            "title": "Book this Vehicle",
+            "dates": "Select Dates",
+            "pickup": "Pickup Date",
+            "return": "Return Date",
+            "location": "Pickup Location",
+            "addons": "Additional Options",
+            "price_breakdown": "Price Breakdown",
+            "daily_rate": "Daily Rate",
+            "days": "Days",
+            "subtotal": "Subtotal",
+            "addons_total": "Addons",
+            "tax": "Tax",
+            "total": "Total",
+            "terms": "By booking, you agree to our",
+            "terms_link": "Terms & Conditions",
+            "proceed": "Proceed to Checkout"
+        }
+    },
+    "bookings": {
+        "title": "My Bookings",
+        "subtitle": "Manage your vehicle rentals",
+        "tabs": {
+            "upcoming": "Upcoming",
+            "active": "Active",
+            "past": "Past",
+            "cancelled": "Cancelled"
+        },
+        "booking_card": {
+            "booking_id": "Booking ID",
+            "dates": "Dates",
+            "status": "Status",
+            "amount": "Amount",
+            "vehicle": "Vehicle",
+            "location": "Location",
+            "view_details": "View Details",
+            "cancel": "Cancel Booking",
+            "modify": "Modify Booking",
+            "download_receipt": "Download Receipt"
+        },
+        "statuses": {
+            "confirmed": "Confirmed",
+            "pending": "Pending",
+            "cancelled": "Cancelled",
+            "completed": "Completed",
+            "active": "Active"
+        },
+        "empty": {
+            "title": "No bookings found",
+            "message": "You don't have any {{type}} bookings",
+            "browse": "Browse Vehicles"
+        },
+        "confirmation": {
+            "title": "Booking Confirmation",
+            "message": "Your booking has been confirmed!",
+            "reference": "Booking Reference",
+            "details": "Booking Details",
+            "payment": "Payment Information",
+            "next_steps": "Next Steps",
+            "contact": "Contact Information"
+        }
+    },
+    "profile": {
+        "title": "My Profile",
+        "subtitle": "Manage your account information",
+        "tabs": {
+            "personal": "Personal Info",
+            "bookings": "Booking History",
+            "favorites": "Favorites",
+            "payments": "Payment Methods",
+            "preferences": "Preferences",
+            "settings": "Settings"
+        },
+        "personal": {
+            "title": "Personal Information",
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "address": "Address",
+            "city": "City",
+            "country": "Country",
+            "date_of_birth": "Date of Birth",
+            "driving_license": "Driving License",
+            "save": "Save Changes",
+            "change_password": "Change Password"
+        },
+        "favorites": {
+            "title": "Favorite Vehicles",
+            "empty": "You haven't added any vehicles to your favorites yet",
+            "browse": "Browse Vehicles"
+        },
+        "payments": {
+            "title": "Payment Methods",
+            "add_card": "Add New Card",
+            "add_mobile": "Add Mobile Money",
+            "default": "Default",
+            "set_default": "Set as Default",
+            "remove": "Remove",
+            "card_ending": "Card ending in",
+            "expires": "Expires",
+            "mobile_number": "Mobile number",
+            "operator": "Operator"
+        },
+        "preferences": {
+            "title": "Preferences",
+            "language": "Language",
+            "currency": "Currency",
+            "notifications": "Notifications",
+            "email_promo": "Promotional emails",
+            "email_booking": "Booking confirmations",
+            "sms_alerts": "SMS alerts",
+            "save": "Save Preferences"
+        },
+        "logout": "Log Out"
+    },
+    "agencies": {
+        "title": "Rental Agencies",
+        "subtitle": "Find the best rental agencies",
+        "search": "Search agencies...",
+        "filter": {
+            "title": "Filter by",
+            "location": "Location",
+            "rating": "Rating",
+            "services": "Services",
+            "apply": "Apply Filters",
+            "clear": "Clear Filters"
+        },
+        "view_details": "View Details",
+        "browse_vehicles": "Browse Vehicles",
+        "no_results": "No agencies found matching your criteria",
+        "agency_card": {
+            "vehicles": "vehicles",
+            "rating": "Rating"
+        }
+    },
+    "agency_details": {
+        "about": "About",
+        "vehicles": "Available Vehicles",
+        "reviews": "Reviews",
+        "contact": "Contact",
+        "location": "Location",
+        "business_hours": "Business Hours",
+        "services": "Services",
+        "view_all_vehicles": "View All Vehicles",
+        "contact_info": {
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email",
+            "website": "Website"
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "subtitle": "Get in touch with our team",
+        "form": {
+            "name": "Your Name",
+            "email": "Email Address",
+            "subject": "Subject",
+            "message": "Message",
+            "submit": "Send Message",
+            "sending": "Sending..."
+        },
+        "info": {
+            "title": "Contact Information",
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email",
+            "hours": "Business Hours"
+        },
+        "success": {
+            "title": "Message Sent!",
+            "message": "Thank you for contacting us. We will get back to you shortly."
+        }
+    },
+    "search": {
+        "title": "Search Results",
+        "results_for": "Results for",
+        "no_results": "No results found for",
+        "suggestions": "Suggestions:",
+        "check_spelling": "Check your spelling",
+        "try_different": "Try different keywords",
+        "search_again": "Search Again"
+    },
+    "filters": {
+        "price": {
+            "min": "Min price",
+            "max": "Max price",
+            "any": "Any price"
+        },
+        "type": {
+            "all": "All types",
+            "sedan": "Sedan",
+            "suv": "SUV",
+            "hatchback": "Hatchback",
+            "van": "Van",
+            "luxury": "Luxury",
+            "convertible": "Convertible",
+            "truck": "Truck",
+            "electric": "Electric"
+        }
+    }
 }

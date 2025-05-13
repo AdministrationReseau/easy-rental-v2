@@ -1,11 +1,17 @@
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n: {
-    locales: ['default', 'en', 'fr'],
-    defaultLocale: 'default',
-    localeDetection: false,
-  },
-  // other next.js configurations...
+    async rewrites() {
+        return [
+            {
+                source: '/api/:path*',
+                destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/:path*`
+            }
+        ]
+    },
+    i18n: {
+        locales: ['default', 'en', 'fr'],
+        defaultLocale: 'default',
+        localeDetection: false,
+    },
 };
 
 export default nextConfig;

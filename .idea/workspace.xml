@@ -4,26 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a808345-a257-4b92-be6f-206c01f0e8e6" name="Changes" comment="auth changes">
-      <change afterPath="$PROJECT_DIR$/src/components/stepper/Stepper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/vehicle/VehicleCard.tsx" afterDir="false" />
+    <list default="true" id="4a808345-a257-4b92-be6f-206c01f0e8e6" name="Changes" comment="configuration">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/mastercard-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/mtn-momo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/orange-money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/visa-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/locales/en/auth.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/locales/fr/auth.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(client)/home/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/not-found.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/organization/not-found.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/organization/register/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/subscription/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/data/vehicles.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/data/vehicles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/client.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/client.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/en/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/common.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/en/organization.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/organization.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/fr/client.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/client.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/fr/common.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/common.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/locales/fr/organization.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/organization.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/signin/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/signup/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/signup/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/organization/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/organization/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/unauthorized/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/unauthorized/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/DocumentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/DocumentList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/badge.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/badge.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/loadingSpinner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/loadingSpinner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/auth/RouteGuard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/RouteGuard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/payment/PaymentForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/payment/PaymentForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/AuthContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/auth/useAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth/useAuth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/auth/useProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth/useProtectedRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/paymentService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/paymentService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/payment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/payment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,34 +113,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature-auth&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ntyen/Documents/Projets 4GI S1/Admin/easy-rental-v2/src/components/auth&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/brayanne/Dev/Project/Reseaux/easy-rental-v2/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.codeium.enabled": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "feature-auth",
+    "last_opened_file_path": "/home/brayanne/Dev/Project/Reseaux/easy-rental-v2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/brayanne/Dev/Project/Reseaux/easy-rental-v2/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\components\auth" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\app" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\components\ui" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\public\locales\fr" />
-      <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/src/app/(client)/home" />
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\src\app\(client)\profile" />
     </key>
   </component>
@@ -142,8 +165,20 @@
       <workItem from="1744562490168" duration="13232000" />
       <workItem from="1746797910368" duration="924000" />
       <workItem from="1746799976277" duration="7401000" />
-      <workItem from="1746868845357" duration="2849000" />
+      <workItem from="1746868845357" duration="8892000" />
+      <workItem from="1747059732351" duration="2578000" />
+      <workItem from="1747062362035" duration="7838000" />
+      <workItem from="1747125439395" duration="14855000" />
     </task>
+    <task id="LOCAL-00001" summary="configuration">
+      <option name="closed" value="true" />
+      <created>1746871779034</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746871779034</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +197,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="auth changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="auth changes" />
+    <MESSAGE value="configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuration" />
   </component>
 </project>
