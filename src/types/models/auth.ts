@@ -27,8 +27,3 @@ export interface AuthLayoutProps {
 	subtitle: string;
 }
 
-// export interface AuthLayoutProps {
-// 	children: React.ReactNode;
-// 	title: string;
-// 	subtitle: string;
-// }

@@ -34,7 +34,7 @@
 //             flex items-center space-x-1
 //             px-2 py-1 rounded
 //             ${i18n.language === lang.code
-// 						? 'bg-primary-100 text-primary-600'
+// 						? 'bg-primary-100 text-primary'
 // 						: 'hover:bg-neutral-100'}
 //           `}
 // 				>
@@ -127,7 +127,7 @@ const LanguageSwitcher: React.FC = () => {
                 w-full text-left px-3 py-2 
                 flex items-center space-x-2
                 hover:bg-gray-50
-                ${i18n.language === lang.code ? 'bg-primary-50 text-primary-600 dark:bg-primary-900 dark:text-primary-50' : 'dark:text-primary-700'}
+                ${i18n.language === lang.code ? 'bg-primary-50 text-primary dark:bg-primary-900 dark:text-primary-50' : 'dark:text-primary-700'}
               `}
 						>
 							<Flag

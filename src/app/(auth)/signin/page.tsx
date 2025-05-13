@@ -4,7 +4,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import AuthLayout from "@/components/auth/AuthLayout";
 import { useAuth } from '@/hooks/auth/useAuth';
-import { UserRole } from '@/types/auth';
+import { UserRole } from '@/types/models/auth';
 
 export default function SignIn() {
     const router = useRouter();

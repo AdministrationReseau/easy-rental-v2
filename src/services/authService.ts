@@ -1,5 +1,5 @@
  // src/services/authService.ts
-import { User, UserRole } from '@/types/auth';
+import { User, UserRole } from '@/types/models/auth';
 
 export async function loginUser(email: string, password: string): Promise<User> {
 	try {

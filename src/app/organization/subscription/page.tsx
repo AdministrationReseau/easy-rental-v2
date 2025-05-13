@@ -8,7 +8,7 @@ import SubscriptionPlan from '@/components/subscription/subscriptionPlan';
 // import LoadingSpinner from '../components/ui/LoadingSpinner.tsx';
 import React from 'react';
 import PaymentForm from '@/components/payment/PaymentForm';
-import { Payment } from '@/types/payment';
+import { Payment } from '@/types/models/payment';
 
 // Types pour notre application
 type Plan = {

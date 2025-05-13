@@ -91,7 +91,7 @@
 
 import { useEffect, useState, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
-import { User, UserRole, AuthContextType } from "@/types/auth";
+import { User, UserRole, AuthContextType } from "@/types/models/auth";
 import { AuthContext } from "@/context/AuthContext";
 import { loginUser, registerUser } from '@/services/authService';
 

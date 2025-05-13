@@ -1,5 +1,5 @@
 // components/PaymentForm.tsx
-import { Payment } from '@/types/payment';
+import { Payment } from '@/types/models/payment';
 import React, { useState } from 'react';
 
 type Props = {

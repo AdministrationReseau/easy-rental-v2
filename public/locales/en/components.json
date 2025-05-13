@@ -13,41 +13,70 @@
 
   },
 
+  "landing": {
+    "hero": {
+      "title": "Fast & Easy Rental",
+      "titleHighlight": "Made Easy",
+      "description": "Experience premium vehicles with our hassle-free rental service. From sports cars to luxury sedans, we have the perfect ride for your journey.",
+      "videoButton": "Easy steps for renting a car",
+      "rentNowButton": "Rent Now", 
+      "appStore": "App Store",
+      "googlePlay": "Google Play",
+      "altText": "Luxury Car Rental"
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Easy steps to rent your dream car in minutes",
+      "steps": {
+        "step1": {
+          "title": "Search & Select",
+          "description": "Browse our extensive fleet and choose your perfect vehicle"
+        },
+        "step2": {
+          "title": "Book & Pay",
+          "description": "Select your dates and complete secure payment in seconds"
+        },
+        "step3": {
+          "title": "Enjoy your Ride",
+          "description": "Pick up your car and hit the road with style and comfort"
+        }
+      }
+    }
+  },
+
   "navbar": {
     "client_navbar": {
       "home": "Home",
       "vehicles": "Vehicles",
       "agencies": "Agencies",
-      "contact": "Contact",
-      "about": "About Us",
-      "bookings": "My Bookings",
       "profile": "Profile",
       "notifications": "Notifications",
-      "favorites": "Favorites"
+      "favorites": "Favorites",
+      "account": "My Account",
+      "rentals": "Rentals",
+      "transactions": "Transactions",
+      "help": "Help Center",
+      "logout": "Logout"
     },
 
-    "agency_navbar": {
+    "guest_navbar": {
       "home": "Home",
       "vehicles": "Vehicles",
       "agencies": "Agencies",
-      "contact": "Contact",
-      "about": "About Us",
-      "bookings": "My Bookings",
-      "profile": "Profile",
-      "notifications": "Notifications",
-      "favorites": "Favorites"
+      "becomeOrganization": "Become an Organization",
+      "loginRegister": "Login / Register"
     },
 
     "organization_navbar": {
-      "home": "Home",
-      "vehicles": "Vehicles",
-      "agencies": "Agencies",
-      "contact": "Contact",
-      "about": "About Us",
-      "bookings": "My Bookings",
-      "profile": "Profile",
       "notifications": "Notifications",
-      "favorites": "Favorites"
+      "profile": "Profile",
+      "account": "My Account",
+      "configurations": "Configurations",
+      "subscription": "Subscription"
+    },
+
+    "agency_navbar": {
+      "notifications": "Notifications"
     }
   },
 

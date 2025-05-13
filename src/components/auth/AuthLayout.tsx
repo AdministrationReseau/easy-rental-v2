@@ -1,5 +1,5 @@
 import React from 'react';
-import {AuthLayoutProps} from "@/types/auth";
+import {AuthLayoutProps} from "@/types/models/auth";
 
 const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, subtitle }) => {
     return (
