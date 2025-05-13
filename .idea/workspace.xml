@@ -4,46 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a808345-a257-4b92-be6f-206c01f0e8e6" name="Changes" comment="layout changes">
-      <change afterPath="$PROJECT_DIR$/public/assets/Ads1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/Ads2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/Ads3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/chauffeur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/luxury-car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/voiture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/animations/AnimatedBackground.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/animations/CountUp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/Hero.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/HowItWorks.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/Services.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/Section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/AgencyNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/GuestNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/models/animation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/models/navbar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/fr/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/signin/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/signup/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/signup/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/organization/subscription/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/organization/subscription/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/AuthLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/ClientNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/ClientNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/OrganizationNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/OrganizationNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/payment/PaymentForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/payment/PaymentForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/LanguageSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/LanguageSwitcher.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/AuthContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/payment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models/payment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
-    </list>
+    <list default="true" id="4a808345-a257-4b92-be6f-206c01f0e8e6" name="Changes" comment="layout changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,9 +27,6 @@
     &quot;assignee&quot;: &quot;Ntye&quot;
   }
 }</component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="1d65622c-e95b-406d-b0c9-17acf3344644" />
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AdministrationReseau/easy-rental-v2.git&quot;,
@@ -87,26 +45,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "js.debugger.nextJs.config.created.client": "true",
-    "js.debugger.nextJs.config.created.server": "true",
-    "last_opened_file_path": "C:/Users/ntyen/Documents/Projets 4GI S1/Admin/easy-rental-v2/public/assets",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\ntyen\\Documents\\Projets 4GI S1\\Admin\\easy-rental-v2\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.debugger.nextJs.config.created.client&quot;: &quot;true&quot;,
+    &quot;js.debugger.nextJs.config.created.server&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ntyen/Documents/Projets 4GI S1/Admin/easy-rental-v2/public/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ntyen\\Documents\\Projets 4GI S1\\Admin\\easy-rental-v2\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ntyen\Documents\Projets 4GI S1\Admin\easy-rental-v2\public\assets" />
@@ -192,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747048027856</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/feature-auth' into nina&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/app/page.tsx&#10;#&#9;src/hooks/auth/useProtectedRoute.tsx&#10;#&#9;tailwind.config.ts">
+      <option name="closed" value="true" />
+      <created>1747130307301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747130307301</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
