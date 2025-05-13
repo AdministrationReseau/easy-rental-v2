@@ -5,44 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a808345-a257-4b92-be6f-206c01f0e8e6" name="Changes" comment="layout changes">
-      <change afterPath="$PROJECT_DIR$/public/assets/Ads1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/Ads2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/Ads3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/chauffeur.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/luxury-car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/voiture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/animations/AnimatedBackground.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/animations/CountUp.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/Hero.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/HowItWorks.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/landing/Services.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/layout/Section.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/AgencyNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/GuestNavbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/models/animation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/models/navbar.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/en/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/locales/fr/components.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/fr/components.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/signin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/signin/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/signup/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/signup/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/organization/subscription/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/organization/subscription/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/AuthLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/AuthLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/ClientNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/ClientNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/OrganizationNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/OrganizationNavbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/payment/PaymentForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/payment/PaymentForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/LanguageSwitcher.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/LanguageSwitcher.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/AuthContext.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/AuthContext.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/providers/AuthProvider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/payment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/models/payment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature-auth" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -67,7 +35,7 @@
   }
 }</component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="1d65622c-e95b-406d-b0c9-17acf3344644" />
+    <option name="defaultAccountId" value="5d25a75c-017f-4c31-a404-153bb732ebfe" />
   </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -93,7 +61,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "nina",
     "js.debugger.nextJs.config.created.client": "true",
     "js.debugger.nextJs.config.created.server": "true",
     "last_opened_file_path": "C:/Users/ntyen/Documents/Projets 4GI S1/Admin/easy-rental-v2/public/assets",
@@ -102,7 +70,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "ts.external.directory.path": "C:\\Users\\ntyen\\Documents\\Projets 4GI S1\\Admin\\easy-rental-v2\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
