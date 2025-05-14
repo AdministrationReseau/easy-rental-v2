@@ -6,7 +6,7 @@ export default function Layout({children }: { children: React.ReactNode }) {
     return (
         <>
           <ClientNavbar/>
-            <main>
+            <main className="mt-16">
                 {children}
             </main>
         </>

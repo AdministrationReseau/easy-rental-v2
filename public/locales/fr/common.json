@@ -38,5 +38,278 @@
         "location_setup": "Configuration de la location",
         "keys_ready": "Clés prêtes",
         "ready": "Prêt pour la remise"
-    }
+    },
+    "landing": {
+        "hero": {
+            "title": "Easy Rental - Votre Passerelle vers la Liberté Automobile",
+            "subtitle": "Connectez-vous avec les meilleures agences de location au Cameroun",
+            "cta1": "Trouver un Véhicule",
+            "cta2": "Enregistrer Votre Agence"
+        },
+        "features": {
+            "title": "Pourquoi Choisir Easy Rental ?",
+            "subtitle": "La plateforme leader pour la location de véhicules au Cameroun",
+            "vehicles": {
+                "title": "Large Sélection de Véhicules",
+                "description": "Choisissez parmi notre vaste flotte de véhicules bien entretenus"
+            },
+            "security": {
+                "title": "100% Sécurisé",
+                "description": "Toutes les transactions sont protégées avec des protocoles de sécurité avancés"
+            },
+            "support": {
+                "title": "Support 24/7",
+                "description": "Notre équipe est disponible 24h/24 pour vous assister"
+            },
+            "mobile": {
+                "title": "Application Mobile",
+                "description": "Accédez à Easy Rental sur tout appareil, n'importe où, n'importe quand"
+            }
+        },
+        "services": {
+            "title": "Nos Services",
+            "subtitle": "Solutions adaptées à chaque type d'utilisateur",
+            "clients": {
+                "title": "Pour les Clients",
+                "description": "Louez des véhicules facilement et profitez de votre voyage",
+                "feature1": "Parcourez les véhicules vérifiés",
+                "feature2": "Options de paiement sécurisées",
+                "feature3": "Système de réservation flexible",
+                "feature4": "Support client 24/7",
+                "cta": "Commencer à Louer"
+            },
+            "agencies": {
+                "title": "Pour les Agences",
+                "description": "Développez votre entreprise avec notre plateforme",
+                "feature1": "Gestion complète de flotte",
+                "feature2": "Tableau de bord analytique avancé",
+                "feature3": "Système de réservation automatisé",
+                "feature4": "Gestionnaire de compte dédié",
+                "cta": "Rejoindre comme Agence"
+            }
+        },
+        "stats": {
+            "vehicles": "Véhicules Disponibles",
+            "agencies": "Agences Partenaires",
+            "clients": "Clients Satisfaits",
+            "rating": "Évaluation Moyenne"
+        },
+        "team": {
+            "title": "Rencontrez Notre Équipe",
+            "subtitle": "Les personnes derrière Easy Rental",
+            "ceo": "PDG & Fondateur",
+            "ceo_bio": "Plus de 10 ans d'expérience dans l'industrie automobile",
+            "cto": "Directeur Technique",
+            "cto_bio": "Expert en développement de plateforme et évolutivité",
+            "operations": "Responsable des Opérations",
+            "operations_bio": "Garantit le bon fonctionnement de tous les services",
+            "marketing": "Directeur Marketing",
+            "marketing_bio": "Développe la notoriété de la marque et les relations clients"
+        },
+        "cta": {
+            "title": "Prêt à Commencer ?",
+            "subtitle": "Rejoignez des milliers de clients satisfaits sur Easy Rental",
+            "client_button": "Trouver des Véhicules",
+            "agency_button": "Enregistrer une Agence"
+        },
+        "footer": {
+            "about": "Easy Rental connecte les clients avec des agences de location vérifiées à travers le Cameroun, offrant une expérience de location fluide.",
+            "links": {
+                "title": "Liens Rapides",
+                "about": "À Propos",
+                "contact": "Contact",
+                "terms": "Conditions d'Utilisation",
+                "privacy": "Politique de Confidentialité"
+            },
+            "services": {
+                "title": "Services",
+                "browse": "Parcourir les Véhicules",
+                "agency": "Enregistrer une Agence",
+                "bookings": "Mes Réservations",
+                "support": "Support"
+            },
+            "contact": {
+                "title": "Nous Contacter",
+                "email": "contact@easyrental.cm",
+                "phone": "+237 6XX XXX XXX",
+                "address": "Yaoundé, Cameroun"
+            },
+            "copyright": "Tous droits réservés."
+        }
+    },
+    "theme": {
+        "light": "Mode Clair",
+        "dark": "Mode Sombre",
+        "system": "Par Défaut du Système",
+        "toggle": "Changer de Thème"
+    },
+    "language": {
+        "change": "Changer de Langue",
+        "en": "Anglais",
+        "fr": "Français"
+    },
+    "common": {
+        "loading": "Chargement...",
+        "error": "Erreur",
+        "success": "Succès",
+        "cancel": "Annuler",
+        "save": "Enregistrer",
+        "back": "Retour",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "submit": "Soumettre",
+        "confirm": "Confirmer",
+        "close": "Fermer",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "search": "Rechercher",
+        "filter": "Filtrer",
+        "sort": "Trier",
+        "clear": "Effacer",
+        "apply": "Appliquer",
+        "yes": "Oui",
+        "no": "Non"
+    },
+    "validation": {
+        "required": "Ce champ est obligatoire",
+        "email": "Veuillez saisir une adresse email valide",
+        "min_length": "Doit contenir au moins {{length}} caractères",
+        "max_length": "Doit contenir au maximum {{length}} caractères",
+        "password_match": "Les mots de passe doivent correspondre",
+        "phone": "Veuillez saisir un numéro de téléphone valide"
+    },
+    "errors": {
+        "generic": "Une erreur est survenue. Veuillez réessayer.",
+        "not_found": "La page que vous recherchez n'existe pas.",
+        "server": "Erreur serveur. Veuillez réessayer plus tard.",
+        "network": "Erreur réseau. Veuillez vérifier votre connexion.",
+        "unauthorized": "Vous n'êtes pas autorisé à accéder à cette page.",
+        "forbidden": "Accès interdit.",
+        "validation": "Veuillez corriger les erreurs dans le formulaire.",
+        "payment": "Le paiement a échoué. Veuillez réessayer."
+    },
+    "buttons": {
+        "try_again": "Réessayer",
+        "go_home": "Aller à l'Accueil",
+        "go_back": "Retour",
+        "learn_more": "En Savoir Plus",
+        "view_all": "Voir Tout",
+        "show_more": "Afficher Plus",
+        "show_less": "Afficher Moins"
+    },
+    "notifications": {
+        "success": "Succès !",
+        "error": "Erreur !",
+        "warning": "Attention !",
+        "info": "Information"
+    },
+    "dates": {
+        "today": "Aujourd'hui",
+        "yesterday": "Hier",
+        "tomorrow": "Demain",
+        "days_ago": "Il y a {{count}} jours",
+        "in_days": "Dans {{count}} jours",
+        "months": {
+            "january": "Janvier",
+            "february": "Février",
+            "march": "Mars",
+            "april": "Avril",
+            "may": "Mai",
+            "june": "Juin",
+            "july": "Juillet",
+            "august": "Août",
+            "september": "Septembre",
+            "october": "Octobre",
+            "november": "Novembre",
+            "december": "Décembre"
+        },
+        "days": {
+            "monday": "Lundi",
+            "tuesday": "Mardi",
+            "wednesday": "Mercredi",
+            "thursday": "Jeudi",
+            "friday": "Vendredi",
+            "saturday": "Samedi",
+            "sunday": "Dimanche"
+        },
+        "formats": {
+            "short": "DD/MM/YYYY",
+            "long": "D MMMM YYYY",
+            "time": "HH:mm"
+        }
+    },
+    "about": {
+        "title": "À Propos d'Easy Rental",
+        "subtitle": "Votre plateforme de location de véhicules de confiance au Cameroun",
+        "story": {
+            "title": "Notre Histoire",
+            "content": "Easy Rental a été fondée en 2022 avec pour mission de simplifier le processus de location de véhicules au Cameroun. Nous avons remarqué un manque sur le marché pour une plateforme de location fiable et conviviale, et nous avons entrepris de créer une solution qui profite tant aux agences de location qu'aux clients."
+        },
+        "mission": {
+            "title": "Notre Mission",
+            "content": "Fournir une plateforme facile, sécurisée et efficace reliant les agences de location de véhicules avec les clients à travers le Cameroun, permettant des solutions de mobilité sans tracas pour tous."
+        },
+        "vision": {
+            "title": "Notre Vision",
+            "content": "Devenir la principale place de marché de location de véhicules en Afrique, reconnue pour la qualité exceptionnelle de son service, sa fiabilité et la satisfaction de ses clients."
+        },
+        "values": {
+            "title": "Nos Valeurs",
+            "integrity": "Intégrité",
+            "integrity_desc": "Nous opérons avec honnêteté et transparence dans toutes nos transactions.",
+            "excellence": "Excellence",
+            "excellence_desc": "Nous visons l'excellence dans tout ce que nous faisons.",
+            "innovation": "Innovation",
+            "innovation_desc": "Nous améliorons continuellement notre plateforme et nos services.",
+            "customer": "Centré sur le Client",
+            "customer_desc": "Nous plaçons les besoins de nos clients au centre de nos opérations."
+        }
+    },
+    "legal": {
+        "terms": {
+            "title": "Conditions d'Utilisation",
+            "updated": "Dernière mise à jour : 1 mai 2024"
+        },
+        "privacy": {
+            "title": "Politique de Confidentialité",
+            "updated": "Dernière mise à jour : 1 mai 2024"
+        },
+        "cookies": {
+            "title": "Politique de Cookies",
+            "updated": "Dernière mise à jour : 1 mai 2024"
+        }
+    },
+    "payment": {
+        "methods": {
+            "card": "Carte Bancaire",
+            "mobile": "Mobile Money"
+        },
+        "status": {
+            "pending": "En attente",
+            "processing": "En cours",
+            "completed": "Terminé",
+            "failed": "Échoué",
+            "refunded": "Remboursé"
+        }
+    },
+    "page_not_found_title": "Route introuvable",
+    "page_not_found_message": "Il semble que cette destination n'existe pas dans notre réseau de location.",
+    "finding_alternative_route": "Recherche d'un itinéraire alternatif...",
+    "go_back": "Retour précédent",
+    "go_home": "Retour à l'accueil",
+    "suggested_actions": "Vous pourriez essayer :",
+    "browse_vehicles": "Parcourir les véhicules",
+    "find_agencies": "Trouver une agence",
+    "contact_support": "Contacter le support",
+    "org_page_not_found_title": "Module introuvable",
+    "org_page_not_found_message": "Cette fonctionnalité organisationnelle n'est pas disponible ou a été déplacée.",
+    "checking_permissions": "Vérification des permissions...",
+    "go_dashboard": "Tableau de bord",
+    "org_suggested_actions": "Accès rapide organisation :",
+    "manage_fleet": "Gérer la flotte",
+    "manage_drivers": "Gérer les conducteurs",
+    "manage_bookings": "Gérer les réservations",
+    "view_analytics": "Voir les analyses",
+    "org_help_text": "Besoin d'aide avec votre organisation ?",
+    "contact_org_support": "Contacter le support organisation"
 }

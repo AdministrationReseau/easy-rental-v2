@@ -1,11 +1,9 @@
-// src/hooks/useAuth.ts
-import { useContext } from 'react';
-import { AuthContext } from "@/context/AuthContext"
+// src/hooks/auth/useAuth.ts
+import { useAuthContext } from '@/context/AuthContext';
 
+/**
+ * Hook personnalisé pour accéder au contexte d'authentification
+ */
 export function useAuth() {
-	const context = useContext(AuthContext);
-	if (context === undefined) {
-		throw new Error('useAuth must be used within an AuthProvider');
-	}
-	return context;
+    return useAuthContext();
 }

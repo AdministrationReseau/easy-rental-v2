@@ -1,18 +1,286 @@
 {
-  "navbar": {
-    "dashboard": "Dashboard",
-    "vehicles": "Vehicle Fleet",
-    "drivers": "Drivers",
-    "bookings": "Bookings",
-    "analytics": "Analytics",
-    "profile": "Profile",
-    "notifications": "Notifications"
-  },
-  "dashboard": {
-    "welcome": "Welcome to Your Organization Dashboard",
-    "total_vehicles": "Total Vehicles",
-    "active_bookings": "Active Bookings",
-    "revenue": "Total Revenue",
-    "quick_actions": "Quick Actions"
-  }
+    "subscription": {
+        "title": "Subscription",
+        "choose_plan": "Choose Your Plan",
+        "select_plan_description": "Select the subscription plan that best meets the needs of your agency",
+        "billing": {
+            "monthly": "Monthly",
+            "yearly": "Yearly"
+        },
+        "save": "Save {{percent}}%",
+        "popular": "Popular",
+        "basic_description": "Perfect for starting and managing a small vehicle fleet",
+        "pro_description": "Ideal for growing agencies with advanced needs",
+        "enterprise_description": "Complete solution for large fleets and specific requirements",
+        "features": {
+            "unlimited_vehicles": "Unlimited vehicles",
+            "dedicated_support": "Dedicated support",
+            "analytics": "Advanced analytics",
+            "api_access": "API access",
+            "custom_branding": "Custom branding",
+            "multi_user": "Multiple users",
+            "reports": "Detailed reports",
+            "integrations": "Third-party integrations"
+        },
+        "per_month": "per month",
+        "per_year": "per year",
+        "get_started": "Get started now",
+        "select_plan": "Select this plan",
+        "select_button": "Select",
+        "selected": "Selected",
+        "features_included": "Features included",
+        "why_choose": "Why choose Easy Rental?",
+        "why_choose_description": "A complete platform for managing your vehicle rental agency",
+        "advantages": {
+            "title": "Why Choose Easy Rental?",
+            "secure": "100% Secure",
+            "secure_description": "All your data is protected with the latest security protocols",
+            "fast": "Quick Setup",
+            "fast_description": "Get your agency online in less than 5 minutes",
+            "support": "Dedicated Support",
+            "support_description": "Our team is available 24/7 to help you"
+        },
+        "trusted_by": "Trusted by",
+        "trusted_by_description": "Discover what our customers say about our platform",
+        "testimonial1": "Easy Rental has allowed us to increase our bookings by 60% in just 3 months. The interface is intuitive and the customer support is exceptional.",
+        "testimonial2": "Our management process has become much more efficient since we started using this platform. Highly recommended!",
+        "testimonial3": "The best decision we've made for our business. The value for money is unbeatable.",
+        "faq": {
+            "title": "Frequently Asked Questions",
+            "q1": "Can I change plans later?",
+            "a1": "Yes, you can upgrade or downgrade your subscription plan at any time from your dashboard.",
+            "q2": "Are there any setup fees?",
+            "a2": "No, there are no setup fees. You only pay for the subscription plan you choose.",
+            "q3": "What payment methods do you accept?",
+            "a3": "We accept credit/debit cards and mobile money payments.",
+            "q4": "Is there a free trial period?",
+            "a4": "Yes, all our plans include a 14-day free trial with no commitment."
+        },
+        "ready_to_start": "Ready to get started?",
+        "ready_to_start_description": "Sign up today and start efficiently managing your vehicle fleet",
+        "start_free_trial": "Start 14-day free trial",
+        "or": "or",
+        "learn_more": "Learn more"
+    },
+    "register": {
+        "title": "Organization Registration",
+        "subtitle": "Create your organization space and start managing your vehicle fleet",
+        "selected_plan_label": "Selected plan",
+        "selected_plan": "Selected Plan",
+        "per_month": "per month",
+        "step": "Step",
+        "of": "of",
+        "steps": {
+            "personal": "Personal Info",
+            "organization": "Organization",
+            "payment": "Payment",
+            "confirmation": "Confirmation",
+            "personal_description": "Information about the owner or main manager",
+            "organization_description": "Details about your rental agency",
+            "payment_description": "Complete your subscription with secure payment",
+            "confirmation_description": "Verification and finalization of your registration"
+        },
+        "personal_info": "Personal Information",
+        "organization_info": "Organization Information",
+        "payment_info": "Payment Information",
+        "payment_methods": "Payment methods",
+        "payment_note": "By making this payment, you agree to the terms of service and privacy policy. Your subscription will automatically renew until canceled.",
+        "fields": {
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "username": "Username",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "password": "Password",
+            "confirm_password": "Confirm Password",
+            "org_name": "Organization Name",
+            "org_email": "Organization Email",
+            "org_phone": "Organization Phone",
+            "org_address": "Address",
+            "org_city": "City",
+            "org_country": "Country",
+            "org_description": "Description",
+            "business_actor_id": "Business Actor ID"
+        },
+        "navigation": {
+            "back": "Back",
+            "next": "Next"
+        },
+        "tooltips": {
+            "username": "Choose a unique username that will be used to log in to the platform.",
+            "phone": "Recommended format: +237 6XX XXX XXX for Cameroonian numbers.",
+            "password": "Use at least 6 characters with letters and numbers for better security.",
+            "org_name": "The official name of your company or rental agency.",
+            "business_actor_id": "Unique identifier provided by the Yowyob payment system."
+        },
+        "note": {
+            "title": "Important information",
+            "content": "This information will be used to create your administrator account. Make sure it is accurate as it will be linked to your organization."
+        },
+        "important": {
+            "title": "Required information",
+            "content": "The Business Actor ID is necessary to complete registration. If you don't have one, please contact our customer service."
+        },
+        "plans": {
+            "basic": "Basic",
+            "pro": "Professional",
+            "enterprise": "Enterprise",
+            "includes_free_trial": "Includes 14-day free trial"
+        },
+        "errors": {
+            "title": "Validation Error",
+            "required_fields": "Please fill in all required fields",
+            "password_mismatch": "Passwords do not match",
+            "password_length": "Password must be at least 6 characters long",
+            "required_organization_fields": "Please fill in all required organization fields"
+        },
+        "subscription_status": "Subscription status",
+        "subscription_active": "Active",
+        "success": {
+            "title": "Registration Successful!",
+            "message": "Your organization has been registered successfully and your subscription is active.",
+            "details": "Registration Details",
+            "goto_dashboard": "Go to Dashboard",
+            "email_note": "A confirmation email has been sent to your email address with your account and subscription details."
+        }
+    },
+    "payment": {
+        "title": "Payment",
+        "subtitle": "Complete your subscription payment",
+        "secure_payment": "Secure payment",
+        "choose_method": "Choose your payment method",
+        "methods": {
+            "card": "Credit Card",
+            "mobile": "Mobile Money"
+        },
+        "card": {
+            "details": "Card details",
+            "cvc_tooltip": "3-digit code on the back of your card",
+            "name": "Cardholder Name",
+            "number": "Card Number",
+            "expiry": "Expiration Date",
+            "cvc": "CVC",
+            "save": "Save card for future payments"
+        },
+        "mobile": {
+            "details": "Mobile payment details",
+            "notice": "Make sure the phone number is associated with an active Mobile Money account.",
+            "how_it_works": "How does it work?",
+            "step1": "Enter your phone number and validate",
+            "step2": "You will receive a payment request on your phone",
+            "step3": "Validate the payment with your PIN code",
+            "number": "Phone Number",
+            "operator": "Mobile Operator",
+            "select_operator": "Select Operator",
+            "operators": {
+                "orange": "Orange Money",
+                "mtn": "MTN Mobile Money",
+                "other": "Other"
+            }
+        },
+        "button": "Pay Now",
+        "processing": "Processing payment...",
+        "secure": "Your payment is secure and encrypted",
+        "errors": {
+            "invalid_card": "Invalid card details",
+            "declined": "Payment declined",
+            "failed": "Payment failed",
+            "generic": "An error occurred while processing your payment"
+        },
+        "success": {
+            "title": "Payment Successful!",
+            "message": "Your payment has been processed successfully.",
+            "transaction_id": "Transaction ID",
+            "amount": "Amount",
+            "date": "Date"
+        }
+    },
+    "dashboard": {
+        "welcome_subtitle": "Here's an overview of your rental agency",
+        "welcome": "Welcome to Your Organization Dashboard",
+        "total_vehicles": "Total Vehicles",
+        "active_bookings": "Active Bookings",
+        "revenue": "Total Revenue",
+        "quick_actions": {
+            "title": "Quick Actions",
+            "add_vehicle": "Add Vehicle",
+            "view_bookings": "View Bookings",
+            "view_analytics": "View Analytics",
+            "manage_drivers": "Manage Drivers"
+        },
+        "stats": {
+            "total_vehicles": "Total Vehicles",
+            "vehicles_active": "vehicles active",
+            "active_bookings": "Active Bookings",
+            "bookings_today": "bookings today",
+            "total_revenue": "Total Revenue",
+            "revenue_this_month": "this month",
+            "customer_satisfaction": "Customer Satisfaction",
+            "average_rating": "average rating"
+        },
+        "organization_info": {
+            "title": "Organization Info",
+            "name": "Name",
+            "email": "Email",
+            "plan": "Plan"
+        },
+        "create_organization_prompt": "You need to create an organization to access the dashboard.",
+        "create_organization_button": "Create Organization"
+    },
+    "modal": {
+        "create_organization": {
+            "title": "Create Organization",
+            "creating": "Creating...",
+            "create_button": "Create"
+        }
+    },
+    "navbar": {
+        "dashboard": "Dashboard",
+        "vehicles": "Vehicles",
+        "drivers": "Drivers",
+        "bookings": "Bookings",
+        "analytics": "Analytics",
+        "profile": "Profile",
+        "notifications": "Notifications"
+    },
+    "profile": {
+        "title": "Organization Profile",
+        "subtitle": "Manage your organization information",
+        "general": {
+            "title": "General Information",
+            "name": "Organization Name",
+            "email": "Email",
+            "phone": "Phone",
+            "address": "Address",
+            "description": "Description",
+            "save": "Save Changes",
+            "saving": "Saving..."
+        },
+        "subscription": {
+            "title": "Subscription",
+            "current_plan": "Current Plan",
+            "status": "Status",
+            "next_billing": "Next Billing Date",
+            "upgrade": "Upgrade Plan",
+            "cancel": "Cancel Subscription",
+            "history": "Payment History"
+        },
+        "team": {
+            "title": "Team Members",
+            "invite": "Invite Member",
+            "name": "Name",
+            "email": "Email",
+            "role": "Role",
+            "status": "Status",
+            "actions": "Actions"
+        },
+        "settings": {
+            "title": "Settings",
+            "language": "Language",
+            "notifications": "Notifications",
+            "theme": "Theme",
+            "security": "Security",
+            "change_password": "Change Password"
+        }
+    }
 }

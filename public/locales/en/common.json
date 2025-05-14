@@ -30,6 +30,259 @@
             "tax_sticker": "Tax Sticker"
         }
     },
+    "landing": {
+        "hero": {
+            "title": "Easy Rental - Your Gateway to Vehicle Freedom",
+            "subtitle": "Connect with the best car rental agencies in Cameroon",
+            "cta1": "Find a Vehicle",
+            "cta2": "List Your Agency"
+        },
+        "features": {
+            "title": "Why Choose Easy Rental?",
+            "subtitle": "The leading platform for vehicle rental in Cameroon",
+            "vehicles": {
+                "title": "Wide Vehicle Selection",
+                "description": "Choose from our extensive fleet of well-maintained vehicles"
+            },
+            "security": {
+                "title": "100% Secure",
+                "description": "All transactions are protected with advanced security protocols"
+            },
+            "support": {
+                "title": "24/7 Support",
+                "description": "Our team is available around the clock to assist you"
+            },
+            "mobile": {
+                "title": "Mobile App Ready",
+                "description": "Access Easy Rental on any device, anywhere, anytime"
+            }
+        },
+        "services": {
+            "title": "Our Services",
+            "subtitle": "Tailored solutions for every user type",
+            "clients": {
+                "title": "For Clients",
+                "description": "Rent vehicles easily and enjoy your journey",
+                "feature1": "Browse verified vehicles",
+                "feature2": "Secure payment options",
+                "feature3": "Flexible booking system",
+                "feature4": "24/7 customer support",
+                "cta": "Start Renting"
+            },
+            "agencies": {
+                "title": "For Agencies",
+                "description": "Expand your business with our platform",
+                "feature1": "Complete fleet management",
+                "feature2": "Advanced analytics dashboard",
+                "feature3": "Automated booking system",
+                "feature4": "Dedicated account manager",
+                "cta": "Join as Agency"
+            }
+        },
+        "stats": {
+            "vehicles": "Available Vehicles",
+            "agencies": "Partner Agencies",
+            "clients": "Happy Clients",
+            "rating": "Average Rating"
+        },
+        "team": {
+            "title": "Meet Our Team",
+            "subtitle": "The people behind Easy Rental",
+            "ceo": "CEO & Founder",
+            "ceo_bio": "10+ years experience in the automotive industry",
+            "cto": "Chief Technology Officer",
+            "cto_bio": "Expert in platform development and scalability",
+            "operations": "Head of Operations",
+            "operations_bio": "Ensuring smooth operations across all services",
+            "marketing": "Marketing Director",
+            "marketing_bio": "Building brand awareness and customer relationships"
+        },
+        "cta": {
+            "title": "Ready to Get Started?",
+            "subtitle": "Join thousands of satisfied customers on Easy Rental",
+            "client_button": "Find Vehicles",
+            "agency_button": "Register Agency"
+        },
+        "footer": {
+            "about": "Easy Rental connects clients with verified car rental agencies across Cameroon, providing a seamless rental experience.",
+            "links": {
+                "title": "Quick Links",
+                "about": "About Us",
+                "contact": "Contact",
+                "terms": "Terms of Service",
+                "privacy": "Privacy Policy"
+            },
+            "services": {
+                "title": "Services",
+                "browse": "Browse Vehicles",
+                "agency": "Register Agency",
+                "bookings": "My Bookings",
+                "support": "Support"
+            },
+            "contact": {
+                "title": "Contact Us",
+                "email": "contact@easyrental.cm",
+                "phone": "+237 6XX XXX XXX",
+                "address": "Yaoundé, Cameroon"
+            },
+            "copyright": "All rights reserved."
+        }
+    },
+    "theme": {
+        "light": "Light Mode",
+        "dark": "Dark Mode",
+        "system": "System Default",
+        "toggle": "Toggle Theme"
+    },
+    "language": {
+        "change": "Change Language",
+        "en": "English",
+        "fr": "French"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "Error",
+        "success": "Success",
+        "cancel": "Cancel",
+        "save": "Save",
+        "back": "Back",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Submit",
+        "confirm": "Confirm",
+        "close": "Close",
+        "edit": "Edit",
+        "delete": "Delete",
+        "search": "Search",
+        "filter": "Filter",
+        "sort": "Sort",
+        "clear": "Clear",
+        "apply": "Apply",
+        "yes": "Yes",
+        "no": "No"
+    },
+    "validation": {
+        "required": "This field is required",
+        "email": "Please enter a valid email address",
+        "min_length": "Must be at least {{length}} characters",
+        "max_length": "Must be at most {{length}} characters",
+        "password_match": "Passwords must match",
+        "phone": "Please enter a valid phone number"
+    },
+    "errors": {
+        "generic": "An error occurred. Please try again.",
+        "not_found": "The page you're looking for doesn't exist.",
+        "server": "Server error. Please try again later.",
+        "network": "Network error. Please check your connection.",
+        "unauthorized": "You are not authorized to access this page.",
+        "forbidden": "Access forbidden.",
+        "validation": "Please correct the errors in the form.",
+        "payment": "Payment failed. Please try again."
+    },
+    "buttons": {
+        "try_again": "Try Again",
+        "go_home": "Go to Home",
+        "go_back": "Go Back",
+        "learn_more": "Learn More",
+        "view_all": "View All",
+        "show_more": "Show More",
+        "show_less": "Show Less"
+    },
+    "notifications": {
+        "success": "Success!",
+        "error": "Error!",
+        "warning": "Warning!",
+        "info": "Information"
+    },
+    "dates": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "tomorrow": "Tomorrow",
+        "days_ago": "{{count}} days ago",
+        "in_days": "In {{count}} days",
+        "months": {
+            "january": "January",
+            "february": "February",
+            "march": "March",
+            "april": "April",
+            "may": "May",
+            "june": "June",
+            "july": "July",
+            "august": "August",
+            "september": "September",
+            "october": "October",
+            "november": "November",
+            "december": "December"
+        },
+        "days": {
+            "monday": "Monday",
+            "tuesday": "Tuesday",
+            "wednesday": "Wednesday",
+            "thursday": "Thursday",
+            "friday": "Friday",
+            "saturday": "Saturday",
+            "sunday": "Sunday"
+        },
+        "formats": {
+            "short": "MM/DD/YYYY",
+            "long": "MMMM D, YYYY",
+            "time": "h:mm A"
+        }
+    },
+    "about": {
+        "title": "About Easy Rental",
+        "subtitle": "Your trusted vehicle rental platform in Cameroon",
+        "story": {
+            "title": "Our Story",
+            "content": "Easy Rental was founded in 2022 with a mission to simplify the vehicle rental process in Cameroon. We noticed a gap in the market for a reliable and user-friendly rental platform, and we set out to create a solution that benefits both rental agencies and customers alike."
+        },
+        "mission": {
+            "title": "Our Mission",
+            "content": "To provide an easy, secure, and efficient platform connecting vehicle rental agencies with customers across Cameroon, enabling hassle-free mobility solutions for everyone."
+        },
+        "vision": {
+            "title": "Our Vision",
+            "content": "To become the leading vehicle rental marketplace in Africa, known for exceptional quality of service, reliability, and customer satisfaction."
+        },
+        "values": {
+            "title": "Our Values",
+            "integrity": "Integrity",
+            "integrity_desc": "We operate with honesty and transparency in all our dealings.",
+            "excellence": "Excellence",
+            "excellence_desc": "We strive for excellence in everything we do.",
+            "innovation": "Innovation",
+            "innovation_desc": "We continuously improve our platform and services.",
+            "customer": "Customer-Centric",
+            "customer_desc": "We put our customers' needs at the center of our operations."
+        }
+    },
+    "legal": {
+        "terms": {
+            "title": "Terms of Service",
+            "updated": "Last updated: May 1, 2024"
+        },
+        "privacy": {
+            "title": "Privacy Policy",
+            "updated": "Last updated: May 1, 2024"
+        },
+        "cookies": {
+            "title": "Cookie Policy",
+            "updated": "Last updated: May 1, 2024"
+        }
+    },
+    "payment": {
+        "methods": {
+            "card": "Credit Card",
+            "mobile": "Mobile Money"
+        },
+        "status": {
+            "pending": "Pending",
+            "processing": "Processing",
+            "completed": "Completed",
+            "failed": "Failed",
+            "refunded": "Refunded"
+        }
+    },
     "close": "close",
     "loading": "Loading...",
     "loading_steps": {
@@ -38,5 +291,25 @@
         "location_setup": "Setting up location",
         "keys_ready": "Keys ready",
         "ready": "Ready for pickup"
-    }
+    },
+    "page_not_found_title": "Route Not Found",
+    "page_not_found_message": "It seems this destination doesn't exist in our rental network.",
+    "finding_alternative_route": "Finding alternative route...",
+    "go_back": "Go Back",
+    "go_home": "Go Home",
+    "suggested_actions": "You might try:",
+    "browse_vehicles": "Browse Vehicles",
+    "find_agencies": "Find Agencies",
+    "contact_support": "Contact Support",
+    "org_page_not_found_title": "Module Not Found",
+    "org_page_not_found_message": "This organizational feature is not available or has been moved.",
+    "checking_permissions": "Checking permissions...",
+    "go_dashboard": "Dashboard",
+    "org_suggested_actions": "Quick organization access:",
+    "manage_fleet": "Manage Fleet",
+    "manage_drivers": "Manage Drivers",
+    "manage_bookings": "Manage Bookings",
+    "view_analytics": "View Analytics",
+    "org_help_text": "Need help with your organization?",
+    "contact_org_support": "Contact Organization Support"
 }

@@ -1,174 +1,178 @@
-// // src/providers/AuthProvider.tsx
-// 'use client';
-//
-// import { useEffect, useState, ReactNode } from 'react';
-// import { useRouter } from 'next/navigation';
-// import { User } from "@/types/auth"
-// import { AuthContext } from "@/context/AuthContext"
-// import { loginUser, registerUser } from '@/services/authService';
-//
-// export function AuthProvider({ children }: { children: ReactNode }) {
-// 	const [user, setUser] = useState<User | null>(null);
-// 	const [isLoading, setIsLoading] = useState(true);
-// 	const [error, setError] = useState<string | null>(null);
-// 	const router = useRouter();
-//
-// 	useEffect(() => {
-// 		// Check if user is already logged in
-// 		const checkAuth = () => {
-// 			setIsLoading(true);
-// 			const userData = localStorage.getItem('user');
-// 			if (userData) {
-// 				try {
-// 					setUser(JSON.parse(userData));
-// 				} catch (e) {
-// 					console.error('Failed to parse user data', e);
-// 					localStorage.removeItem('user');
-// 				}
-// 			}
-// 			setIsLoading(false);
-// 		};
-//
-// 		checkAuth();
-// 	}, []);
-//
-// 	const login = async (email: string, password: string) => {
-// 		setIsLoading(true);
-// 		setError(null);
-// 		try {
-// 			const userData = await loginUser(email, password);
-// 			setUser(userData);
-// 			localStorage.setItem('user', JSON.stringify(userData));
-// 		} catch (e) {
-// 			setError((e as Error).message);
-// 			throw e;
-// 		} finally {
-// 			setIsLoading(false);
-// 		}
-// 	};
-//
-// 	const register = async (name: string, email: string, password: string) => {
-// 		setIsLoading(true);
-// 		setError(null);
-// 		try {
-// 			// Pass password to registerUser function to fix the unused parameter warning
-// 			const userData = await registerUser(name, email, password);
-// 			setUser(userData);
-// 			localStorage.setItem('user', JSON.stringify(userData));
-// 		} catch (e) {
-// 			setError((e as Error).message);
-// 			throw e;
-// 		} finally {
-// 			setIsLoading(false);
-// 		}
-// 	};
-//
-// 	const logout = () => {
-// 		setUser(null);
-// 		localStorage.removeItem('user');
-// 		router.push('/');
-// 	};
-//
-// 	return (
-// 		<AuthContext.Provider
-// 			value={{
-// 				user,
-// 				isAuthenticated: !!user,
-// 				login,
-// 				register,
-// 				logout,
-// 				isLoading,
-// 				error
-// 			}}
-// 		>
-// 			{children}
-// 		</AuthContext.Provider>
-// 	);
-// }
-
-// src/providers/AuthProvider.tsx
 'use client';
 
 import { useEffect, useState, ReactNode } from 'react';
 import { useRouter } from 'next/navigation';
-import { User, UserRole, AuthContextType } from "@/types/models/auth";
-import { AuthContext } from "@/context/AuthContext";
-import { loginUser, registerUser } from '@/services/authService';
+import { User, UserRole } from '@/types/models/auth';
+import AuthContext from "@/context/AuthContext";
+import { loginUser, registerUser, logoutUser, getCurrentUser, checkSession as apiCheckSession, refreshToken } from '@/services/authService';
 
-export function AuthProvider({ children }: { children: ReactNode }) {
-	const [user, setUser] = useState<User | null>(null);
-	const [isLoading, setIsLoading] = useState(true);
-	const [error, setError] = useState<string | null>(null);
-	const router = useRouter();
+interface AuthProviderProps {
+    children: ReactNode;
+}
 
-	useEffect(() => {
-		// Check if user is already logged in
-		const checkAuth = () => {
-			setIsLoading(true);
-			const userData = localStorage.getItem('user');
-			if (userData) {
-				try {
-					setUser(JSON.parse(userData));
-				} catch (e) {
-					console.error('Failed to parse user data', e);
-					localStorage.removeItem('user');
-				}
-			}
-			setIsLoading(false);
-		};
+export function AuthProvider({ children }: AuthProviderProps) {
+    const [user, setUser] = useState<User | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
+    const router = useRouter();
 
-		checkAuth();
-	}, []);
+    useEffect(() => {
+        // Vérifie si l'utilisateur est déjà connecté au chargement
+        const checkAuth = async () => {
+            setIsLoading(true);
 
-	const login = async (email: string, password: string, role: UserRole = 'user') => {
-		setIsLoading(true);
-		setError(null);
-		try {
-			const userData = await loginUser(email, password);
-			setUser(userData);
-			localStorage.setItem('user', JSON.stringify(userData));
-		} catch (e) {
-			setError(e instanceof Error ? e.message : 'Une erreur est survenue');
-			throw e;
-		} finally {
-			setIsLoading(false);
-		}
-	};
+            try {
+                const userData = await getCurrentUser();
+                if (userData) {
+                    setUser(userData);
+                }
+            } catch (e) {
+                console.error('Failed to check authentication', e);
+            } finally {
+                setIsLoading(false);
+            }
+        };
 
-	const register = async (name: string, email: string, password: string, role: UserRole = 'user') => {
-		setIsLoading(true);
-		setError(null);
-		try {
-			const userData = await registerUser(name, email, password, role);
-			setUser(userData);
-			localStorage.setItem('user', JSON.stringify(userData));
-		} catch (e) {
-			setError(e instanceof Error ? e.message : 'Une erreur est survenue');
-			throw e;
-		} finally {
-			setIsLoading(false);
-		}
-	};
+        checkAuth();
+    }, []);
 
-	const logout = () => {
-		setUser(null);
-		localStorage.removeItem('user');
-		router.push('/');
-	};
+    // Connexion utilisateur
+    const login = async (email: string, password: string, role: UserRole = 'user') => {
+        setIsLoading(true);
+        setError(null);
 
-	const contextValue: AuthContextType = {
-		user,
-		isAuthenticated: !!user,
-		login,
-		register,
-		logout,
-		isLoading,
-		error
-	};
+        try {
+            const userData = await loginUser(email, password, role);
+            setUser(userData);
 
-	return (
-		<AuthContext.Provider value={contextValue}>
-			{children}
-		</AuthContext.Provider>
-	);
+            // Conserver les préférences utilisateur
+            localStorage.setItem('user_preferences', JSON.stringify({
+                theme: localStorage.getItem('theme') || 'light',
+                language: localStorage.getItem('lng') || 'fr',
+                role: userData.role
+            }));
+
+            return userData;
+        } catch (e) {
+            const errorMessage = e instanceof Error ? e.message : 'Une erreur est survenue';
+            setError(errorMessage);
+            throw e;
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Inscription utilisateur
+    const register = async (
+        name: string,
+        email: string,
+        password: string,
+        role: UserRole = 'user',
+        username?: string,
+        phoneNumber?: string
+    ) => {
+        setIsLoading(true);
+        setError(null);
+
+        try {
+            const userData = await registerUser(name, email, password, role, username, phoneNumber);
+            setUser(userData);
+
+            // Conserver les préférences utilisateur
+            localStorage.setItem('user_preferences', JSON.stringify({
+                theme: 'light',
+                language: 'fr',
+                role: userData.role
+            }));
+
+            return userData;
+        } catch (e) {
+            const errorMessage = e instanceof Error ? e.message : 'Une erreur est survenue';
+            setError(errorMessage);
+            throw e;
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Déconnexion utilisateur
+    const logout = async () => {
+        setIsLoading(true);
+
+        try {
+            await logoutUser();
+            setUser(null);
+
+            // Conserver uniquement les préférences de thème et de langue
+            const theme = localStorage.getItem('theme');
+            const lng = localStorage.getItem('lng');
+
+            localStorage.clear();
+
+            if (theme) localStorage.setItem('theme', theme);
+            if (lng) localStorage.setItem('lng', lng);
+
+            router.push('/');
+        } catch (e) {
+            console.error('Logout error', e);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    // Vérification de session
+    const checkSession = async (): Promise<boolean> => {
+        try {
+            const isValid = await apiCheckSession();
+
+            if (!isValid && user) {
+                setUser(null);
+                return false;
+            }
+
+            return isValid;
+        } catch (e) {
+            console.error('Session check error', e);
+            return false;
+        }
+    };
+
+    // Rafraîchissement de session
+    const refreshSession = async (): Promise<void> => {
+        try {
+            const success = await refreshToken();
+
+            if (!success && user) {
+                setUser(null);
+                router.push('/signin');
+            }
+        } catch (e) {
+            console.error('Session refresh error', e);
+        }
+    };
+
+    // Effacer les erreurs
+    const clearError = () => {
+        setError(null);
+    };
+
+    // Valeur du contexte
+    const contextValue = {
+        user,
+        isAuthenticated: !!user,
+        isLoading,
+        error,
+        login,
+        register,
+        logout,
+        checkSession,
+        refreshSession,
+        clearError
+    };
+
+    return (
+        <AuthContext.Provider value={contextValue}>
+            {children}
+        </AuthContext.Provider>
+    );
 }

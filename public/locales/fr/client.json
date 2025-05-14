@@ -1,19 +1,337 @@
 {
-  "navbar": {
-    "home": "Acceuil",
-    "vehicles": "Véhicules",
-    "agencies": "Agencies",
-    "contact": "Contact",
-    "about": "About Us",
-    "bookings": "Mes Réservations",
-    "profile": "Profil",
-    "notifications": "Notifications",
-    "favorites": "Favoris"
-  },
-  "dashboard": {
-    "welcome": "Bienvenue sur votre Tableau de bord",
-    "quick_actions": "Actions Rapides",
-    "recent_bookings": "Réservations Récentes",
-    "vehicle_status": "État des Véhicules"
-  }
+    "navbar": {
+        "home": "Accueil",
+        "vehicles": "Véhicules",
+        "agencies": "Agences",
+        "contact": "Contact",
+        "about": "À propos",
+        "profile": "Profil",
+        "favorites": "Favoris",
+        "notifications": "Notifications",
+        "bookings": "Mes Réservations"
+    },
+    "home": {
+        "hero": {
+            "title": "Bienvenue, {{name}} !",
+            "subtitle": "Trouvez le véhicule parfait pour votre prochain voyage"
+        },
+        "search": {
+            "location": "Localisation",
+            "all_locations": "Toutes les Localisations",
+            "pickup_date": "Date de prise",
+            "return_date": "Date de retour",
+            "vehicle_type": "Type de véhicule",
+            "price_range": "Fourchette de prix",
+            "search_button": "Rechercher des Véhicules"
+        },
+        "featured": {
+            "title": "Véhicules en Vedette",
+            "subtitle": "Choix populaires de notre collection",
+            "per_day": "/jour",
+            "rent_now": "Louer Maintenant",
+            "unavailable": "Indisponible",
+            "view_all": "Voir Tous les Véhicules",
+            "filter": {
+                "title": "Filtrer par",
+                "price": "Prix",
+                "type": "Type",
+                "brand": "Marque",
+                "availability": "Disponibilité",
+                "apply": "Appliquer les Filtres",
+                "clear": "Effacer les Filtres"
+            }
+        },
+        "stats": {
+            "vehicles": "Véhicules Disponibles",
+            "locations": "Points de Service",
+            "rating": "Évaluation Moyenne",
+            "support": "Support Client"
+        },
+        "features": {
+            "wide_selection": {
+                "title": "Large Sélection de Véhicules",
+                "description": "Choisissez parmi notre vaste flotte de véhicules bien entretenus"
+            },
+            "flexible_booking": {
+                "title": "Réservation Flexible",
+                "description": "Réservez des véhicules avec des options flexibles de prise et de retour"
+            },
+            "best_service": {
+                "title": "Meilleur Service",
+                "description": "Service client exceptionnel et support 24h/24"
+            }
+        },
+        "testimonials": {
+            "title": "Ce que Disent Nos Clients",
+            "subtitle": "Ne prenez pas seulement notre parole",
+            "read_more": "Lire Plus de Témoignages"
+        },
+        "download_app": {
+            "title": "Obtenez l'Application Easy Rental",
+            "subtitle": "Réservez et gérez vos locations en déplacement",
+            "android": "Télécharger pour Android",
+            "ios": "Télécharger pour iOS"
+        }
+    },
+    "vehicles": {
+        "title": "Parcourir les Véhicules",
+        "subtitle": "Trouvez le véhicule parfait pour vos besoins",
+        "search": "Rechercher des véhicules...",
+        "sort": {
+            "label": "Trier par",
+            "price_low": "Prix : Croissant",
+            "price_high": "Prix : Décroissant",
+            "newest": "Plus récent d'abord",
+            "rating": "Évaluation Client"
+        },
+        "filter": {
+            "title": "Filtres",
+            "price_range": "Fourchette de Prix",
+            "vehicle_type": "Type de Véhicule",
+            "brand": "Marque",
+            "seats": "Nombre de Sièges",
+            "transmission": "Transmission",
+            "features": "Caractéristiques",
+            "apply": "Appliquer les Filtres",
+            "clear": "Effacer les Filtres"
+        },
+        "per_day": "/jour",
+        "view_details": "Voir les Détails",
+        "book_now": "Réserver Maintenant",
+        "no_results": "Aucun véhicule trouvé correspondant à vos critères",
+        "try_again": "Essayez d'ajuster vos filtres",
+        "pagination": {
+            "prev": "Précédent",
+            "next": "Suivant",
+            "page": "Page",
+            "of": "sur"
+        }
+    },
+    "vehicle_details": {
+        "back": "Retour aux Véhicules",
+        "book_now": "Réserver Maintenant",
+        "add_favorite": "Ajouter aux Favoris",
+        "remove_favorite": "Retirer des Favoris",
+        "share": "Partager",
+        "overview": "Aperçu",
+        "features": "Caractéristiques",
+        "specifications": "Spécifications",
+        "reviews": "Avis",
+        "available": "Disponible",
+        "unavailable": "Indisponible",
+        "similar": "Véhicules Similaires",
+        "view_all_photos": "Voir Toutes les Photos",
+        "specs": {
+            "brand": "Marque",
+            "model": "Modèle",
+            "year": "Année",
+            "type": "Type",
+            "seats": "Sièges",
+            "doors": "Portes",
+            "transmission": "Transmission",
+            "fuel": "Type de Carburant",
+            "consumption": "Consommation",
+            "engine": "Moteur"
+        },
+        "booking": {
+            "title": "Réserver ce Véhicule",
+            "dates": "Sélectionner les Dates",
+            "pickup": "Date de Prise",
+            "return": "Date de Retour",
+            "location": "Lieu de Prise",
+            "addons": "Options Supplémentaires",
+            "price_breakdown": "Détail du Prix",
+            "daily_rate": "Tarif Journalier",
+            "days": "Jours",
+            "subtotal": "Sous-total",
+            "addons_total": "Options",
+            "tax": "Taxe",
+            "total": "Total",
+            "terms": "En réservant, vous acceptez nos",
+            "terms_link": "Conditions Générales",
+            "proceed": "Procéder au Paiement"
+        }
+    },
+    "bookings": {
+        "title": "Mes Réservations",
+        "subtitle": "Gérez vos locations de véhicules",
+        "tabs": {
+            "upcoming": "À venir",
+            "active": "Actives",
+            "past": "Passées",
+            "cancelled": "Annulées"
+        },
+        "booking_card": {
+            "booking_id": "ID de Réservation",
+            "dates": "Dates",
+            "status": "Statut",
+            "amount": "Montant",
+            "vehicle": "Véhicule",
+            "location": "Localisation",
+            "view_details": "Voir les Détails",
+            "cancel": "Annuler la Réservation",
+            "modify": "Modifier la Réservation",
+            "download_receipt": "Télécharger le Reçu"
+        },
+        "statuses": {
+            "confirmed": "Confirmée",
+            "pending": "En attente",
+            "cancelled": "Annulée",
+            "completed": "Terminée",
+            "active": "Active"
+        },
+        "empty": {
+            "title": "Aucune réservation trouvée",
+            "message": "Vous n'avez aucune réservation {{type}}",
+            "browse": "Parcourir les Véhicules"
+        },
+        "confirmation": {
+            "title": "Confirmation de Réservation",
+            "message": "Votre réservation a été confirmée !",
+            "reference": "Référence de Réservation",
+            "details": "Détails de la Réservation",
+            "payment": "Informations de Paiement",
+            "next_steps": "Prochaines Étapes",
+            "contact": "Informations de Contact"
+        }
+    },
+    "profile": {
+        "title": "Mon Profil",
+        "subtitle": "Gérez les informations de votre compte",
+        "tabs": {
+            "personal": "Informations Personnelles",
+            "bookings": "Historique des Réservations",
+            "favorites": "Favoris",
+            "payments": "Méthodes de Paiement",
+            "preferences": "Préférences",
+            "settings": "Paramètres"
+        },
+        "personal": {
+            "title": "Informations Personnelles",
+            "name": "Nom Complet",
+            "email": "Adresse Email",
+            "phone": "Numéro de Téléphone",
+            "address": "Adresse",
+            "city": "Ville",
+            "country": "Pays",
+            "date_of_birth": "Date de Naissance",
+            "driving_license": "Permis de Conduire",
+            "save": "Enregistrer les Modifications",
+            "change_password": "Changer le Mot de Passe"
+        },
+        "favorites": {
+            "title": "Véhicules Favoris",
+            "empty": "Vous n'avez pas encore ajouté de véhicules à vos favoris",
+            "browse": "Parcourir les Véhicules"
+        },
+        "payments": {
+            "title": "Méthodes de Paiement",
+            "add_card": "Ajouter une Nouvelle Carte",
+            "add_mobile": "Ajouter Mobile Money",
+            "default": "Par défaut",
+            "set_default": "Définir par Défaut",
+            "remove": "Supprimer",
+            "card_ending": "Carte se terminant par",
+            "expires": "Expire",
+            "mobile_number": "Numéro mobile",
+            "operator": "Opérateur"
+        },
+        "preferences": {
+            "title": "Préférences",
+            "language": "Langue",
+            "currency": "Devise",
+            "notifications": "Notifications",
+            "email_promo": "Emails promotionnels",
+            "email_booking": "Confirmations de réservation",
+            "sms_alerts": "Alertes SMS",
+            "save": "Enregistrer les Préférences"
+        },
+        "logout": "Déconnexion"
+    },
+    "agencies": {
+        "title": "Agences de Location",
+        "subtitle": "Trouvez les meilleures agences de location",
+        "search": "Rechercher des agences...",
+        "filter": {
+            "title": "Filtrer par",
+            "location": "Localisation",
+            "rating": "Évaluation",
+            "services": "Services",
+            "apply": "Appliquer les Filtres",
+            "clear": "Effacer les Filtres"
+        },
+        "view_details": "Voir les Détails",
+        "browse_vehicles": "Parcourir les Véhicules",
+        "no_results": "Aucune agence trouvée correspondant à vos critères",
+        "agency_card": {
+            "vehicles": "véhicules",
+            "rating": "Évaluation"
+        }
+    },
+    "agency_details": {
+        "about": "À propos",
+        "vehicles": "Véhicules Disponibles",
+        "reviews": "Avis",
+        "contact": "Contact",
+        "location": "Localisation",
+        "business_hours": "Heures d'Ouverture",
+        "services": "Services",
+        "view_all_vehicles": "Voir Tous les Véhicules",
+        "contact_info": {
+            "address": "Adresse",
+            "phone": "Téléphone",
+            "email": "Email",
+            "website": "Site Web"
+        }
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "subtitle": "Entrez en contact avec notre équipe",
+        "form": {
+            "name": "Votre Nom",
+            "email": "Adresse Email",
+            "subject": "Sujet",
+            "message": "Message",
+            "submit": "Envoyer le Message",
+            "sending": "Envoi en cours..."
+        },
+        "info": {
+            "title": "Informations de Contact",
+            "address": "Adresse",
+            "phone": "Téléphone",
+            "email": "Email",
+            "hours": "Heures d'Ouverture"
+        },
+        "success": {
+            "title": "Message Envoyé !",
+            "message": "Merci de nous avoir contactés. Nous vous répondrons dans les plus brefs délais."
+        }
+    },
+    "search": {
+        "title": "Résultats de Recherche",
+        "results_for": "Résultats pour",
+        "no_results": "Aucun résultat trouvé pour",
+        "suggestions": "Suggestions :",
+        "check_spelling": "Vérifiez l'orthographe",
+        "try_different": "Essayez des mots-clés différents",
+        "search_again": "Rechercher à Nouveau"
+    },
+    "filters": {
+        "price": {
+            "min": "Prix min",
+            "max": "Prix max",
+            "any": "Tous les prix"
+        },
+        "type": {
+            "all": "Tous les types",
+            "sedan": "Berline",
+            "suv": "SUV",
+            "hatchback": "Compacte",
+            "van": "Minivan",
+            "luxury": "Luxe",
+            "convertible": "Décapotable",
+            "truck": "Camionnette",
+            "electric": "Électrique"
+        }
+    }
 }
