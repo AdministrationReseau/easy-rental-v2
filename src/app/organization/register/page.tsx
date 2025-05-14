@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import PaymentForm from '@/components/payment/PaymentForm';
-import { Payment } from '@/types/payment';
+import { Payment } from '@/types/models/payment';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ChevronRight, HelpCircle, AlertCircle } from 'lucide-react';
 

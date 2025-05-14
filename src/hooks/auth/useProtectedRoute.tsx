@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useAuth } from "@/hooks/auth/useAuth";
-import { UserRole } from '@/types/auth';
+import { UserRole } from '@/types/models/auth';
 
 /**
  * Hook pour protéger une route avec des exigences d'authentification et de rôle

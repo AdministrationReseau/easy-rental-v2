@@ -1,5 +1,5 @@
 import api from '@/lib/api';
-import { Payment } from '@/types/payment';
+import { Payment } from '@/types/models/payment';
 
 interface PaymentResponse {
     transactionId: string;
