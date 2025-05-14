@@ -1,18 +1,287 @@
 {
-  "navbar": {
-    "dashboard": "Tableau de bord",
-    "vehicles": "Parc de véhicules",
-    "drivers": "Conducteurs",
-    "bookings": "Réservations",
-    "analytics": "Analytique",
-    "profile": "Profil",
-    "notifications": "Notifications"
-  },
-  "dashboard": {
-    "welcome": "Bienvenue sur le Tableau de bord de votre Organisation",
-    "total_vehicles": "Total des Véhicules",
-    "active_bookings": "Réservations Actives",
-    "revenue": "Revenu Total",
-    "quick_actions": "Actions Rapides"
-  }
+    "subscription": {
+        "title": "Abonnement",
+        "choose_plan": "Choisissez Votre Plan",
+        "select_plan_description": "Sélectionnez le plan d'abonnement qui correspond le mieux aux besoins de votre agence",
+        "billing": {
+            "monthly": "Mensuel",
+            "yearly": "Annuel"
+        },
+        "save": "Économisez {{percent}}%",
+        "popular": "Populaire",
+        "basic_description": "Parfait pour démarrer et gérer une petite flotte de véhicules",
+        "pro_description": "Idéal pour les agences en croissance avec des besoins avancés",
+        "enterprise_description": "Solution complète pour les grandes flottes et besoins spécifiques",
+        "features": {
+            "unlimited_vehicles": "Véhicules illimités",
+            "dedicated_support": "Support dédié",
+            "analytics": "Analyses avancées",
+            "api_access": "Accès API",
+            "custom_branding": "Personnalisation de marque",
+            "multi_user": "Utilisateurs multiples",
+            "reports": "Rapports détaillés",
+            "integrations": "Intégrations tierces"
+        },
+        "per_month": "par mois",
+        "per_year": "par an",
+        "get_started": "Commencer maintenant",
+        "select_plan": "Choisir ce plan",
+        "select_button": "Sélectionner",
+        "selected": "Sélectionné",
+        "features_included": "Fonctionnalités incluses",
+        "why_choose": "Pourquoi choisir Easy Rental?",
+        "why_choose_description": "Une plateforme complète pour la gestion de votre agence de location de véhicules",
+        "advantages": {
+            "title": "Pourquoi Choisir Easy Rental ?",
+            "secure": "100% Sécurisé",
+            "secure_description": "Toutes vos données sont protégées avec les derniers protocoles de sécurité",
+            "fast": "Configuration Rapide",
+            "fast_description": "Mettez votre agence en ligne en moins de 5 minutes",
+            "support": "Support Dédié",
+            "support_description": "Notre équipe est disponible 24h/24 et 7j/7 pour vous aider"
+        },
+        "trusted_by": "Ils nous font confiance",
+        "trusted_by_description": "Découvrez ce que nos clients disent de notre plateforme",
+        "testimonial1": "Easy Rental nous a permis d'augmenter nos réservations de 60% en seulement 3 mois. L'interface est intuitive et le support client est exceptionnel.",
+        "testimonial2": "Notre processus de gestion est devenu beaucoup plus efficace depuis que nous utilisons cette plateforme. Hautement recommandé!",
+        "testimonial3": "La meilleure décision que nous ayons prise pour notre entreprise. Le rapport qualité-prix est imbattable.",
+        "faq": {
+            "title": "Questions Fréquentes",
+            "q1": "Puis-je changer de plan plus tard ?",
+            "a1": "Oui, vous pouvez mettre à niveau ou rétrograder votre plan d'abonnement à tout moment depuis votre tableau de bord.",
+            "q2": "Y a-t-il des frais de configuration ?",
+            "a2": "Non, il n'y a pas de frais de configuration. Vous ne payez que pour le plan d'abonnement choisi.",
+            "q3": "Quels modes de paiement acceptez-vous ?",
+            "a3": "Nous acceptons les cartes de crédit/débit et les paiements par mobile money.",
+            "q4": "Y a-t-il une période d'essai gratuite ?",
+            "a4": "Oui, tous nos plans incluent une période d'essai gratuite de 14 jours, sans engagement."
+        },
+        "ready_to_start": "Prêt à commencer ?",
+        "ready_to_start_description": "Inscrivez-vous dès aujourd'hui et commencez à gérer efficacement votre flotte de véhicules",
+        "start_free_trial": "Essai gratuit de 14 jours",
+        "or": "ou",
+        "learn_more": "En savoir plus"
+    },
+    "register": {
+        "title": "Enregistrement d'Organisation",
+        "subtitle": "Créez votre espace d'organisation et commencez à gérer votre flotte de véhicules",
+        "selected_plan_label": "Plan sélectionné",
+        "selected_plan": "Plan Sélectionné",
+        "per_month": "par mois",
+        "step": "Étape",
+        "of": "sur",
+        "steps": {
+            "personal": "Infos Personnelles",
+            "organization": "Organisation",
+            "payment": "Paiement",
+            "confirmation": "Confirmation",
+            "personal_description": "Informations sur le propriétaire ou le gestionnaire principal",
+            "organization_description": "Détails concernant votre agence de location",
+            "payment_description": "Complétez votre abonnement avec un paiement sécurisé",
+            "confirmation_description": "Vérification et finalisation de votre enregistrement"
+        },
+        "personal_info": "Informations Personnelles",
+        "organization_info": "Informations de l'Organisation",
+        "payment_info": "Informations de Paiement",
+        "payment_methods": "Méthodes de paiement",
+        "payment_note": "En effectuant ce paiement, vous acceptez les conditions générales de service et la politique de confidentialité. Votre abonnement sera automatiquement renouvelé jusqu'à annulation.",
+        "fields": {
+            "first_name": "Prénom",
+            "last_name": "Nom",
+            "username": "Nom d'utilisateur",
+            "email": "Adresse Email",
+            "phone": "Numéro de Téléphone",
+            "password": "Mot de Passe",
+            "confirm_password": "Confirmer le Mot de Passe",
+            "org_name": "Nom de l'Organisation",
+            "org_email": "Email de l'Organisation",
+            "org_phone": "Téléphone de l'Organisation",
+            "org_address": "Adresse",
+            "org_city": "Ville",
+            "org_country": "Pays",
+            "org_description": "Description",
+            "business_actor_id": "ID Business Actor"
+        },
+        "navigation": {
+            "back": "Retour",
+            "next": "Suivant"
+        },
+        "tooltips": {
+            "username": "Choisissez un nom d'utilisateur unique qui sera utilisé pour vous connecter à la plateforme.",
+            "phone": "Format recommandé: +237 6XX XXX XXX pour les numéros camerounais.",
+            "password": "Utilisez au moins 6 caractères avec des lettres et des chiffres pour plus de sécurité.",
+            "org_name": "Le nom officiel de votre entreprise ou agence de location.",
+            "business_actor_id": "Identifiant unique fourni par le système de paiement Yowyob."
+        },
+        "note": {
+            "title": "Information importante",
+            "content": "Ces informations seront utilisées pour créer votre compte administrateur. Assurez-vous qu'elles sont exactes car elles seront liées à votre organisation."
+        },
+        "important": {
+            "title": "Informations requises",
+            "content": "L'ID Business Actor est nécessaire pour finaliser l'enregistrement. Si vous n'en avez pas, veuillez contacter notre service client."
+        },
+        "plans": {
+            "basic": "Basique",
+            "pro": "Professionnel",
+            "enterprise": "Entreprise",
+            "includes_free_trial": "Inclut 14 jours d'essai gratuit"
+        },
+        "errors": {
+            "title": "Erreur de validation",
+            "required_fields": "Veuillez remplir tous les champs requis",
+            "password_mismatch": "Les mots de passe ne correspondent pas",
+            "password_length": "Le mot de passe doit contenir au moins 6 caractères",
+            "required_organization_fields": "Veuillez remplir tous les champs requis de l'organisation"
+        },
+        "subscription_status": "Statut de l'abonnement",
+        "subscription_active": "Actif",
+        "success": {
+            "title": "Enregistrement Réussi !",
+            "message": "Votre organisation a été enregistrée avec succès et votre abonnement est actif.",
+            "details": "Détails de l'Enregistrement",
+            "goto_dashboard": "Aller au Tableau de Bord",
+            "email_note": "Un email de confirmation a été envoyé à votre adresse email avec les détails de votre compte et de votre abonnement."
+        }
+    },
+    "payment": {
+        "title": "Paiement",
+        "subtitle": "Complétez le paiement de votre abonnement",
+        "secure_payment": "Paiement sécurisé",
+        "choose_method": "Choisissez votre méthode de paiement",
+        "methods": {
+            "card": "Carte Bancaire",
+            "mobile": "Mobile Money"
+        },
+        "card": {
+            "name": "Nom du titulaire",
+            "number": "Numéro de carte",
+            "expiry": "Date d'expiration",
+            "cvc": "CVC",
+            "save": "Enregistrer la carte pour les paiements futurs",
+            "details": "Détails de la carte",
+            "cvc_tooltip": "Code de 3 chiffres situé au dos de votre carte"
+
+        },
+        "mobile": {
+            "details": "Détails du paiement mobile",
+            "notice": "Assurez-vous que le numéro de téléphone est associé à un compte Mobile Money actif.",
+            "how_it_works": "Comment ça fonctionne ?",
+            "step1": "Saisissez votre numéro de téléphone et validez",
+            "step2": "Vous recevrez une demande de paiement sur votre téléphone",
+            "step3": "Validez le paiement avec votre code PIN",
+            "number": "Numéro de téléphone",
+            "operator": "Opérateur mobile",
+            "select_operator": "Sélectionnez l'opérateur",
+            "operators": {
+                "orange": "Orange Money",
+                "mtn": "MTN Mobile Money",
+                "other": "Autre"
+            }
+        },
+        "button": "Payer Maintenant",
+        "processing": "Traitement du paiement...",
+        "secure": "Votre paiement est sécurisé et chiffré",
+        "errors": {
+            "invalid_card": "Détails de carte invalides",
+            "declined": "Paiement refusé",
+            "failed": "Paiement échoué",
+            "generic": "Une erreur est survenue lors du paiement"
+        },
+        "success": {
+            "title": "Paiement Réussi !",
+            "message": "Votre paiement a été traité avec succès.",
+            "transaction_id": "ID de transaction",
+            "amount": "Montant",
+            "date": "Date"
+        }
+    },
+    "dashboard": {
+        "welcome": "Bienvenue",
+        "welcome_subtitle": "Voici un aperçu de votre agence de location",
+        "total_vehicles": "Total des Véhicules",
+        "active_bookings": "Réservations Actives",
+        "revenue": "Revenu Total",
+        "quick_actions": {
+            "title": "Actions Rapides",
+            "add_vehicle": "Ajouter un Véhicule",
+            "view_bookings": "Voir les Réservations",
+            "view_analytics": "Voir les Analyses",
+            "manage_drivers": "Gérer les Chauffeurs"
+        },
+        "stats": {
+            "total_vehicles": "Total des Véhicules",
+            "vehicles_active": "véhicules actifs",
+            "active_bookings": "Réservations Actives",
+            "bookings_today": "réservations aujourd'hui",
+            "total_revenue": "Revenu Total",
+            "revenue_this_month": "ce mois-ci",
+            "customer_satisfaction": "Satisfaction Client",
+            "average_rating": "note moyenne"
+        },
+        "organization_info": {
+            "title": "Infos Organisation",
+            "name": "Nom",
+            "email": "Email",
+            "plan": "Plan"
+        },
+        "create_organization_prompt": "Vous devez créer une organisation pour accéder au tableau de bord.",
+        "create_organization_button": "Créer une Organisation"
+    },
+    "modal": {
+        "create_organization": {
+            "title": "Créer une Organisation",
+            "creating": "Création en cours...",
+            "create_button": "Créer"
+        }
+    },
+    "navbar": {
+        "dashboard": "Tableau de Bord",
+        "vehicles": "Véhicules",
+        "drivers": "Chauffeurs",
+        "bookings": "Réservations",
+        "analytics": "Analytiques",
+        "profile": "Profil",
+        "notifications": "Notifications"
+    },
+    "profile": {
+        "title": "Profil d'Organisation",
+        "subtitle": "Gérez les informations de votre organisation",
+        "general": {
+            "title": "Informations Générales",
+            "name": "Nom de l'Organisation",
+            "email": "Email",
+            "phone": "Téléphone",
+            "address": "Adresse",
+            "description": "Description",
+            "save": "Enregistrer les Modifications",
+            "saving": "Enregistrement..."
+        },
+        "subscription": {
+            "title": "Abonnement",
+            "current_plan": "Plan Actuel",
+            "status": "Statut",
+            "next_billing": "Prochaine Date de Facturation",
+            "upgrade": "Mettre à Niveau",
+            "cancel": "Annuler l'Abonnement",
+            "history": "Historique des Paiements"
+        },
+        "team": {
+            "title": "Membres de l'Équipe",
+            "invite": "Inviter un Membre",
+            "name": "Nom",
+            "email": "Email",
+            "role": "Rôle",
+            "status": "Statut",
+            "actions": "Actions"
+        },
+        "settings": {
+            "title": "Paramètres",
+            "language": "Langue",
+            "notifications": "Notifications",
+            "theme": "Thème",
+            "security": "Sécurité",
+            "change_password": "Changer le Mot de Passe"
+        }
+    }
 }
