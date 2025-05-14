@@ -4,7 +4,6 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AuthLayout from "@/components/auth/AuthLayout";
 import { useAuth } from '@/hooks/auth/useAuth';
-import { UserRole } from '@/types/models/auth';
 
 export default function SignUp() {
     const router = useRouter();
@@ -14,8 +13,7 @@ export default function SignUp() {
         lastName: '',
         email: '',
         password: '',
-        confirmPassword: '',
-        role: 'user' as UserRole,
+        confirmPassword: ''
     });
     const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
@@ -108,23 +106,6 @@ export default function SignUp() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       />
-                  </div>
-
-                  <div>
-                      <label htmlFor="role" className="block text-sm font-medium text-gray-700">
-                          Type de compte
-                      </label>
-                      <select
-                        id="role"
-                        name="role"
-                        required
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                        value={formData.role}
-                        onChange={(e) => setFormData({ ...formData, role: e.target.value as UserRole })}
-                      >
-                          <option value="user">Utilisateur</option>
-                          <option value="admin">Administrateur</option>
-                      </select>
                   </div>
 
                   <div>

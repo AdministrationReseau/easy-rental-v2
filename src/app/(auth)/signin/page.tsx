@@ -4,7 +4,6 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import AuthLayout from "@/components/auth/AuthLayout";
 import { useAuth } from '@/hooks/auth/useAuth';
-import { UserRole } from '@/types/models/auth';
 
 export default function SignIn() {
     const router = useRouter();
@@ -97,22 +96,6 @@ export default function SignIn() {
                         value={formData.password}
                         onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                       />
-                  </div>
-                  <div>
-                      <label htmlFor="role" className="block text-sm font-medium text-gray-700">
-                          Type de compte
-                      </label>
-                      <select
-                        id="role"
-                        name="role"
-                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                        value={formData.role}
-                        onChange={(e) => setFormData({ ...formData, role: e.target.value as UserRole })}
-                      >
-                          <option value="user">Utilisateur</option>
-                          <option value="admin">Administrateur</option>
-                          <option value="guest">Invité</option>
-                      </select>
                   </div>
               </div>
 
