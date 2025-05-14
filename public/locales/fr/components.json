@@ -41,6 +41,33 @@
           "description": "Prenez votre voiture et partez sur la route avec style et confort"
         }
       }
+    },
+    "statistics": {
+      "title": "Notre Plateforme en Chiffres",
+      "subtitle": "Nous grandissons chaque jour pour mieux vous servir",
+      "stats": {
+        "happyCustomers": {
+          "label": "Clients Satisfaits",
+          "value": "15000",
+          "suffix": "+"
+        },
+        "premiumVehicles": {
+          "label": "Véhicules Premium",
+          "value": "5000",
+          "suffix": "+"
+        },
+        "partnerAgencies": {
+          "label": "Agences Partenaires",
+          "value": "500",
+          "suffix": "+"
+        },
+        "earningsGenerated": {
+          "label": "Revenus Générés",
+          "value": "10",
+          "suffix": "M+",
+          "prefix": "$"
+        }
+      }
     }
   },
 

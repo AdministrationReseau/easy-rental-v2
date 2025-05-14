@@ -13,6 +13,8 @@
 
   },
 
+
+
   "landing": {
     "hero": {
       "title": "Fast & Easy Rental",
@@ -39,6 +41,33 @@
         "step3": {
           "title": "Enjoy your Ride",
           "description": "Pick up your car and hit the road with style and comfort"
+        }
+      }
+    },
+    "statistics": {
+      "title": "Our Platform in Numbers",
+      "subtitle": "Growing every day to serve you better",
+      "stats": {
+        "happyCustomers": {
+          "label": "Happy Customers",
+          "value": "15000",
+          "suffix": "+"
+        },
+        "premiumVehicles": {
+          "label": "Premium Vehicles",
+          "value": "5000",
+          "suffix": "+"
+        },
+        "partnerAgencies": {
+          "label": "Partner Agencies",
+          "value": "500",
+          "suffix": "+"
+        },
+        "earningsGenerated": {
+          "label": "Earnings Generated",
+          "value": "10",
+          "suffix": "M+",
+          "prefix": "$"
         }
       }
     }
