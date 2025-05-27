@@ -2,21 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Variables globales */
-:root {
-
-}
-
 @layer base {
     html {
         font-size: 12px; /* Make base font size smaller */
         line-height: 1.4; /* Reduce line height for more compact text */
+        overflow-x: hidden;
     }
 
-    /*h1, h2, h3, h4, h5, h6 {*/
-    /*    font-weight: 600; !* Slightly lighter headings *!*/
-    /*    line-height: 1.2;*/
-    /*}*/
+    body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        max-width: 100vw; /* Ensure body doesn't exceed viewport width */
+    }
 
     p {
         font-weight: 400; /* Normal weight for body text */
@@ -24,14 +20,9 @@
     }
 }
 
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
-}
 
 @layer components {
-    /* Boutons */
+    /* --- Buttons --- */
     .btn-primary {
         @apply bg-primary-500 text-white rounded-lg px-4 py-2 font-medium transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2;
     }
@@ -44,34 +35,34 @@
         @apply text-primary-500 bg-transparent py-2 px-4 font-medium hover:text-primary-700 focus:outline-none;
     }
 
-    /* Cartes */
+    /* --- Cards --- */
     .card {
         @apply bg-card-light dark:bg-card-dark rounded-card shadow-card border border-border-light dark:border-border-dark overflow-hidden transition-shadow hover:shadow-card-hover;
     }
 
-    /* Formulaires */
+    /* --- Forms --- */
     .input {
-        @apply w-full px-3 py-2 border border-border-light dark:border-border-dark rounded-md bg-white dark:bg-surface-dark text-text-light dark:text-text-dark focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-700 transition-colors;
+        @apply w-full px-3 py-2 border border-border-light dark:border-border-dark rounded-md bg-background-light dark:bg-surface-dark text-text-light dark:text-text-dark focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-100 dark:focus:ring-primary-700 transition-colors;
     }
 
     .label {
-        @apply block mb-2 text-sm font-medium text-text-light-secondary dark:text-text-light-secondary;
+        @apply block mb-2 text-sm font-medium text-text-lightSecondary dark:text-text-lightSecondary;
     }
 
-    /* Navigation */
+    /* --- Navbar --- */
     .navbar {
         @apply bg-background-light dark:bg-background-dark border-b border-border-light dark:border-border-dark h-16;
     }
 
     .nav-link {
-        @apply text-text-light-secondary dark:text-text-light-secondary font-medium px-4 py-2 transition-colors hover:text-primary-500 dark:hover:text-primary-400;
+        @apply text-text-lightSecondary dark:text-text-lightSecondary font-medium px-4 py-2 transition-colors hover:text-primary-500 dark:hover:text-primary-400;
     }
 
     .nav-link.active {
         @apply text-primary-500 dark:text-primary-400;
     }
 
-    /* Stepper */
+    /* --- Stepper --- */
     .stepper {
         @apply flex justify-between mb-8;
     }
@@ -100,12 +91,12 @@
         @apply bg-primary-500;
     }
 
-    /* Cartes de véhicules */
+    /* --- Vehicle Cards --- */
     .vehicle-card {
         @apply rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover;
     }
 
-    /* Badges */
+    /* --- Badges --- */
     .badge {
         @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
     }
@@ -122,103 +113,16 @@
         @apply bg-warning-100 text-warning-700;
     }
 
-    /* Conteneurs */
+    /* --- Section Containers --- */
     .section-container {
         @apply p-8 mb-8 bg-surface-light dark:bg-surface-dark rounded-lg;
     }
 }
 
-/* Animations personnalisées pour la page 404 */
-@keyframes car-lost {
-    0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-    25% { transform: translate(-50%, -50%) rotate(-5deg); }
-    75% { transform: translate(-50%, -50%) rotate(5deg); }
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
-@keyframes smoke {
-    0% { opacity: 0; transform: translateY(0) scale(0.5); }
-    50% { opacity: 0.7; transform: translateY(-20px) scale(1); }
-    100% { opacity: 0; transform: translateY(-40px) scale(1.5); }
-}
-
-@keyframes float-up {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-30px); }
-}
-
-@keyframes text-glow {
-    0%, 100% { text-shadow: 0 0 10px rgba(59, 130, 246, 0.3); }
-    50% { text-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
-}
-
-@keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.animate-car-lost {
-    animation: car-lost 3s ease-in-out infinite;
-}
-
-.animate-smoke {
-    animation: smoke 2s ease-out infinite;
-}
-
-.animate-float-up {
-    animation: float-up 2s ease-out infinite;
-}
-
-.animate-text-glow {
-    animation: text-glow 3s ease-in-out infinite;
-}
-
-.animate-spin-slow {
-    animation: spin-slow 4s linear infinite;
-}
-
-/* Animations spécifiques pour la page 404 organisation */
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-4px); }
-    20%, 40%, 60%, 80% { transform: translateX(4px); }
-}
-
-@keyframes float-1 {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes float-2 {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-@keyframes float-3 {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-@keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.animate-shake {
-    animation: shake 3s ease-in-out infinite;
-}
-
-.animate-float-1 {
-    animation: float-1 3s ease-in-out infinite;
-}
-
-.animate-float-2 {
-    animation: float-2 3s ease-in-out infinite 0.5s;
-}
-
-.animate-float-3 {
-    animation: float-3 3s ease-in-out infinite 1s;
-}
-
-.animate-spin-slow {
-    animation: spin-slow 4s linear infinite;
-}

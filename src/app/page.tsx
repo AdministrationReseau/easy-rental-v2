@@ -11,6 +11,8 @@ import Team from "@/components/landing/Team";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/footer/footer";
 import Statistics from "@/components/landing/Statistics";
+import Feature from "@/components/landing/Feature";
+import ServicesSection from "@/components/landing/ServicesSection";
 
 export default function Home() {
 
@@ -18,6 +20,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
       <GuestNavbar/>
       <Hero/>
+      <Feature/>
+      <ServicesSection/>
       <HowItWorks/>
       <Services/>
       <Earning/>

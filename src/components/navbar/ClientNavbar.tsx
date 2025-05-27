@@ -20,22 +20,22 @@ import Navbar from './Navbar';
 import {NavLink, NavAction} from "@/types/models/navbar";
 
 const ClientNavbar: React.FC = () => {
-  const { t } = useTranslation('components');
+  const { t } = useTranslation('common');
 
   const links: NavLink[] = [
     {
       href: '/client',
-      label: t('navbar.client_navbar.home'),
+      label: t('components.navbar.client_navbar.home'),
       icon: <FaHome />
     },
     {
       href: '/client/vehicles',
-      label: t('navbar.client_navbar.vehicles'),
+      label: t('components.navbar.client_navbar.vehicles'),
       icon: <FaCar />
     },
     {
       href: '/client/agencies',
-      label: t('navbar.client_navbar.agencies'),
+      label: t('components.navbar.client_navbar.agencies'),
       icon: <FaBuilding />
     }
   ];
@@ -46,42 +46,42 @@ const ClientNavbar: React.FC = () => {
       icon: <FaHeart />,
       badge: 3,
       href: '/client/favorites',
-      label: t('navbar.client_navbar.favorites')
+      label: t('components.navbar.client_navbar.favorites')
     },
     {
       type: 'icon',
       icon: <FaBell />,
       badge: 2,
       href: '/client/notifications',
-      label: t('navbar.client_navbar.notifications')
+      label: t('components.navbar.client_navbar.notifications')
     },
     {
       type: 'dropdown',
-      label: t('navbar.client_navbar.profile'),
+      label: t('components.navbar.client_navbar.profile'),
       icon: <FaUser />,
       items: [
         { 
-          label: t('navbar.client_navbar.account'), 
+          label: t('components.navbar.client_navbar.account'),
           href: '/client/profile',
           icon: <FaUserCircle />
         },
         { 
-          label: t('navbar.client_navbar.rentals'), 
+          label: t('components.navbar.client_navbar.rentals'),
           href: '/client/rentals',
           icon: <FaExchangeAlt />
         },
         { 
-          label: t('navbar.client_navbar.transactions'), 
+          label: t('components.navbar.client_navbar.transactions'),
           href: '/client/transactions',
           icon: <FaMoneyBillWave />
         },
         { 
-          label: t('navbar.client_navbar.help'), 
+          label: t('components.navbar.client_navbar.help'),
           href: '/client/help',
           icon: <FaQuestionCircle />
         },
         { 
-          label: t('navbar.client_navbar.logout'), 
+          label: t('components.navbar.client_navbar.logout'),
           href: '/logout',
           icon: <FaSignOutAlt />
         }

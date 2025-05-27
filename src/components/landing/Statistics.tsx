@@ -38,7 +38,7 @@ const Statistics = () => {
 	];
 
 	return (
-		<Section className="bg-background-whitish dark:bg-background-blue">
+		<Section className="bg-background-whitish dark:bg-background-darkish">
 			<div className="text-center mb-16">
 				<h2 className="text-3xl font-bold text-text-primary dark:text-text-dark mb-4">
 					{t('landing.statistics.title')}

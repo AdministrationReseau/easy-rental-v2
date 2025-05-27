@@ -14,22 +14,22 @@ import Navbar from './Navbar';
 import {NavLink, NavAction} from "@/types/models/navbar";
 
 const GuestNavbar: React.FC = () => {
-  const { t } = useTranslation('components');
+  const { t } = useTranslation('common');
 
   const links: NavLink[] = [
     {
       href: '/',
-      label: t('navbar.guest_navbar.home'),
+      label: t('components.navbar.guest_navbar.home'),
       icon: <FaHome />
     },
     {
       href: '/vehicles',
-      label: t('navbar.guest_navbar.vehicles'),
+      label: t('components.navbar.guest_navbar.vehicles'),
       icon: <FaCar />
     },
     {
       href: '/agencies',
-      label: t('navbar.guest_navbar.agencies'),
+      label: t('components.navbar.guest_navbar.agencies'),
       icon: <FaBuilding />
     }
   ];
@@ -37,14 +37,14 @@ const GuestNavbar: React.FC = () => {
   const actions: NavAction[] = [
     {
       type: 'button',
-      label: t('navbar.guest_navbar.becomeOrganization'),
+      label: t('components.navbar.guest_navbar.becomeOrganization'),
       href: '/register/organization',
       icon: <FaUserPlus />,
       className: ''
     },
     {
       type: 'button',
-      label: t('navbar.guest_navbar.loginRegister'),
+      label: t('components.navbar.guest_navbar.loginRegister'),
       href: '/login',
       icon: <FaSignInAlt />
     }
