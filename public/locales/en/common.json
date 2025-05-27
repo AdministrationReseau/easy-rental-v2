@@ -48,27 +48,89 @@
             "statistics": {
                 "title": "Our Platform in Numbers",
                 "subtitle": "Growing every day to serve you better",
+
                 "stats": {
-                    "happyCustomers": {
-                        "label": "Happy Customers",
-                        "value": "15000",
-                        "suffix": "+"
-                    },
-                    "premiumVehicles": {
-                        "label": "Premium Vehicles",
-                        "value": "5000",
-                        "suffix": "+"
-                    },
-                    "partnerAgencies": {
-                        "label": "Partner Agencies",
+                    "vehicles": {
+                        "label": "Available Vehicles",
                         "value": "500",
                         "suffix": "+"
                     },
-                    "earningsGenerated": {
-                        "label": "Earnings Generated",
-                        "value": "10",
-                        "suffix": "M+",
-                        "prefix": "$"
+                    "agencies": {
+                        "label": "Partner Agencies",
+                        "value": "50",
+                        "suffix": "+"
+                    },
+                    "clients": {
+                        "label": "Happy Clients",
+                        "value": "10000",
+                        "suffix": "+"
+                    },
+                    "rating": {
+                        "label": "Average Rating",
+                        "value": "4.8",
+                        "suffix": "/5"
+                    }
+                }
+            },
+            "team": {
+                "title": "Meet Our Team",
+                "subtitle": "The passionate people behind Easy Rental",
+                "members": {
+                    "teacher": {
+                        "name": "Thomas Djotio Ndié",
+                        "position": "CEO",
+                        "bio": "Associate Professor at University of Yaounde 1",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://cm.linkedin.com/in/thomas-djotio",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "engineer": {
+                        "name": "Jane Smith",
+                        "position": "Engineer",
+                        "bio": "Expert in platform development and scaling technology solutions.",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member1": {
+                        "name": "Nguepssi Brayanne",
+                        "position": "Development Team Lead",
+                        "bio": "4th Year Engineering Student",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member2": {
+                        "name": "Hassana Zouheiriyya",
+                        "position": "Development Team Member",
+                        "bio": "4th Year Engineering Student",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member3": {
+                        "name": "Ntye Nina",
+                        "position": "Development Team Member",
+                        "bio": "4th Year Engineering Student",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member4": {
+                        "name": "Vuide Jordan",
+                        "position": "Development Team Member",
+                        "bio": "4th Year Engineering Student",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member5": {
+                        "name": "Ngom Christine",
+                        "position": "Development Team Member",
+                        "bio": "4th Year Engineering Student",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
                     }
                 }
             }

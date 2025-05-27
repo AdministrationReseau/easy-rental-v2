@@ -47,26 +47,87 @@
                 "title": "Notre Plateforme en Chiffres",
                 "subtitle": "Nous grandissons chaque jour pour mieux vous servir",
                 "stats": {
-                    "happyCustomers": {
-                        "label": "Clients Satisfaits",
-                        "value": "15000",
-                        "suffix": "+"
-                    },
-                    "premiumVehicles": {
-                        "label": "Véhicules Premium",
-                        "value": "5000",
-                        "suffix": "+"
-                    },
-                    "partnerAgencies": {
-                        "label": "Agences Partenaires",
+                    "vehicles": {
+                        "label": "Véhicules Disponibles",
                         "value": "500",
                         "suffix": "+"
                     },
-                    "earningsGenerated": {
-                        "label": "Revenus Générés",
-                        "value": "10",
-                        "suffix": "M+",
-                        "prefix": "$"
+                    "agencies": {
+                        "label": "Agences Partenaires",
+                        "value": "50",
+                        "suffix": "+"
+                    },
+                    "clients": {
+                        "label": "Clients Satisfaits",
+                        "value": "10000",
+                        "suffix": "+"
+                    },
+                    "rating": {
+                        "label": "Évaluation Moyenne",
+                        "value": "4.8",
+                        "suffix": "/5"
+                    }
+                }
+            },
+            "team": {
+                "title": "Rencontrez Notre Équipe",
+                "subtitle": "Les passionnés derrière Easy Rental",
+                "members": {
+                    "teacher": {
+                        "name": "Thomas Djotio Ndié",
+                        "position": "PDG",
+                        "bio": "Professeur associé à l'Université de Yaoundé 1",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://cm.linkedin.com/in/thomas-djotio",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "engineer": {
+                        "name": "Jane Smith",
+                        "position": "Ingénieure",
+                        "bio": "Experte en développement de plateformes et en solutions technologiques évolutives.",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member1": {
+                        "name": "Nguepssi Brayanne",
+                        "position": "Cheffe d'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member2": {
+                        "name": "Hassana Zouheiriyya",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member3": {
+                        "name": "Ntye Nina",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member4": {
+                        "name": "Vuide Jordan",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiant en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "member5": {
+                        "name": "Ngom Christine",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc_legrand"
                     }
                 }
             }
@@ -213,12 +274,7 @@
                 "cta": "Rejoindre comme Agence"
             }
         },
-        "stats": {
-            "vehicles": "Véhicules Disponibles",
-            "agencies": "Agences Partenaires",
-            "clients": "Clients Satisfaits",
-            "rating": "Évaluation Moyenne"
-        },
+
         "team": {
             "title": "Rencontrez Notre Équipe",
             "subtitle": "Les personnes derrière Easy Rental",
