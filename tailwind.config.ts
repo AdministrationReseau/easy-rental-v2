@@ -39,6 +39,7 @@ const config: Config = {
           light: '#FFFFFF',
           dark: '#0F172A', // Dark blue-gray
           whitish: '#F6F7F9',
+          darkish: '#1B325F',
           green: '#DCFAED',
           orange: '#FFE5A1',
           red: '#FDE2E2',
@@ -96,11 +97,11 @@ const config: Config = {
           primary: '#083A50',
           secondary: '#90A3BF',
           light: '#1F2937', // Dark gray
-          'light-secondary': '#4B5563',
-          'light-tertiary': '#9CA3AF',
+          lightSecondary: '#4B5563',
+          lightTertiary: '#9CA3AF',
           dark: '#F9FAFB', // Light grayR
-          'dark-secondary': '#E5E7EB',
-          'dark-tertiary': '#9CA3AF',
+          darkSecondary: '#E5E7EB',
+          darkTertiary: '#9CA3AF',
           green: '#0EAD69',
           orange: '#F49A47',
           red: '#FF5D47',
@@ -157,6 +158,45 @@ const config: Config = {
           '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
           '100%': { transform: 'translate(0px, 0px) scale(1)' }
         },
+        'car-lost': {
+          '0%, 100%': { transform: 'translate(-50%, -50%) rotate(0deg)' },
+          '25%': { transform: 'translate(-50%, -50%) rotate(-5deg)' },
+          '75%': { transform: 'translate(-50%, -50%) rotate(5deg)' },
+        },
+        'smoke': {
+          '0%': { opacity: '0', transform: 'translateY(0) scale(0.5)' },
+          '50%': { opacity: '0.7', transform: 'translateY(-20px) scale(1)' },
+          '100%': { opacity: '0', transform: 'translateY(-40px) scale(1.5)' },
+        },
+        'float-up': {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-30px)' },
+        },
+        'text-glow': {
+          '0%, 100%': { textShadow: '0 0 10px rgba(59, 130, 246, 0.3)' },
+          '50%': { textShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
+        },
+        'spin-slow': {
+          'from': { transform: 'rotate(0deg)' },
+          'to': { transform: 'rotate(360deg)' },
+        },
+        'shake': {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-4px)' },
+          '20%, 40%, 60%, 80%': { transform: 'translateX(4px)' },
+        },
+        'float-1': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'float-2': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' },
+        },
+        'float-3': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' },
+        },
       },
 
       animation: {
@@ -165,16 +205,28 @@ const config: Config = {
         'particle-2': 'particle-2 2s ease-in-out infinite 0.5s',
         'shimmer': 'shimmer 2s linear infinite',
         'blob': 'blob 7s infinite',
+        'car-lost': 'car-lost 3s ease-in-out infinite',
+        'smoke': 'smoke 2s ease-out infinite',
+        'float-up': 'float-up 2s ease-out infinite',
+        'text-glow': 'text-glow 3s ease-in-out infinite',
+        'spin-slow': 'spin-slow 4s linear infinite',
+        'shake': 'shake 3s ease-in-out infinite',
+        'float-1': 'float-1 3s ease-in-out infinite',
+        'float-2': 'float-2 3s ease-in-out infinite 0.5s',
+        'float-3': 'float-3 3s ease-in-out infinite 1s',
       },
 
 
       animationDelay: {
         '2000': '2s',
+        '3000': '3s',
         '4000': '4s',
       },
     },
   },
+
   plugins: [],
+
   variants: {
     extend: {
       backgroundColor: ['dark', 'neutral'],

@@ -23,25 +23,25 @@ const OrganizationNavbar: React.FC = () => {
       icon: <FaBell />,
       badge: 2,
       href: '/organization/notifications',
-      label: t('navbar.organization_navbar.notifications')
+      label: t('components.navbar.organization_navbar.notifications')
     },
     {
       type: 'dropdown',
-      label: t('navbar.organization_navbar.profile'),
+      label: t('components.navbar.organization_navbar.profile'),
       icon: <FaUser />,
       items: [
         { 
-          label: t('navbar.organization_navbar.account'), 
+          label: t('components.navbar.organization_navbar.account'),
           href: '/organization/account',
           icon: <FaUserCircle />
         },
         { 
-          label: t('navbar.organization_navbar.configurations'), 
+          label: t('components.navbar.organization_navbar.configurations'),
           href: '/organization/configurations',
           icon: <FaCog />
         },
         { 
-          label: t('navbar.organization_navbar.subscription'), 
+          label: t('components.navbar.organization_navbar.subscription'),
           href: '/organization/subscription',
           icon: <FaMoneyBillWave />
         }

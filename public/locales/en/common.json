@@ -1,4 +1,136 @@
 {
+    "components": {
+        "_comment": "these are for the texts in the components and are classified according to their folder names then the component name",
+
+        "auth": {
+
+        },
+
+        "bookings": {
+
+        },
+
+        "drivers":{
+
+        },
+
+
+
+        "landing": {
+            "hero": {
+                "title": "Fast & Easy Rental",
+                "titleHighlight": "Made Easy",
+                "description": "Experience premium vehicles with our hassle-free rental service. From sports cars to luxury sedans, we have the perfect ride for your journey.",
+                "videoButton": "Easy steps for renting a car",
+                "rentNowButton": "Rent Now",
+                "appStore": "App Store",
+                "googlePlay": "Google Play",
+                "altText": "Luxury Car Rental"
+            },
+            "howItWorks": {
+                "title": "How It Works",
+                "subtitle": "Easy steps to rent your dream car in minutes",
+                "steps": {
+                    "step1": {
+                        "title": "Search & Select",
+                        "description": "Browse our extensive fleet and choose your perfect vehicle"
+                    },
+                    "step2": {
+                        "title": "Book & Pay",
+                        "description": "Select your dates and complete secure payment in seconds"
+                    },
+                    "step3": {
+                        "title": "Enjoy your Ride",
+                        "description": "Pick up your car and hit the road with style and comfort"
+                    }
+                }
+            },
+            "statistics": {
+                "title": "Our Platform in Numbers",
+                "subtitle": "Growing every day to serve you better",
+                "stats": {
+                    "happyCustomers": {
+                        "label": "Happy Customers",
+                        "value": "15000",
+                        "suffix": "+"
+                    },
+                    "premiumVehicles": {
+                        "label": "Premium Vehicles",
+                        "value": "5000",
+                        "suffix": "+"
+                    },
+                    "partnerAgencies": {
+                        "label": "Partner Agencies",
+                        "value": "500",
+                        "suffix": "+"
+                    },
+                    "earningsGenerated": {
+                        "label": "Earnings Generated",
+                        "value": "10",
+                        "suffix": "M+",
+                        "prefix": "$"
+                    }
+                }
+            }
+        },
+
+        "navbar": {
+            "client_navbar": {
+                "home": "Home",
+                "vehicles": "Vehicles",
+                "agencies": "Agencies",
+                "profile": "Profile",
+                "notifications": "Notifications",
+                "favorites": "Favorites",
+                "account": "My Account",
+                "rentals": "Rentals",
+                "transactions": "Transactions",
+                "help": "Help Center",
+                "logout": "Logout"
+            },
+
+            "guest_navbar": {
+                "home": "Home",
+                "vehicles": "Vehicles",
+                "agencies": "Agencies",
+                "becomeOrganization": "Become an Organization",
+                "loginRegister": "Login / Register"
+            },
+
+            "organization_navbar": {
+                "notifications": "Notifications",
+                "profile": "Profile",
+                "account": "My Account",
+                "configurations": "Configurations",
+                "subscription": "Subscription"
+            },
+
+            "agency_navbar": {
+                "notifications": "Notifications"
+            }
+        },
+
+        "payment": {
+
+        },
+
+        "staff": {
+
+        },
+
+        "subscription": {
+
+        },
+
+        "ui": {
+
+        },
+
+        "vehicles": {
+
+        }
+    },
+
     "vehicle_card": {
         "available": "Available",
         "unavailable": "Unavailable",
@@ -128,6 +260,7 @@
             "copyright": "All rights reserved."
         }
     },
+
     "theme": {
         "light": "Light Mode",
         "dark": "Dark Mode",
