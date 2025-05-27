@@ -1,26 +1,64 @@
 'use client'
 
 import { motion } from 'framer-motion';
-import Section from '../layout/Section';
+import Section from '@/components/layout/Section';
+import TeamMember from "@/components/cards/TeamMember";
+import { useTranslation } from 'next-i18next';
 
 const Team = () => {
+	const { t } = useTranslation('common');
+
 	return (
-		<Section>
-			<div className="text-center mb-12">
-				<h2 className="text-3xl font-bold text-text-primary dark:text-text-dark mb-4">Trusted By Industry Leaders</h2>
-				<p className="text-text-secondary dark:text-gray-400 max-w-2xl mx-auto">
-					We partner with the best to deliver exceptional service
-				</p>
+		<Section className="bg-surface-light dark:bg-surface-dark">
+			<div className="text-center mb-16">
+				<motion.h2
+					className="text-3xl md:text-4xl font-bold mb-4 text-text-light dark:text-text-dark"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5 }}
+				>
+					{t('components.landing.team.title')}
+				</motion.h2>
+				<motion.p
+					className="text-xl text-text-light-secondary dark:text-text-dark-secondary max-w-3xl mx-auto"
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.5, delay: 0.2 }}
+				>
+					{t('components.landing.team.subtitle')}
+				</motion.p>
 			</div>
-			<div className="flex flex-wrap justify-center gap-8 md:gap-16">
-				{[1, 2, 3, 4, 5, 6].map((partner) => (
-					<motion.div
-						key={partner}
-						whileHover={{ scale: 1.1 }}
-						className="h-16 w-32 bg-gray-200 dark:bg-gray-800 rounded-full flex items-center justify-center"
-					>
-						<span className="text-gray-500 dark:text-gray-400 font-semibold">Partner {partner}</span>
-					</motion.div>
+
+			<div className="md:w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+				<TeamMember
+					name={t('components.landing.team.members.teacher.name')}
+					role={t('components.landing.team.members.teacher.position')}
+					bio={t('components.landing.team.members.teacher.bio')}
+					image={t('components.landing.team.members.teacher.image', { defaultValue: '/assets/member.jpg' })}
+					linkedin={t('components.landing.team.members.teacher.linkedin')}
+					twitter={t('components.landing.team.members.teacher.twitter')}
+				/>
+				<TeamMember
+					name={t('components.landing.team.members.engineer.name')}
+					role={t('components.landing.team.members.engineer.position')}
+					bio={t('components.landing.team.members.engineer.bio')}
+					image={t('components.landing.team.members.engineer.image', { defaultValue: '/assets/member.jpg' })}
+					linkedin={t('components.landing.team.members.engineer.linkedin')}
+					twitter={t('components.landing.team.members.engineer.twitter')}
+				/>
+			</div>
+
+			<div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+				{['member1', 'member2', 'member3', 'member4', 'member5'].map((memberKey) => (
+					<TeamMember
+						key={memberKey}
+						name={t(`components.landing.team.members.${memberKey}.name`)}
+						role={t(`components.landing.team.members.${memberKey}.position`)}
+						bio={t(`components.landing.team.members.${memberKey}.bio`)}
+						image={t(`components.landing.team.members.${memberKey}.image`, { defaultValue: '/assets/member.jpg' })}
+						linkedin={t(`components.landing.team.members.${memberKey}.linkedin`)}
+						twitter={t(`components.landing.team.members.${memberKey}.twitter`)}
+					/>
 				))}
 			</div>
 		</Section>

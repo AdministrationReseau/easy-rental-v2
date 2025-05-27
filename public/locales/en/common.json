@@ -133,6 +133,24 @@
                         "twitter": "https://twitter.com/marc_legrand"
                     }
                 }
+            },
+            "partners": {
+                "title": "Our Partners",
+                "subtitle": "Trusted by leading vehicle rental agencies",
+                "partnersList": [
+                    {
+                        "name": "Alicya Auto",
+                        "logo": "/assets/rental2.png"
+                    },
+                    {
+                        "name": "VIP Cars",
+                        "logo": "/assets/rental3.png"
+                    },
+                    {
+                        "name": "Polycom Sarl",
+                        "logo": "/assets/rental4.png"
+                    }
+                ]
             }
         },
 
@@ -225,12 +243,6 @@
         }
     },
     "landing": {
-        "hero": {
-            "title": "Easy Rental - Your Gateway to Vehicle Freedom",
-            "subtitle": "Connect with the best car rental agencies in Cameroon",
-            "cta1": "Find a Vehicle",
-            "cta2": "List Your Agency"
-        },
         "features": {
             "title": "Why Choose Easy Rental?",
             "subtitle": "The leading platform for vehicle rental in Cameroon",
@@ -272,24 +284,6 @@
                 "feature4": "Dedicated account manager",
                 "cta": "Join as Agency"
             }
-        },
-        "stats": {
-            "vehicles": "Available Vehicles",
-            "agencies": "Partner Agencies",
-            "clients": "Happy Clients",
-            "rating": "Average Rating"
-        },
-        "team": {
-            "title": "Meet Our Team",
-            "subtitle": "The people behind Easy Rental",
-            "ceo": "CEO & Founder",
-            "ceo_bio": "10+ years experience in the automotive industry",
-            "cto": "Chief Technology Officer",
-            "cto_bio": "Expert in platform development and scalability",
-            "operations": "Head of Operations",
-            "operations_bio": "Ensuring smooth operations across all services",
-            "marketing": "Marketing Director",
-            "marketing_bio": "Building brand awareness and customer relationships"
         },
         "cta": {
             "title": "Ready to Get Started?",

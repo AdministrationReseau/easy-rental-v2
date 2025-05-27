@@ -130,6 +130,24 @@
                         "twitter": "https://twitter.com/marc_legrand"
                     }
                 }
+            },
+            "partners": {
+                "title": "Nos Partenaires",
+                "subtitle": "De confiance pour les principales agences de location de véhicules",
+                "partnersList": [
+                    {
+                        "name": "Alicya Auto",
+                        "logo": "/assets/rental2.png"
+                    },
+                    {
+                        "name": "VIP Cars",
+                        "logo": "/assets/rental3.png"
+                    },
+                    {
+                        "name": "Polycom Sarl",
+                        "logo": "/assets/rental4.png"
+                    }
+                ]
             }
         },
 
