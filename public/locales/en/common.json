@@ -151,6 +151,12 @@
                         "logo": "/assets/rental4.png"
                     }
                 ]
+            },
+            "cta": {
+                "title": "Ready to Get Started?",
+                "subtitle": "Join thousands of satisfied customers on Easy Rental",
+                "client_button": "Find Vehicles",
+                "agency_button": "Register Agency"
             }
         },
 
@@ -187,6 +193,37 @@
 
             "agency_navbar": {
                 "notifications": "Notifications"
+            }
+        },
+
+        "footer": {
+            "about": "Easy Rental connects clients with verified car rental agencies across Cameroon, providing a seamless rental experience.",
+            "links": {
+                "title": "Quick Links",
+                "about": "About Us",
+                "contact": "Contact",
+                "terms": "Terms of Service",
+                "privacy": "Privacy Policy"
+            },
+            "services": {
+                "title": "Services",
+                "browse": "Browse Vehicles",
+                "agency": "Register Agency",
+                "bookings": "My Bookings",
+                "support": "Support"
+            },
+            "contact": {
+                "title": "Contact Us",
+                "email": "contact@easyrental.cm",
+                "phone": "+237 6XX XXX XXX",
+                "address": "Yaoundé, Cameroon"
+            },
+            "copyright": "All rights reserved.",
+            "socials": {
+                "facebook": "https://facebook.com/easyrental",
+                "twitter": "https://twitter.com/easyrental",
+                "instagram": "https://instagram.com/easyrental",
+                "linkedin": "https://linkedin.com/company/easyrental"
             }
         },
 

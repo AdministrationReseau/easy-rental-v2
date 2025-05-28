@@ -87,7 +87,7 @@
                         "bio": "Experte en développement de plateformes et en solutions technologiques évolutives.",
                         "image": "/assets/member.jpg",
                         "linkedin": "https://linkedin.com/in/marc-legrand",
-                        "twitter": "https://twitter.com/marc_legrand"
+                        "twitter": "https://twitter.com/marc-legrand"
                     },
                     "member1": {
                         "name": "Nguepssi Brayanne",
@@ -95,7 +95,7 @@
                         "bio": "Étudiante en 4ème année d'ingénierie",
                         "image": "/assets/member.jpg",
                         "linkedin": "https://linkedin.com/in/marc-legrand",
-                        "twitter": "https://twitter.com/marc_legrand"
+                        "twitter": "https://twitter.com/marc-legrand"
                     },
                     "member2": {
                         "name": "Hassana Zouheiriyya",
@@ -103,7 +103,7 @@
                         "bio": "Étudiante en 4ème année d'ingénierie",
                         "image": "/assets/member.jpg",
                         "linkedin": "https://linkedin.com/in/marc-legrand",
-                        "twitter": "https://twitter.com/marc_legrand"
+                        "twitter": "https://twitter.com/marc-legrand"
                     },
                     "member3": {
                         "name": "Ntye Nina",
@@ -111,7 +111,7 @@
                         "bio": "Étudiante en 4ème année d'ingénierie",
                         "image": "/assets/member.jpg",
                         "linkedin": "https://linkedin.com/in/marc-legrand",
-                        "twitter": "https://twitter.com/marc_legrand"
+                        "twitter": "https://twitter.com/marc-legrand"
                     },
                     "member4": {
                         "name": "Vuide Jordan",
@@ -119,7 +119,7 @@
                         "bio": "Étudiant en 4ème année d'ingénierie",
                         "image": "/assets/member.jpg",
                         "linkedin": "https://linkedin.com/in/marc-legrand",
-                        "twitter": "https://twitter.com/marc_legrand"
+                        "twitter": "https://twitter.com/marc-legrand"
                     },
                     "member5": {
                         "name": "Ngom Christine",
@@ -127,7 +127,7 @@
                         "bio": "Étudiante en 4ème année d'ingénierie",
                         "image": "/assets/member.jpg",
                         "linkedin": "https://linkedin.com/in/marc-legrand",
-                        "twitter": "https://twitter.com/marc_legrand"
+                        "twitter": "https://twitter.com/marc-legrand"
                     }
                 }
             },
@@ -148,6 +148,12 @@
                         "logo": "/assets/rental4.png"
                     }
                 ]
+            },
+            "cta": {
+                "title": "Prêt à Commencer ?",
+                "subtitle": "Rejoignez des milliers de clients satisfaits sur Easy Rental",
+                "client_button": "Trouver des Véhicules",
+                "agency_button": "Enregistrer une Agence"
             }
         },
 
@@ -184,6 +190,37 @@
 
             "agency_navbar": {
                 "notifications": "Notifications"
+            }
+        },
+
+        "footer": {
+            "about": "Easy Rental connecte les clients avec des agences de location vérifiées à travers le Cameroun, offrant une expérience de location fluide.",
+            "links": {
+                "title": "Liens Rapides",
+                "about": "À Propos",
+                "contact": "Contact",
+                "terms": "Conditions d'Utilisation",
+                "privacy": "Politique de Confidentialité"
+            },
+            "services": {
+                "title": "Services",
+                "browse": "Parcourir les Véhicules",
+                "agency": "Enregistrer une Agence",
+                "bookings": "Mes Réservations",
+                "support": "Support"
+            },
+            "contact": {
+                "title": "Nous Contacter",
+                "email": "contact@easyrental.cm",
+                "phone": "+237 6XX XXX XXX",
+                "address": "Yaoundé, Cameroun"
+            },
+            "copyright": "Tous droits réservés.",
+            "socials": {
+                "facebook": "https://facebook.com/easyrental",
+                "twitter": "https://twitter.com/easyrental",
+                "instagram": "https://instagram.com/easyrental",
+                "linkedin": "https://linkedin.com/company/easyrental"
             }
         },
 

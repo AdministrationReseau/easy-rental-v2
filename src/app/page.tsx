@@ -8,7 +8,7 @@ import Hero from "@/components/landing/Hero";
 // import Earning from "@/components/landing/Earning";
 // import Organisation from "@/components/landing/Organisation";
 import Partners from "@/components/landing/Partners";
-// import CTA from "@/components/landing/CTA";
+import CTA from "@/components/landing/CTA";
 import Footer from "@/components/footer/footer";
 // import Feature from "@/components/landing/Feature";
 // import ServicesSection from "@/components/landing/ServicesSection";
@@ -21,17 +21,20 @@ export default function Home() {
 		<div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
 			<GuestNavbar/>
 			<Hero/>
-			<Statistics/>
-			<Team/>
-			{/*<Feature/>*/}
-			{/*<ServicesSection/>*/}
+
 			{/*<HowItWorks/>*/}
 			{/*<Services/>*/}
 			{/*<Earning/>*/}
+			{/*<Feature/>*/}
 			{/*<Organisation/>*/}
 
+			<Statistics/>
+			<Team/>
 			<Partners/>
-			{/*<CTA/>*/}
+
+			{/*<ServicesSection/>*/}
+
+			<CTA/>
 			<Footer/>
 		</div>
 	);
