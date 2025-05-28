@@ -154,6 +154,47 @@
                 "subtitle": "Rejoignez des milliers de clients satisfaits sur Easy Rental",
                 "client_button": "Trouver des Véhicules",
                 "agency_button": "Enregistrer une Agence"
+            },
+            "features": {
+                "title": "Pourquoi Choisir Easy Rental ?",
+                "subtitle": "La plateforme leader pour la location de véhicules au Cameroun",
+                "cards": {
+                    "vehicles": {
+                        "title": "Large Sélection de Véhicules",
+                        "description": "Choisissez parmi notre vaste flotte de véhicules bien entretenus"
+                    },
+                    "security": {
+                        "title": "100% Sécurisé",
+                        "description": "Toutes les transactions sont protégées avec des protocoles de sécurité avancés"
+                    },
+                    "support": {
+                        "title": "Support 24/7",
+                        "description": "Notre équipe est disponible 24h/24 pour vous assister"
+                    },
+                    "mobile": {
+                        "title": "Application Mobile",
+                        "description": "Accédez à Easy Rental sur tout appareil, n'importe où, n'importe quand"
+                    }
+                }
+            },
+            "organisation": {
+                "title": "Devenez une Organisation Partenaire",
+                "description": "Listez votre flotte sur notre plateforme et atteignez des milliers de clients potentiels chaque jour. Notre système simplifié rend la gestion des locations simple et rentable.",
+                "features": [
+                    "Élargissez votre base de clients",
+                    "Structure de commission flexible",
+                    "Gestion des réservations en temps réel",
+                    "Équipe de support dédiée"
+                ],
+                "button": "S'inscrire comme Organisation",
+                "testimonial": {
+                    "title": "Rejoignez 500+ Organisations",
+                    "quote": "Collaborer avec Easy-Rent a augmenté nos réservations de 60% au premier trimestre !",
+                    "author": {
+                        "name": "John Smith",
+                        "position": "PDG, Premium Rides"
+                    }
+                }
             }
         },
 

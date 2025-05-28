@@ -157,6 +157,47 @@
                 "subtitle": "Join thousands of satisfied customers on Easy Rental",
                 "client_button": "Find Vehicles",
                 "agency_button": "Register Agency"
+            },
+            "features": {
+                "title": "Why Choose Easy Rental?",
+                "subtitle": "The leading platform for vehicle rental in Cameroon",
+                "cards": {
+                    "vehicles": {
+                        "title": "Wide Vehicle Selection",
+                        "description": "Choose from our extensive fleet of well-maintained vehicles"
+                    },
+                    "security": {
+                        "title": "100% Secure",
+                        "description": "All transactions are protected with advanced security protocols"
+                    },
+                    "support": {
+                        "title": "24/7 Support",
+                        "description": "Our team is available around the clock to assist you"
+                    },
+                    "mobile": {
+                        "title": "Mobile App Ready",
+                        "description": "Access Easy Rental on any device, anywhere, anytime"
+                    }
+                }
+            },
+            "organisation": {
+                "title": "Become a Partner Organization",
+                "description": "List your fleet on our platform and reach thousands of potential customers every day. Our streamlined system makes managing rentals simple and profitable.",
+                "features": [
+                    "Expand your customer base",
+                    "Flexible commission structure",
+                    "Real-time booking management",
+                    "Dedicated support team"
+                ],
+                "button": "Register as Organization",
+                "testimonial": {
+                    "title": "Join 500+ Organizations",
+                    "quote": "Partnering with Easy-Rent increased our bookings by 60% in the first quarter!",
+                    "author": {
+                        "name": "John Smith",
+                        "position": "CEO, Premium Rides"
+                    }
+                }
             }
         },
 

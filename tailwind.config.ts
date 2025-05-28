@@ -97,11 +97,11 @@ const config: Config = {
           primary: '#083A50',
           secondary: '#90A3BF',
           light: '#1F2937', // Dark gray
-          lightSecondary: '#4B5563',
-          lightTertiary: '#9CA3AF',
+          "light-secondary": '#4B5563',
+          "light-tertiary": '#9CA3AF',
           dark: '#F9FAFB', // Light grayR
-          darkSecondary: '#E5E7EB',
-          darkTertiary: '#9CA3AF',
+          "dark-secondary": '#E5E7EB',
+          "dark-tertiary": '#9CA3AF',
           green: '#0EAD69',
           orange: '#F49A47',
           red: '#FF5D47',

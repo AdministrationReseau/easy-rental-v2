@@ -25,7 +25,7 @@ const StatCard = ({ value, label, suffix = '' }:{ value:number, label:string, su
 					0
 				)}
 			</div>
-			<div className="text-lg text-text-lightSecondary dark:text-text-darkSecondary">{label}</div>
+			<div className="text-lg text-text-light-secondary dark:text-text-dark-secondary">{label}</div>
 		</motion.div>
 	);
 };

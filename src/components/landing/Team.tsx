@@ -9,7 +9,7 @@ const Team = () => {
 	const { t } = useTranslation('common');
 
 	return (
-		<Section className="bg-surface-light dark:bg-surface-dark">
+		<Section className="bg-background-whitish dark:bg-background-darkish">
 			<div className="text-center mb-16">
 				<motion.h2
 					className="text-3xl md:text-4xl font-bold mb-4 text-text-light dark:text-text-dark"
