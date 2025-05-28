@@ -284,6 +284,37 @@
             }
         },
 
+        "sidebar": {
+            "organization_sidebar": {
+                "dashboard": "Dashboard",
+                "entities": {
+                    "agencies": "Agencies",
+                    "vehicles": "Vehicles",
+                    "staff": "Staff",
+                    "drivers": "Drivers"
+                },
+                "rentals": "Reservations",
+                "transactions": "Transactions",
+                "help_center": "Help Center",
+                "logout": "Log Out"
+            },
+
+            "agency_sidebar": {
+                "dashboard": "Dashboard",
+                "entities": {
+                    "label": "Entities",
+                    "vehicles": "Vehicles",
+                    "staff": "Staff",
+                    "drivers": "Drivers"
+                },
+                "rentals": "Rentals",
+                "transactions": "Transactions",
+                "help_center": "Help Center",
+                "logout": "Log Out"
+            }
+        },
+
+
         "footer": {
             "about": "Easy Rental connects clients with verified car rental agencies across Cameroon, providing a seamless rental experience.",
             "links": {

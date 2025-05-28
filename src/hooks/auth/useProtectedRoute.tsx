@@ -25,14 +25,14 @@ export function useProtectedRoute(requiredRole?: UserRole) {
 
             // Vérifier si l'utilisateur est authentifié
             if (!isAuthenticated) {
-                router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
+                // router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
                 return;
             }
 
             // Vérifier la validité de la session
             const isSessionValid = await checkSession();
             if (!isSessionValid) {
-                router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
+                // router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
                 return;
             }
 

@@ -281,6 +281,37 @@
             }
         },
 
+        "sidebar": {
+            "organization_sidebar": {
+                "dashboard": "Tableau de bord",
+                "entities": {
+                    "agencies": "Agences",
+                    "vehicles": "Véhicules",
+                    "staff": "Personnel",
+                    "drivers": "Conducteurs"
+                },
+                "rentals": "Réservations",
+                "transactions": "Transactions",
+                "help_center": "Centre d’aide",
+                "logout": "Déconnexion"
+            },
+
+            "agency_sidebar": {
+                "dashboard": "Tableau de bord",
+                "entities": {
+                    "label": "Entités",
+                    "vehicles": "Véhicules",
+                    "staff": "Personnel",
+                    "drivers": "Conducteurs"
+                },
+                "rentals": "Locations",
+                "transactions": "Transactions",
+                "help_center": "Centre d’aide",
+                "logout": "Déconnexion"
+            }
+        },
+
+
         "footer": {
             "about": "Easy Rental connecte les clients avec des agences de location vérifiées à travers le Cameroun, offrant une expérience de location fluide.",
             "links": {

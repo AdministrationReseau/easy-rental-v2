@@ -78,17 +78,17 @@ export default function RouteGuard({ children }: RouteGuardProps) {
 
             // Vérifier l'authentification si requise
             if (config.requireAuth) {
-                if (!isAuthenticated) {
-                    router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
-                    return;
-                }
-
-                // Vérifier la validité de la session
-                const isSessionValid = await checkSession();
-                if (!isSessionValid) {
-                    router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
-                    return;
-                }
+                // if (!isAuthenticated) {
+                //     router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
+                //     return;
+                // }
+                //
+                // // Vérifier la validité de la session
+                // const isSessionValid = await checkSession();
+                // if (!isSessionValid) {
+                //     router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
+                //     return;
+                // }
 
                 // Vérifier le rôle
                 if (user && !config.allowedRoles.includes(user.role)) {

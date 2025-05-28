@@ -11,339 +11,339 @@ import { Input } from '@/components/ui/input';
 import OrganizationNavbar from '@/components/navbar/OrganizationNavbar';
 
 interface OrganizationData {
-    id?: string;
-    name: string;
-    email: string;
-    phone: string;
-    address: string;
-    city: string;
-    country: string;
-    description: string;
-    businessActorId: string;
-    planId: string;
-    transactionId: string;
+	id?: string;
+	name: string;
+	email: string;
+	phone: string;
+	address: string;
+	city: string;
+	country: string;
+	description: string;
+	businessActorId: string;
+	planId: string;
+	transactionId: string;
 }
 
 const Organization = () => {
-    const router = useRouter();
-    const { user, isAuthenticated, isLoading } = useAuth();
-    const { t } = useTranslation('organization');
-    const [showOrganizationModal, setShowOrganizationModal] = useState(false);
-    const [organizationData, setOrganizationData] = useState<OrganizationData | null>(null);
-    const [formData, setFormData] = useState<OrganizationData>({
-        name: '',
-        email: '',
-        phone: '',
-        address: '',
-        city: '',
-        country: 'Cameroon',
-        description: '',
-        businessActorId: '',
-        planId: '',
-        transactionId: ''
-    });
-    const [isSubmitting, setIsSubmitting] = useState(false);
+	const router = useRouter();
+	const { user, isAuthenticated, isLoading } = useAuth();
+	const { t } = useTranslation('organization');
+	const [showOrganizationModal, setShowOrganizationModal] = useState(false);
+	const [organizationData, setOrganizationData] = useState<OrganizationData | null>(null);
+	const [formData, setFormData] = useState<OrganizationData>({
+		name: '',
+		email: '',
+		phone: '',
+		address: '',
+		city: '',
+		country: 'Cameroon',
+		description: '',
+		businessActorId: '',
+		planId: '',
+		transactionId: ''
+	});
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
-    useEffect(() => {
-        // Redirect if not authenticated or not admin
-        if (!isLoading && (!isAuthenticated || user?.role !== 'admin')) {
-            router.push('/signin');
-            return;
-        }
+	useEffect(() => {
+		// Redirect if not authenticated or not admin
+		if (!isLoading && (!isAuthenticated || user?.role !== 'admin')) {
+			router.push('/signin');
+			return;
+		}
 
-        // Check if organization data exists
-        const storedOrganizationData = localStorage.getItem('organization-data');
-        if (storedOrganizationData) {
-            try {
-                const orgData = JSON.parse(storedOrganizationData);
-                setOrganizationData(orgData);
-                setFormData(prev => ({ ...prev, ...orgData }));
-            } catch (e) {
-                console.error('Failed to parse organization data', e);
-            }
-        }
+		// Check if organization data exists
+		const storedOrganizationData = localStorage.getItem('organization-data');
+		if (storedOrganizationData) {
+			try {
+				const orgData = JSON.parse(storedOrganizationData);
+				setOrganizationData(orgData);
+				setFormData(prev => ({ ...prev, ...orgData }));
+			} catch (e) {
+				console.error('Failed to parse organization data', e);
+			}
+		}
 
-        // Check if we need to show the organization creation modal
-        const organizationId = localStorage.getItem('organization-id');
-        if (!organizationId && !storedOrganizationData) {
-            setShowOrganizationModal(true);
-        }
-    }, [isAuthenticated, isLoading, user, router]);
+		// Check if we need to show the organization creation modal
+		const organizationId = localStorage.getItem('organization-id');
+		if (!organizationId && !storedOrganizationData) {
+			setShowOrganizationModal(true);
+		}
+	}, [isAuthenticated, isLoading, user, router]);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-    };
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+		const { name, value } = e.target;
+		setFormData(prev => ({ ...prev, [name]: value }));
+	};
 
-    const handleCreateOrganization = async () => {
-        setIsSubmitting(true);
-        try {
-            // Create organization ID
-            const organizationId = `org-${Date.now()}`;
+	const handleCreateOrganization = async () => {
+		setIsSubmitting(true);
+		try {
+			// Create organization ID
+			const organizationId = `org-${Date.now()}`;
 
-            // Save organization data
-            const completeOrgData = {
-                ...formData,
-                id: organizationId,
-                ownerId: user?.id,
-                createdAt: new Date().toISOString()
-            };
+			// Save organization data
+			const completeOrgData = {
+				...formData,
+				id: organizationId,
+				ownerId: user?.id,
+				createdAt: new Date().toISOString()
+			};
 
-            // Store in localStorage
-            localStorage.setItem('organization-id', organizationId);
-            localStorage.setItem('organization-data', JSON.stringify(completeOrgData));
+			// Store in localStorage
+			localStorage.setItem('organization-id', organizationId);
+			localStorage.setItem('organization-data', JSON.stringify(completeOrgData));
 
-            // Update state
-            setOrganizationData(completeOrgData);
-            setShowOrganizationModal(false);
+			// Update state
+			setOrganizationData(completeOrgData);
+			setShowOrganizationModal(false);
 
-            // Here you would typically send this data to your backend
-            // const response = await fetch('/api/organizations', {
-            //   method: 'POST',
-            //   headers: { 'Content-Type': 'application/json' },
-            //   body: JSON.stringify(completeOrgData)
-            // });
+			// Here you would typically send this data to your backend
+			// const response = await fetch('/api/organizations', {
+			//   method: 'POST',
+			//   headers: { 'Content-Type': 'application/json' },
+			//   body: JSON.stringify(completeOrgData)
+			// });
 
-        } catch (error) {
-            console.error('Error creating organization:', error);
-            // You could show an error message here
-        } finally {
-            setIsSubmitting(false);
-        }
-    };
+		} catch (error) {
+			console.error('Error creating organization:', error);
+			// You could show an error message here
+		} finally {
+			setIsSubmitting(false);
+		}
+	};
 
-    if (isLoading) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-background-dark">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500"></div>
-            </div>
-        );
-    }
+	if (isLoading) {
+		return (
+			<div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-background-dark">
+				<div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500"></div>
+			</div>
+		);
+	}
 
-    if (!isAuthenticated || user?.role !== 'admin') {
-        return null; // Will redirect in useEffect
-    }
+	if (!isAuthenticated || user?.role !== 'admin') {
+		return null; // Will redirect in useEffect
+	}
 
-    if (!organizationData && !showOrganizationModal) {
-        return (
-            <div className="min-h-screen bg-gray-50 dark:bg-background-dark">
-                <OrganizationNavbar />
-                <div className="pt-[80px] p-8">
-                    <div className="max-w-4xl mx-auto">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>{t('register.title')}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-gray-600 dark:text-text-dark/70 mb-4">
-                                    {t('dashboard.create_organization_prompt')}
-                                </p>
-                                <Button
-                                    onClick={() => setShowOrganizationModal(true)}
-                                    className="bg-primary-600 hover:bg-primary-700 text-white"
-                                >
-                                    {t('dashboard.create_organization_button')}
-                                </Button>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+	if (!organizationData && !showOrganizationModal) {
+		return (
+			<div className="min-h-screen bg-gray-50 dark:bg-background-dark">
+				<OrganizationNavbar />
+				<div className="pt-[80px] p-8">
+					<div className="max-w-4xl mx-auto">
+						<Card>
+							<CardHeader>
+								<CardTitle>{t('register.title')}</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<p className="text-gray-600 dark:text-text-dark/70 mb-4">
+									{t('dashboard.create_organization_prompt')}
+								</p>
+								<Button
+									onClick={() => setShowOrganizationModal(true)}
+									className="bg-primary-600 hover:bg-primary-700 text-white"
+								>
+									{t('dashboard.create_organization_button')}
+								</Button>
+							</CardContent>
+						</Card>
+					</div>
+				</div>
+			</div>
+		);
+	}
 
-    return (
-        <div className="min-h-screen bg-gray-50 dark:bg-background-dark">
-            <OrganizationNavbar />
+	return (
+		<div className="min-h-screen bg-gray-50 dark:bg-background-dark">
+			<OrganizationNavbar />
 
-            <main className="pt-[80px] p-8">
-                <div className="max-w-7xl mx-auto">
-                    {/* Welcome Section */}
-                    <div className="mb-8">
-                        <h1 className="text-3xl font-bold text-gray-900 dark:text-text-dark">
-                            {t('dashboard.welcome')}, {organizationData?.name || 'Organization'}!
-                        </h1>
-                        <p className="text-gray-600 dark:text-text-dark/70 mt-2">
-                            {t('dashboard.welcome_subtitle')}
-                        </p>
-                    </div>
+			<main className="pt-[80px] p-8">
+				<div className="max-w-7xl mx-auto">
+					{/* Welcome Section */}
+					<div className="mb-8">
+						<h1 className="text-3xl font-bold text-gray-900 dark:text-text-dark">
+							{t('dashboard.welcome')}, {organizationData?.name || 'Organization'}!
+						</h1>
+						<p className="text-gray-600 dark:text-text-dark/70 mt-2">
+							{t('dashboard.welcome_subtitle')}
+						</p>
+					</div>
 
-                    {/* Stats Overview */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                        <Card>
-                            <CardHeader className="pb-2">
-                                <CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
-                                    {t('dashboard.stats.total_vehicles')}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-2xl font-bold text-gray-900 dark:text-text-dark">0</div>
-                                <p className="text-xs text-gray-500 dark:text-text-dark/50">
-                                    {t('dashboard.stats.vehicles_active')}
-                                </p>
-                            </CardContent>
-                        </Card>
+					{/* Stats Overview */}
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+						<Card>
+							<CardHeader className="pb-2">
+								<CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
+									{t('dashboard.stats.total_vehicles')}
+								</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<div className="text-2xl font-bold text-gray-900 dark:text-text-dark">0</div>
+								<p className="text-xs text-gray-500 dark:text-text-dark/50">
+									{t('dashboard.stats.vehicles_active')}
+								</p>
+							</CardContent>
+						</Card>
 
-                        <Card>
-                            <CardHeader className="pb-2">
-                                <CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
-                                    {t('dashboard.stats.active_bookings')}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-2xl font-bold text-gray-900 dark:text-text-dark">0</div>
-                                <p className="text-xs text-gray-500 dark:text-text-dark/50">
-                                    {t('dashboard.stats.bookings_today')}
-                                </p>
-                            </CardContent>
-                        </Card>
+						<Card>
+							<CardHeader className="pb-2">
+								<CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
+									{t('dashboard.stats.active_bookings')}
+								</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<div className="text-2xl font-bold text-gray-900 dark:text-text-dark">0</div>
+								<p className="text-xs text-gray-500 dark:text-text-dark/50">
+									{t('dashboard.stats.bookings_today')}
+								</p>
+							</CardContent>
+						</Card>
 
-                        <Card>
-                            <CardHeader className="pb-2">
-                                <CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
-                                    {t('dashboard.stats.total_revenue')}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-2xl font-bold text-gray-900 dark:text-text-dark">0 XAF</div>
-                                <p className="text-xs text-gray-500 dark:text-text-dark/50">
-                                    {t('dashboard.stats.revenue_this_month')}
-                                </p>
-                            </CardContent>
-                        </Card>
+						<Card>
+							<CardHeader className="pb-2">
+								<CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
+									{t('dashboard.stats.total_revenue')}
+								</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<div className="text-2xl font-bold text-gray-900 dark:text-text-dark">0 XAF</div>
+								<p className="text-xs text-gray-500 dark:text-text-dark/50">
+									{t('dashboard.stats.revenue_this_month')}
+								</p>
+							</CardContent>
+						</Card>
 
-                        <Card>
-                            <CardHeader className="pb-2">
-                                <CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
-                                    {t('dashboard.stats.customer_satisfaction')}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="text-2xl font-bold text-gray-900 dark:text-text-dark">-</div>
-                                <p className="text-xs text-gray-500 dark:text-text-dark/50">
-                                    {t('dashboard.stats.average_rating')}
-                                </p>
-                            </CardContent>
-                        </Card>
-                    </div>
+						<Card>
+							<CardHeader className="pb-2">
+								<CardTitle className="text-sm font-medium text-gray-600 dark:text-text-dark/70">
+									{t('dashboard.stats.customer_satisfaction')}
+								</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<div className="text-2xl font-bold text-gray-900 dark:text-text-dark">-</div>
+								<p className="text-xs text-gray-500 dark:text-text-dark/50">
+									{t('dashboard.stats.average_rating')}
+								</p>
+							</CardContent>
+						</Card>
+					</div>
 
-                    {/* Quick Actions */}
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <Card className="lg:col-span-2">
-                            <CardHeader>
-                                <CardTitle>{t('dashboard.quick_actions.title')}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <Button
-                                        onClick={() => router.push('/organization/vehicles/add')}
-                                        className="bg-primary-600 hover:bg-primary-700 text-white"
-                                    >
-                                        {t('dashboard.quick_actions.add_vehicle')}
-                                    </Button>
-                                    <Button
-                                        onClick={() => router.push('/organization/bookings')}
-                                        variant="outline"
-                                    >
-                                        {t('dashboard.quick_actions.view_bookings')}
-                                    </Button>
-                                    <Button
-                                        onClick={() => router.push('/organization/analytics')}
-                                        variant="outline"
-                                    >
-                                        {t('dashboard.quick_actions.view_analytics')}
-                                    </Button>
-                                    <Button
-                                        onClick={() => router.push('/organization/drivers')}
-                                        variant="outline"
-                                    >
-                                        {t('dashboard.quick_actions.manage_drivers')}
-                                    </Button>
-                                </div>
-                            </CardContent>
-                        </Card>
+					{/* Quick Actions */}
+					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+						<Card className="lg:col-span-2">
+							<CardHeader>
+								<CardTitle>{t('dashboard.quick_actions.title')}</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<div className="grid grid-cols-2 gap-4">
+									<Button
+										onClick={() => router.push('/organization/vehicles/add')}
+										className="bg-primary-600 hover:bg-primary-700 text-white"
+									>
+										{t('dashboard.quick_actions.add_vehicle')}
+									</Button>
+									<Button
+										onClick={() => router.push('/organization/bookings')}
+										variant="outline"
+									>
+										{t('dashboard.quick_actions.view_bookings')}
+									</Button>
+									<Button
+										onClick={() => router.push('/organization/analytics')}
+										variant="outline"
+									>
+										{t('dashboard.quick_actions.view_analytics')}
+									</Button>
+									<Button
+										onClick={() => router.push('/organization/drivers')}
+										variant="outline"
+									>
+										{t('dashboard.quick_actions.manage_drivers')}
+									</Button>
+								</div>
+							</CardContent>
+						</Card>
 
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>{t('dashboard.organization_info.title')}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="space-y-2">
-                                    <div>
+						<Card>
+							<CardHeader>
+								<CardTitle>{t('dashboard.organization_info.title')}</CardTitle>
+							</CardHeader>
+							<CardContent>
+								<div className="space-y-2">
+									<div>
                     <span className="text-sm text-gray-500 dark:text-text-dark/50">
                       {t('dashboard.organization_info.name')}:
                     </span>
-                                        <p className="font-medium text-gray-900 dark:text-text-dark">
-                                            {organizationData?.name}
-                                        </p>
-                                    </div>
-                                    <div>
+										<p className="font-medium text-gray-900 dark:text-text-dark">
+											{organizationData?.name}
+										</p>
+									</div>
+									<div>
                     <span className="text-sm text-gray-500 dark:text-text-dark/50">
                       {t('dashboard.organization_info.email')}:
                     </span>
-                                        <p className="font-medium text-gray-900 dark:text-text-dark">
-                                            {organizationData?.email}
-                                        </p>
-                                    </div>
-                                    <div>
+										<p className="font-medium text-gray-900 dark:text-text-dark">
+											{organizationData?.email}
+										</p>
+									</div>
+									<div>
                     <span className="text-sm text-gray-500 dark:text-text-dark/50">
                       {t('dashboard.organization_info.plan')}:
                     </span>
-                                        <p className="font-medium text-gray-900 dark:text-text-dark capitalize">
-                                            {organizationData?.planId?.replace('-monthly', '')} Plan
-                                        </p>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </div>
-                </div>
-            </main>
+										<p className="font-medium text-gray-900 dark:text-text-dark capitalize">
+											{organizationData?.planId?.replace('-monthly', '')} Plan
+										</p>
+									</div>
+								</div>
+							</CardContent>
+						</Card>
+					</div>
+				</div>
+			</main>
 
-            {/* Organization Creation Modal */}
-            <Dialog open={showOrganizationModal} onOpenChange={setShowOrganizationModal}>
-                <DialogContent className="max-w-md">
-                    <DialogHeader>
-                        <DialogTitle>{t('modal.create_organization.title')}</DialogTitle>
-                    </DialogHeader>
-                    <div className="space-y-4">
-                        <Input
-                            label={t('register.fields.org_name')}
-                            name="name"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            required
-                        />
-                        <Input
-                            label={t('register.fields.org_email')}
-                            name="email"
-                            type="email"
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            required
-                        />
-                        <Input
-                            label={t('register.fields.org_phone')}
-                            name="phone"
-                            type="tel"
-                            value={formData.phone}
-                            onChange={handleInputChange}
-                            required
-                        />
-                        <div className="mt-6">
-                            <Button
-                                onClick={handleCreateOrganization}
-                                disabled={isSubmitting}
-                                className="w-full bg-primary-600 hover:bg-primary-700 text-white"
-                            >
-                                {isSubmitting ? t('modal.create_organization.creating') : t('modal.create_organization.create_button')}
-                            </Button>
-                        </div>
-                    </div>
-                </DialogContent>
-            </Dialog>
-        </div>
-    );
+			{/* Organization Creation Modal */}
+			<Dialog open={showOrganizationModal} onOpenChange={setShowOrganizationModal}>
+				<DialogContent className="max-w-md">
+					<DialogHeader>
+						<DialogTitle>{t('modal.create_organization.title')}</DialogTitle>
+					</DialogHeader>
+					<div className="space-y-4">
+						<Input
+							label={t('register.fields.org_name')}
+							name="name"
+							value={formData.name}
+							onChange={handleInputChange}
+							required
+						/>
+						<Input
+							label={t('register.fields.org_email')}
+							name="email"
+							type="email"
+							value={formData.email}
+							onChange={handleInputChange}
+							required
+						/>
+						<Input
+							label={t('register.fields.org_phone')}
+							name="phone"
+							type="tel"
+							value={formData.phone}
+							onChange={handleInputChange}
+							required
+						/>
+						<div className="mt-6">
+							<Button
+								onClick={handleCreateOrganization}
+								disabled={isSubmitting}
+								className="w-full bg-primary-600 hover:bg-primary-700 text-white"
+							>
+								{isSubmitting ? t('modal.create_organization.creating') : t('modal.create_organization.create_button')}
+							</Button>
+						</div>
+					</div>
+				</DialogContent>
+			</Dialog>
+		</div>
+	);
 };
 
 export default Organization;
