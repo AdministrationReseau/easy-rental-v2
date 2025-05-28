@@ -72,7 +72,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<Link href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-300">
-									{t('footer.links.privacy')}
+									{t('components.footer.links.privacy')}
 								</Link>
 							</li>
 						</ul>
