@@ -12,17 +12,17 @@ const HowItWorks = () => {
 	// Définir les étapes avec leurs icônes
 	const steps = [
 		{
-			icon: <BsSearch className="text-4xl text-primary" />,
+			icon: <BsSearch className="text-4xl text-primary dark:text-primary-100" />,
 			title: t('components.landing.howItWorks.steps.step1.title'),
 			description: t('components.landing.howItWorks.steps.step1.description')
 		},
 		{
-			icon: <BsFillCalendarCheckFill className="text-4xl text-primary" />,
+			icon: <BsFillCalendarCheckFill className="text-4xl text-primary dark:text-primary-100" />,
 			title: t('components.landing.howItWorks.steps.step2.title'),
 			description: t('components.landing.howItWorks.steps.step2.description')
 		},
 		{
-			icon: <FaCar className="text-4xl text-primary" />,
+			icon: <FaCar className="text-4xl text-primary dark:text-primary-100" />,
 			title: t('components.landing.howItWorks.steps.step3.title'),
 			description: t('components.landing.howItWorks.steps.step3.description')
 		},
@@ -44,7 +44,7 @@ const HowItWorks = () => {
 					<motion.div
 						key={index}
 						whileHover={{ y: -10 }}
-						className="bg-white dark:bg-background-blue p-8 rounded-3xl shadow-lg text-center"
+						className="bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-lg text-center"
 					>
 						<div className="flex justify-center mb-4">
 							{step.icon}

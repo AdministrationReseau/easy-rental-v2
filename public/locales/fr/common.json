@@ -195,6 +195,53 @@
                         "position": "PDG, Premium Rides"
                     }
                 }
+            },
+            "earning": {
+                "title": "Commencez à Gagner avec Vos Véhicules",
+                "subtitle": "Rejoignez notre plateforme et transformez votre flotte en une activité rentable",
+                "steps": [
+                    {
+                        "title": "Enregistrez Votre Organisation",
+                        "desc": "Inscrivez-vous et complétez notre processus de vérification simple"
+                    },
+                    {
+                        "title": "Ajoutez Vos Véhicules",
+                        "desc": "Téléchargez les détails de votre flotte avec des photos de qualité"
+                    },
+                    {
+                        "title": "Recevez Vos Premières Réservations",
+                        "desc": "Acceptez les réservations et développez votre activité de location"
+                    }
+                ]
+            },
+            "services": {
+                "title": "Nos Services",
+                "subtitle": "Solutions adaptées à chaque type d'utilisateur",
+                "client": {
+                    "title": "Pour les Clients",
+                    "description": "Louez des véhicules facilement et profitez de votre voyage",
+                    "features": [
+                        "Parcourez les véhicules vérifiés",
+                        "Services de chauffeur",
+                        "Options de paiement sécurisées",
+                        "Système de réservation flexible",
+                        "Support client 24/7"
+                    ],
+                    "image": "/assets/clientservice.png",
+                    "cta": "Commencer à Louer"
+                },
+                "agency": {
+                    "title": "Pour les Agences",
+                    "description": "Développez votre entreprise avec notre plateforme",
+                    "features": [
+                        "Gestion complète de flotte",
+                        "Tableau de bord analytique avancé",
+                        "Système de réservation automatisé",
+                        "Gestionnaire de compte dédié"
+                    ],
+                    "image": "/assets/orgservice.png",
+                    "cta": "Rejoindre comme Agence"
+                }
             }
         },
 

@@ -3,37 +3,30 @@
 import React from 'react';
 import GuestNavbar from "@/components/navbar/GuestNavbar";
 import Hero from "@/components/landing/Hero";
-// import HowItWorks from "@/components/landing/HowItWorks";
-// import Services from "@/components/landing/Services";
-import Earning from "@/components/landing/Earning";
+import Feature from "@/components/landing/Feature";
+import HowItWorks from "@/components/landing/HowItWorks";
+import ServicesSection from "@/components/landing/ServicesSection";
 import Organisation from "@/components/landing/Organisation";
+import Earning from "@/components/landing/Earning";
+import Statistics from "@/components/landing/Statistics";
 import Partners from "@/components/landing/Partners";
+import Team from "@/components/landing/Team";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/footer/footer";
-import Feature from "@/components/landing/Feature";
-// import ServicesSection from "@/components/landing/ServicesSection";
-import Statistics from "@/components/landing/Statistics";
-import Team from "@/components/landing/Team";
 
 export default function Home() {
-
 	return (
 		<div className="min-h-screen flex flex-col bg-background-light dark:bg-background-dark">
 			<GuestNavbar/>
 			<Hero/>
-
-			{/*<HowItWorks/>*/}
-			{/*<Services/>*/}
-			<Earning/>
+			<HowItWorks/>
+			<ServicesSection/>
 			<Feature/>
+			<Earning/>
 			<Organisation/>
-
 			<Statistics/>
-			<Team/>
 			<Partners/>
-
-			{/*<ServicesSection/>*/}
-
+			<Team/>
 			<CTA/>
 			<Footer/>
 		</div>

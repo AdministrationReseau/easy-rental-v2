@@ -52,7 +52,7 @@ const Organization = () => {
 							initial={{ opacity: 0, y: 50 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3, duration: 0.8 }}
-							className="absolute -bottom-5 -right-5 md:bottom-10 md:-right-10 bg-white dark:bg-background-dark p-6 rounded-3xl shadow-2xl max-w-xs"
+							className="absolute -bottom-5 -right-5 md:bottom-10 md:-right-10 bg-white dark:bg-background-darkish p-6 rounded-3xl shadow-2xl max-w-xs"
 						>
 							<h3 className="text-xl font-semibold text-text-primary dark:text-white mb-2">
 								{t('components.landing.organisation.testimonial.title')}

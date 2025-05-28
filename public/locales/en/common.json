@@ -198,6 +198,53 @@
                         "position": "CEO, Premium Rides"
                     }
                 }
+            },
+            "earning": {
+                "title": "Start Earning With Your Vehicles",
+                "subtitle": "Join our platform and turn your fleet into a profitable business",
+                "steps": [
+                    {
+                        "title": "Register Your Organization",
+                        "desc": "Sign up and complete our simple verification process"
+                    },
+                    {
+                        "title": "List Your Vehicles",
+                        "desc": "Upload your fleet details with high-quality photos"
+                    },
+                    {
+                        "title": "Start Receiving Bookings",
+                        "desc": "Accept reservations and grow your rental business"
+                    }
+                ]
+            },
+            "services": {
+                "title": "Our Services",
+                "subtitle": "Solutions adapted to each type of user",
+                "client": {
+                    "title": "For Clients",
+                    "description": "Rent vehicles easily and enjoy your trip",
+                    "features": [
+                        "Browse verified vehicles",
+                        "Chauffeur Services",
+                        "Secure payment options",
+                        "Flexible booking system",
+                        "24/7 customer support"
+                    ],
+                    "image": "/assets/clientservice.png",
+                    "cta": "Start Renting"
+                },
+                "agency": {
+                    "title": "For Agencies",
+                    "description": "Grow your business with our platform",
+                    "features": [
+                        "Complete fleet management",
+                        "Advanced analytics dashboard",
+                        "Automated booking system",
+                        "Dedicated account manager"
+                    ],
+                    "image": "/assets/orgservice.png",
+                    "cta": "Join as Agency"
+                }
             }
         },
 
