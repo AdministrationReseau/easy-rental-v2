@@ -5,7 +5,7 @@ import GuestNavbar from "@/components/navbar/GuestNavbar";
 import Hero from "@/components/landing/Hero";
 import Feature from "@/components/landing/Feature";
 import HowItWorks from "@/components/landing/HowItWorks";
-import ServicesSection from "@/components/landing/ServicesSection";
+import Services from "@/components/landing/Services";
 import Organisation from "@/components/landing/Organisation";
 import Earning from "@/components/landing/Earning";
 import Statistics from "@/components/landing/Statistics";
@@ -20,7 +20,7 @@ export default function Home() {
 			<GuestNavbar/>
 			<Hero/>
 			<HowItWorks/>
-			<ServicesSection/>
+			<Services/>
 			<Feature/>
 			<Earning/>
 			<Organisation/>
