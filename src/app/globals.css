@@ -46,7 +46,7 @@
     }
 
     .label {
-        @apply block mb-2 text-sm font-medium text-text-lightSecondary dark:text-text-lightSecondary;
+        @apply block mb-2 text-sm font-medium text-text-light-secondary dark:text-text-light-secondary;
     }
 
     /* --- Navbar --- */
@@ -55,7 +55,7 @@
     }
 
     .nav-link {
-        @apply text-text-lightSecondary dark:text-text-lightSecondary font-medium px-4 py-2 transition-colors hover:text-primary-500 dark:hover:text-primary-400;
+        @apply text-text-light-secondary dark:text-text-light-secondary font-medium px-4 py-2 transition-colors hover:text-primary-500 dark:hover:text-primary-400;
     }
 
     .nav-link.active {

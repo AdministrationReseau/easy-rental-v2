@@ -4,6 +4,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useAuth } from '@/hooks/auth/useAuth';
 import { UserRole } from '@/types/models/auth';
+// import {useTranslation} from "react-i18next";
 
 interface RouteConfig {
     path: string;
@@ -48,6 +49,7 @@ export default function RouteGuard({ children }: RouteGuardProps) {
     const pathname = usePathname();
     const { user, isAuthenticated, isLoading, checkSession } = useAuth();
     const [isChecking, setIsChecking] = useState(true);
+    // const { t } = useTranslation('common');
 
     useEffect(() => {
         const verifyAccess = async () => {
@@ -76,17 +78,17 @@ export default function RouteGuard({ children }: RouteGuardProps) {
 
             // Vérifier l'authentification si requise
             if (config.requireAuth) {
-                if (!isAuthenticated) {
-                    router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
-                    return;
-                }
-
-                // Vérifier la validité de la session
-                const isSessionValid = await checkSession();
-                if (!isSessionValid) {
-                    router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
-                    return;
-                }
+                // if (!isAuthenticated) {
+                //     router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
+                //     return;
+                // }
+                //
+                // // Vérifier la validité de la session
+                // const isSessionValid = await checkSession();
+                // if (!isSessionValid) {
+                //     router.push(`/signin?returnUrl=${encodeURIComponent(pathname || '')}`);
+                //     return;
+                // }
 
                 // Vérifier le rôle
                 if (user && !config.allowedRoles.includes(user.role)) {
@@ -114,8 +116,9 @@ export default function RouteGuard({ children }: RouteGuardProps) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-background-dark">
                 <div className="flex flex-col items-center space-y-4">
-                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500"></div>
-                    <p className="text-gray-600 dark:text-text-dark">Chargement...</p>
+                    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500 dark:border-primary-100"></div>
+                    {/*<p className="text-gray-600 dark:text-text-dark">{t('common.loading')}</p>*/}
+                    <p className="text-gray-600 dark:text-text-dark">Loading...</p>
                 </div>
             </div>
         );

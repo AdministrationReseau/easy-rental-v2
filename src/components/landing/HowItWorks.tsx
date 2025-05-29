@@ -7,24 +7,24 @@ import { useTranslation } from 'react-i18next';
 import Section from '../layout/Section';
 
 const HowItWorks = () => {
-	const { t } = useTranslation('components');
+	const { t } = useTranslation('common');
 	
 	// Définir les étapes avec leurs icônes
 	const steps = [
 		{
-			icon: <BsSearch className="text-4xl text-primary" />,
-			title: t('landing.howItWorks.steps.step1.title'),
-			description: t('landing.howItWorks.steps.step1.description')
+			icon: <BsSearch className="text-4xl text-primary dark:text-primary-100" />,
+			title: t('components.landing.howItWorks.steps.step1.title'),
+			description: t('components.landing.howItWorks.steps.step1.description')
 		},
 		{
-			icon: <BsFillCalendarCheckFill className="text-4xl text-primary" />,
-			title: t('landing.howItWorks.steps.step2.title'),
-			description: t('landing.howItWorks.steps.step2.description')
+			icon: <BsFillCalendarCheckFill className="text-4xl text-primary dark:text-primary-100" />,
+			title: t('components.landing.howItWorks.steps.step2.title'),
+			description: t('components.landing.howItWorks.steps.step2.description')
 		},
 		{
-			icon: <FaCar className="text-4xl text-primary" />,
-			title: t('landing.howItWorks.steps.step3.title'),
-			description: t('landing.howItWorks.steps.step3.description')
+			icon: <FaCar className="text-4xl text-primary dark:text-primary-100" />,
+			title: t('components.landing.howItWorks.steps.step3.title'),
+			description: t('components.landing.howItWorks.steps.step3.description')
 		},
 	];
 
@@ -32,10 +32,10 @@ const HowItWorks = () => {
 		<Section className="bg-background-whitish dark:bg-background-darkish">
 			<div className="text-center mb-16">
 				<h2 className="text-3xl font-bold text-text-primary dark:text-text-dark mb-4">
-					{t('landing.howItWorks.title')}
+					{t('components.landing.howItWorks.title')}
 				</h2>
 				<p className="text-text-secondary dark:text-gray-400 max-w-2xl mx-auto">
-					{t('landing.howItWorks.subtitle')}
+					{t('components.landing.howItWorks.subtitle')}
 				</p>
 			</div>
 
@@ -44,7 +44,7 @@ const HowItWorks = () => {
 					<motion.div
 						key={index}
 						whileHover={{ y: -10 }}
-						className="bg-white dark:bg-background-blue p-8 rounded-3xl shadow-lg text-center"
+						className="bg-white dark:bg-surface-dark p-8 rounded-3xl shadow-lg text-center"
 					>
 						<div className="flex justify-center mb-4">
 							{step.icon}
