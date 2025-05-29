@@ -86,7 +86,7 @@ const Navbar: React.FC<NavbarProps> = ({
                   <Link
                     key={itemIndex}
                     href={item.href}
-                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center"
+                    className={`block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center `}
                   >
                     {item.icon && <span className="mr-2">{item.icon}</span>}
                     {item.label}

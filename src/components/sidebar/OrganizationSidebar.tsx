@@ -23,43 +23,43 @@ const OrganizationSidebar: React.FC = () => {
 
   const sidebarItems: SidebarItem[] = [
     {
-      label: t('components.sidebar.dashboard'),
-      href: '/organization/dashboard',
+      label: t('components.sidebar.organization_sidebar.dashboard'),
+      href: '/organization',
       icon: <FaChartBar />
     },
     {
-      label: t('components.sidebar.entities'),
+      label: t('components.sidebar.organization_sidebar.entities.label'),
       icon: <FaCar />,
       children: [
         {
-          label: t('components.sidebar.organization.agencies'),
+          label: t('components.sidebar.organization_sidebar.entities.agencies'),
           href: '/organization/agencies',
           icon: <FaBuilding />
         },
         {
-          label: t('components.sidebar.organization.vehicles'),
+          label: t('components.sidebar.organization_sidebar.entities.vehicles'),
           href: '/organization/vehicles',
           icon: <FaCarSide />
         },
         {
-          label: t('components.sidebar.organization.staff'),
+          label: t('components.sidebar.organization_sidebar.entities.staff'),
           href: '/organization/staff',
           icon: <FaUsers />
         },
         {
-          label: t('components.sidebar.organization.drivers'),
+          label: t('components.sidebar.organization_sidebar.entities.drivers'),
           href: '/organization/drivers',
           icon: <FaUserTie />
         }
       ]
     },
     {
-      label: t('components.sidebar.rentals'),
+      label: t('components.sidebar.organization_sidebar.rentals'),
       href: '/organization/rentals',
       icon: <FaCarSide />
     },
     {
-      label: t('components.sidebar.transactions'),
+      label: t('components.sidebar.organization_sidebar.transactions'),
       href: '/organization/transactions',
       icon: <FaExchangeAlt />
     }
@@ -67,12 +67,12 @@ const OrganizationSidebar: React.FC = () => {
 
   const bottomItems: SidebarItem[] = [
     {
-      label: t('components.sidebar.help_center'),
+      label: t('components.sidebar.organization_sidebar.help_center'),
       href: '/organization/help',
       icon: <FaQuestionCircle />
     },
     {
-      label: t('components.sidebar.logout'),
+      label: t('components.sidebar.organization_sidebar.logout'),
       href: '/auth/logout',
       icon: <FaSignOutAlt />
     }

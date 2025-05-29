@@ -83,7 +83,8 @@ const ClientNavbar: React.FC = () => {
         { 
           label: t('components.navbar.client_navbar.logout'),
           href: '/logout',
-          icon: <FaSignOutAlt />
+          icon: <FaSignOutAlt />,
+          // className: 'text-red-500'
         }
       ]
     }

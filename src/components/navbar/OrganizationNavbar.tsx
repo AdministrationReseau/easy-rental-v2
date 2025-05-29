@@ -15,7 +15,7 @@ import Navbar from './Navbar';
 import {NavAction} from "@/types/models/navbar";
 
 const OrganizationNavbar: React.FC = () => {
-  const { t } = useTranslation('components');
+  const { t } = useTranslation('common');
   
   const actions: NavAction[] = [
     {

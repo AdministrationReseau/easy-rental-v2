@@ -285,6 +285,7 @@
             "organization_sidebar": {
                 "dashboard": "Tableau de bord",
                 "entities": {
+                    "label": "Entités",
                     "agencies": "Agences",
                     "vehicles": "Véhicules",
                     "staff": "Personnel",

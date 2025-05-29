@@ -288,6 +288,7 @@
             "organization_sidebar": {
                 "dashboard": "Dashboard",
                 "entities": {
+                    "label": "Entities",
                     "agencies": "Agencies",
                     "vehicles": "Vehicles",
                     "staff": "Staff",

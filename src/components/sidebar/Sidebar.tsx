@@ -1,17 +1,17 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { SidebarProps, SidebarItem } from '@/types/models/sidebar';
 
 const Sidebar: React.FC<SidebarProps> = ({
-  items = [],
-  bottomItems = [],
-  logo,
-}) => {
+                                           items = [],
+                                           bottomItems = [],
+                                           logo,
+                                         }) => {
   const pathname = usePathname();
+  const router = useRouter(); // Add this hook
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
   const [showMobileSubMenu, setShowMobileSubMenu] = useState<string | null>(null);
 
@@ -26,18 +26,23 @@ const Sidebar: React.FC<SidebarProps> = ({
     setShowMobileSubMenu(prevState => prevState === label ? null : label);
   };
 
-  // Check if any child in the item is active
   const isItemOrChildActive = (item: SidebarItem): boolean => {
     if (pathname === item.href) return true;
-    
+
     if (item.children && item.children.length > 0) {
       return item.children.some(child => pathname === child.href);
     }
-    
+
     return false;
   };
 
-  // Auto-expand parents with active children
+  // Navigation helper function
+  const handleNavigation = (href: string) => {
+    if (href && href !== '#') {
+      router.push(href); // Use Next.js router for client-side navigation
+    }
+  };
+
   useEffect(() => {
     const newExpandedItems = { ...expandedItems };
 
@@ -71,8 +76,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             <button
               onClick={() => toggleSubMenu(item.label)}
               className={`flex items-center w-full text-text-light-secondary dark:text-text-dark-secondary text-left px-4 py-4 rounded-lg transition-colors duration-150
-                ${isLogout ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' : 
-                  isActive ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                ${isLogout ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' :
+                isActive ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
             >
               <div className="flex items-center flex-grow">
                 {item.icon && (
@@ -92,25 +97,25 @@ const Sidebar: React.FC<SidebarProps> = ({
             {hasSubItems && isExpanded && (
               <div className="ml-4 mt-1 space-y-1 py-1">
                 {item.children?.map((child, childIndex) => (
-                  <Link
+                  <button
                     key={childIndex}
-                    href={child.href || '#'}
-                    className={`flex items-center px-4 py-4 rounded-lg transition-colors duration-150 
+                    onClick={() => handleNavigation(child.href ?? '')}
+                    className={`flex items-center w-full text-left px-4 py-4 rounded-lg transition-colors duration-150 
                       ${pathname === child.href ? 'bg-primary/10 text-primary dark:text-primary-300' : 'dark:text-text-dark-secondary text-text-light-secondary hover:bg-gray-100 dark:hover:bg-gray-700'}`}
                   >
                     {child.icon && <span className="mr-3 text-lg">{child.icon}</span>}
                     <span>{child.label}</span>
-                  </Link>
+                  </button>
                 ))}
               </div>
             )}
           </>
         ) : (
-          <Link
-            href={item.href || '#'}
-            className={`flex items-center dark:text-text-dark-secondary text-text-light-secondary px-4 py-4 rounded-lg transition-colors duration-150
-              ${isLogout ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' : 
-                isActive ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+          <button
+            onClick={() => handleNavigation(item.href ?? '')}
+            className={`flex items-center w-full text-left dark:text-text-dark-secondary text-text-light-secondary px-4 py-4 rounded-lg transition-colors duration-150
+              ${isLogout ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' :
+              isActive ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
           >
             {item.icon && (
               <span className={`mr-3 text-lg ${isLogout ? 'text-red-500' : isActive ? 'text-white' : ''}`}>
@@ -120,7 +125,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             <span className={`${isLogout && !isActive ? 'text-red-500' : ''}`}>
               {item.label}
             </span>
-          </Link>
+          </button>
         )}
       </div>
     );
@@ -139,26 +144,28 @@ const Sidebar: React.FC<SidebarProps> = ({
           <button
             onClick={() => toggleMobileSubMenu(item.label)}
             className={`flex flex-col items-center justify-center px-2 py-1
-              ${isLogout ? 'text-red-500' : 
-                isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
+              ${isLogout ? 'text-red-500' :
+              isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
           >
             {item.icon && <span className="text-xl mb-1">{item.icon}</span>}
             <span className="text-xs">{item.label}</span>
           </button>
-          
+
           {isShowingSubMenu && (
             <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50 border border-gray-200 dark:border-gray-700">
               {item.children?.map((child, childIndex) => (
-                <Link
+                <button
                   key={childIndex}
-                  href={child.href || '#'}
-                  className={`flex items-center px-4 py-2 transition-colors duration-150
+                  onClick={() => {
+                    setShowMobileSubMenu(null);
+                    handleNavigation(child.href ?? '');
+                  }}
+                  className={`flex items-center w-full text-left px-4 py-2 transition-colors duration-150
                     ${pathname === child.href ? 'bg-primary/10 text-primary' : 'dark:text-text-dark-secondary text-text-light-secondary hover:bg-gray-100 dark:hover:bg-gray-700'}`}
-                  onClick={() => setShowMobileSubMenu(null)}
                 >
                   {child.icon && <span className="mr-3 text-lg">{child.icon}</span>}
                   <span>{child.label}</span>
-                </Link>
+                </button>
               ))}
             </div>
           )}
@@ -167,16 +174,16 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
 
     return (
-      <Link
+      <button
         key={index}
-        href={item.href || '#'}
+        onClick={() => handleNavigation(item.href ?? '')}
         className={`flex flex-col items-center justify-center px-2 py-1
-          ${isLogout ? 'text-red-500' : 
-            isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
+          ${isLogout ? 'text-red-500' :
+          isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
       >
         {item.icon && <span className="text-xl mb-1">{item.icon}</span>}
         <span className="text-xs">{item.label}</span>
-      </Link>
+      </button>
     );
   };
 
@@ -206,7 +213,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         {bottomItems.length > 0 && (
           <div className="p-4 border-t border-gray-200 dark:border-gray-700">
             <nav className="space-y-1">
-              {bottomItems.map((item, index) => 
+              {bottomItems.map((item, index) =>
                 renderSidebarItem(item, index, index === bottomItems.length - 1)
               )}
             </nav>
@@ -217,7 +224,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       {/* Mobile Bottom Navigation */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 flex justify-around items-center py-2 px-2 z-50">
         {items.slice(0, 4).map((item, index) => renderMobileNavItem(item, index))}
-        
+
         {/* More button for additional items if needed */}
         {(items.length > 4 || bottomItems.length > 0) && (
           <div className="relative">
@@ -228,38 +235,42 @@ const Sidebar: React.FC<SidebarProps> = ({
               <span className="text-xl mb-1">•••</span>
               <span className="text-xs">More</span>
             </button>
-            
+
             {showMobileSubMenu === 'more' && (
               <div className="absolute bottom-full right-0 mb-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50 border border-gray-200 dark:border-gray-700">
                 {items.slice(4).map((item, index) => (
-                  <Link
+                  <button
                     key={index}
-                    href={item.href || '#'}
-                    className="flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    onClick={() => setShowMobileSubMenu(null)}
+                    onClick={() => {
+                      setShowMobileSubMenu(null);
+                      handleNavigation(item.href ?? '');
+                    }}
+                    className="flex items-center w-full text-left px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     {item.icon && <span className="mr-3 text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
-                  </Link>
+                  </button>
                 ))}
-                
+
                 {bottomItems.length > 0 && items.length > 4 && (
                   <hr className="my-1 border-gray-200 dark:border-gray-700" />
                 )}
-                
+
                 {bottomItems.map((item, index) => (
-                  <Link
+                  <button
                     key={index}
-                    href={item.href || '#'}
-                    className={`flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 
+                    onClick={() => {
+                      setShowMobileSubMenu(null);
+                      handleNavigation(item.href ?? '');
+                    }}
+                    className={`flex items-center w-full text-left px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 
                       ${index === bottomItems.length - 1 ? 'text-red-500' : ''}`}
-                    onClick={() => setShowMobileSubMenu(null)}
                   >
                     {item.icon && <span className={`mr-3 text-lg ${index === bottomItems.length - 1 ? 'text-red-500' : ''}`}>
                       {item.icon}
                     </span>}
                     <span>{item.label}</span>
-                  </Link>
+                  </button>
                 ))}
               </div>
             )}

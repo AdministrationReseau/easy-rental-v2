@@ -68,7 +68,7 @@ export default function SubscriptionPage() {
     // Handle plan selection
     const handlePlanSelect = (plan: Plan) => {
         // Redirect to register page with selected plan
-        router.push(`/organization/register?plan=${plan.id}`);
+        router.push(`/register?plan=${plan.id}`);
     };
 
     return (

@@ -1,14 +1,14 @@
 'use client'
 
-import AgencyNavbar from "@/components/navbar/AgencyNavbar";
-import AgencySidebar from "@/components/sidebar/AgencySidebar";
 import React from "react";
+import OrganizationNavbar from "@/components/navbar/OrganizationNavbar";
+import OrganizationSidebar from "@/components/sidebar/OrganizationSidebar";
 
 export default function Layout({children }: { children: React.ReactNode }) {
     return (
         <div className="bg-background-light dark:bg-background-dark">
-          <AgencyNavbar/>
-          <AgencySidebar />
+          <OrganizationNavbar/>
+          <OrganizationSidebar/>
           <main className="md:ml-64 pt-16 pb-12 md:pb-0">
             <div className="p-6">
               {children}
