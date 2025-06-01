@@ -20,7 +20,7 @@ export default function ClientProfile() {
         {
           icon: Lock,
           title: t('profile.tabs.settings'),
-          link: "/profile/security-settings",
+          link: "/profile/settings",
         }
       ]
     },
@@ -35,7 +35,7 @@ export default function ClientProfile() {
          {
           icon: ArrowLeftRight,
           title: "Transactions",
-          link: "/profile/transactions",
+          link: "/",
         },
       ]
     },
@@ -45,12 +45,12 @@ export default function ClientProfile() {
         {
           icon: KeyRound,
           title: t('navbar.bookings'),
-          link: "/profile/reservations",
+          link: "/",
         },
         {
           icon: Heart,
           title: t('profile.tabs.favorites'),
-          link: "/profile/payment-methods",
+          link: "/",
         }
       ]
     },
@@ -60,12 +60,12 @@ export default function ClientProfile() {
         {
           icon: HelpCircle,
           title: t('profile.help.contact_support'),
-          link: '/client/help',
+          link: '/profile/contact-support',
         },
         {
           icon: ShieldCheck,
-          title: t('profile.help.privacy_policy'),
-          link: "/profile/security-settings",
+          title: t('profile.help.privacy_policy.title'),
+          link: "/profile/privacy-policy",
         }
       ]
     },

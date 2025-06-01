@@ -254,7 +254,10 @@
             "title": "Aide et Support",
             "contact_support": "Contacter le Service Client",
             "terms": "Conditions Générales",
-            "privacy_policy": "Politique de Confidentialité"
+            "privacy_policy": {
+                "title":"Politique de Confidentialité",
+                "content": "Nous nous engageons à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et partageons vos informations personnelles."
+            } 
         },
         "logout": "Déconnexion"
     },
