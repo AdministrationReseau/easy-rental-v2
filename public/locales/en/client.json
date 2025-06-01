@@ -199,7 +199,7 @@
         "title": "My Profile",
         "subtitle": "Manage your account information",
         "tabs": {
-            "personal": "Personal Info",
+            "personal": "Personal Information",
             "bookings": "Booking History",
             "favorites": "Favorites",
             "payments": "Payment Methods",
@@ -217,7 +217,10 @@
             "date_of_birth": "Date of Birth",
             "driving_license": "Driving License",
             "save": "Save Changes",
-            "change_password": "Change Password"
+            "change_password": "Change Password",
+            "edit": "Edit",
+            "cancel": "Cancel",
+            "add":"Add your "
         },
         "favorites": {
             "title": "Favorite Vehicles",

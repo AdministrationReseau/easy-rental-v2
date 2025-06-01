@@ -217,7 +217,10 @@
             "date_of_birth": "Date de Naissance",
             "driving_license": "Permis de Conduire",
             "save": "Enregistrer les Modifications",
-            "change_password": "Changer le Mot de Passe"
+            "change_password": "Changer le Mot de Passe",
+            "edit": "Modifier",
+            "cancel": "Annuler",
+            "add":"Ajouter votre "
         },
         "favorites": {
             "title": "Véhicules Favoris",
