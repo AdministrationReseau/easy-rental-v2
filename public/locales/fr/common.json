@@ -47,27 +47,200 @@
                 "title": "Notre Plateforme en Chiffres",
                 "subtitle": "Nous grandissons chaque jour pour mieux vous servir",
                 "stats": {
-                    "happyCustomers": {
-                        "label": "Clients Satisfaits",
-                        "value": "15000",
-                        "suffix": "+"
-                    },
-                    "premiumVehicles": {
-                        "label": "Véhicules Premium",
-                        "value": "5000",
-                        "suffix": "+"
-                    },
-                    "partnerAgencies": {
-                        "label": "Agences Partenaires",
+                    "vehicles": {
+                        "label": "Véhicules Disponibles",
                         "value": "500",
                         "suffix": "+"
                     },
-                    "earningsGenerated": {
-                        "label": "Revenus Générés",
-                        "value": "10",
-                        "suffix": "M+",
-                        "prefix": "$"
+                    "agencies": {
+                        "label": "Agences Partenaires",
+                        "value": "50",
+                        "suffix": "+"
+                    },
+                    "clients": {
+                        "label": "Clients Satisfaits",
+                        "value": "10000",
+                        "suffix": "+"
+                    },
+                    "rating": {
+                        "label": "Évaluation Moyenne",
+                        "value": "4.8",
+                        "suffix": "/5"
                     }
+                }
+            },
+            "team": {
+                "title": "Rencontrez Notre Équipe",
+                "subtitle": "Les passionnés derrière Easy Rental",
+                "members": {
+                    "teacher": {
+                        "name": "Thomas Djotio Ndié",
+                        "position": "PDG",
+                        "bio": "Professeur associé à l'Université de Yaoundé 1",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://cm.linkedin.com/in/thomas-djotio",
+                        "twitter": "https://twitter.com/marc_legrand"
+                    },
+                    "engineer": {
+                        "name": "Jane Smith",
+                        "position": "Ingénieure",
+                        "bio": "Experte en développement de plateformes et en solutions technologiques évolutives.",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc-legrand"
+                    },
+                    "member1": {
+                        "name": "Nguepssi Brayanne",
+                        "position": "Cheffe d'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc-legrand"
+                    },
+                    "member2": {
+                        "name": "Hassana Zouheiriyya",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc-legrand"
+                    },
+                    "member3": {
+                        "name": "Ntye Nina",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc-legrand"
+                    },
+                    "member4": {
+                        "name": "Vuide Jordan",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiant en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc-legrand"
+                    },
+                    "member5": {
+                        "name": "Ngom Christine",
+                        "position": "Membre de l'Équipe Développement",
+                        "bio": "Étudiante en 4ème année d'ingénierie",
+                        "image": "/assets/member.jpg",
+                        "linkedin": "https://linkedin.com/in/marc-legrand",
+                        "twitter": "https://twitter.com/marc-legrand"
+                    }
+                }
+            },
+            "partners": {
+                "title": "Nos Partenaires",
+                "subtitle": "De confiance pour les principales agences de location de véhicules",
+                "partnersList": [
+                    {
+                        "name": "Alicya Auto",
+                        "logo": "/assets/rental2.png"
+                    },
+                    {
+                        "name": "VIP Cars",
+                        "logo": "/assets/rental3.png"
+                    },
+                    {
+                        "name": "Polycom Sarl",
+                        "logo": "/assets/rental4.png"
+                    }
+                ]
+            },
+            "cta": {
+                "title": "Prêt à Commencer ?",
+                "subtitle": "Rejoignez des milliers de clients satisfaits sur Easy Rental",
+                "client_button": "Trouver des Véhicules",
+                "agency_button": "Enregistrer une Agence"
+            },
+            "features": {
+                "title": "Pourquoi Choisir Easy Rental ?",
+                "subtitle": "La plateforme leader pour la location de véhicules au Cameroun",
+                "cards": {
+                    "vehicles": {
+                        "title": "Large Sélection de Véhicules",
+                        "description": "Choisissez parmi notre vaste flotte de véhicules bien entretenus"
+                    },
+                    "security": {
+                        "title": "100% Sécurisé",
+                        "description": "Toutes les transactions sont protégées avec des protocoles de sécurité avancés"
+                    },
+                    "support": {
+                        "title": "Support 24/7",
+                        "description": "Notre équipe est disponible 24h/24 pour vous assister"
+                    },
+                    "mobile": {
+                        "title": "Application Mobile",
+                        "description": "Accédez à Easy Rental sur tout appareil, n'importe où, n'importe quand"
+                    }
+                }
+            },
+            "organisation": {
+                "title": "Devenez une Organisation Partenaire",
+                "description": "Listez votre flotte sur notre plateforme et atteignez des milliers de clients potentiels chaque jour. Notre système simplifié rend la gestion des locations simple et rentable.",
+                "features": [
+                    "Élargissez votre base de clients",
+                    "Structure de commission flexible",
+                    "Gestion des réservations en temps réel",
+                    "Équipe de support dédiée"
+                ],
+                "button": "S'inscrire comme Organisation",
+                "testimonial": {
+                    "title": "Rejoignez 500+ Organisations",
+                    "quote": "Collaborer avec Easy-Rent a augmenté nos réservations de 60% au premier trimestre !",
+                    "author": {
+                        "name": "John Smith",
+                        "position": "PDG, Premium Rides"
+                    }
+                }
+            },
+            "earning": {
+                "title": "Commencez à Gagner avec Vos Véhicules",
+                "subtitle": "Rejoignez notre plateforme et transformez votre flotte en une activité rentable",
+                "steps": [
+                    {
+                        "title": "Enregistrez Votre Organisation",
+                        "desc": "Inscrivez-vous et complétez notre processus de vérification simple"
+                    },
+                    {
+                        "title": "Ajoutez Vos Véhicules",
+                        "desc": "Téléchargez les détails de votre flotte avec des photos de qualité"
+                    },
+                    {
+                        "title": "Recevez Vos Premières Réservations",
+                        "desc": "Acceptez les réservations et développez votre activité de location"
+                    }
+                ]
+            },
+            "services": {
+                "title": "Nos Services",
+                "subtitle": "Solutions adaptées à chaque type d'utilisateur",
+                "client": {
+                    "title": "Pour les Clients",
+                    "description": "Louez des véhicules facilement et profitez de votre voyage",
+                    "features": [
+                        "Parcourez les véhicules vérifiés",
+                        "Services de chauffeur",
+                        "Options de paiement sécurisées",
+                        "Système de réservation flexible",
+                        "Support client 24/7"
+                    ],
+                    "image": "/assets/clientservice.png",
+                    "cta": "Commencer à Louer"
+                },
+                "agency": {
+                    "title": "Pour les Agences",
+                    "description": "Développez votre entreprise avec notre plateforme",
+                    "features": [
+                        "Gestion complète de flotte",
+                        "Tableau de bord analytique avancé",
+                        "Système de réservation automatisé",
+                        "Gestionnaire de compte dédié"
+                    ],
+                    "image": "/assets/orgservice.png",
+                    "cta": "Rejoindre comme Agence"
                 }
             }
         },
@@ -105,6 +278,68 @@
 
             "agency_navbar": {
                 "notifications": "Notifications"
+            }
+        },
+
+        "sidebar": {
+            "organization_sidebar": {
+                "dashboard": "Tableau de bord",
+                "entities": {
+                    "agencies": "Agences",
+                    "vehicles": "Véhicules",
+                    "staff": "Personnel",
+                    "drivers": "Conducteurs"
+                },
+                "rentals": "Réservations",
+                "transactions": "Transactions",
+                "help_center": "Centre d’aide",
+                "logout": "Déconnexion"
+            },
+
+            "agency_sidebar": {
+                "dashboard": "Tableau de bord",
+                "entities": {
+                    "label": "Entités",
+                    "vehicles": "Véhicules",
+                    "staff": "Personnel",
+                    "drivers": "Conducteurs"
+                },
+                "rentals": "Locations",
+                "transactions": "Transactions",
+                "help_center": "Centre d’aide",
+                "logout": "Déconnexion"
+            }
+        },
+
+
+        "footer": {
+            "about": "Easy Rental connecte les clients avec des agences de location vérifiées à travers le Cameroun, offrant une expérience de location fluide.",
+            "links": {
+                "title": "Liens Rapides",
+                "about": "À Propos",
+                "contact": "Contact",
+                "terms": "Conditions d'Utilisation",
+                "privacy": "Politique de Confidentialité"
+            },
+            "services": {
+                "title": "Services",
+                "browse": "Parcourir les Véhicules",
+                "agency": "Enregistrer une Agence",
+                "bookings": "Mes Réservations",
+                "support": "Support"
+            },
+            "contact": {
+                "title": "Nous Contacter",
+                "email": "contact@easyrental.cm",
+                "phone": "+237 6XX XXX XXX",
+                "address": "Yaoundé, Cameroun"
+            },
+            "copyright": "Tous droits réservés.",
+            "socials": {
+                "facebook": "https://facebook.com/easyrental",
+                "twitter": "https://twitter.com/easyrental",
+                "instagram": "https://instagram.com/easyrental",
+                "linkedin": "https://linkedin.com/company/easyrental"
             }
         },
 
@@ -213,12 +448,7 @@
                 "cta": "Rejoindre comme Agence"
             }
         },
-        "stats": {
-            "vehicles": "Véhicules Disponibles",
-            "agencies": "Agences Partenaires",
-            "clients": "Clients Satisfaits",
-            "rating": "Évaluation Moyenne"
-        },
+
         "team": {
             "title": "Rencontrez Notre Équipe",
             "subtitle": "Les personnes derrière Easy Rental",

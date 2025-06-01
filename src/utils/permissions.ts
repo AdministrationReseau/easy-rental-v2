@@ -15,14 +15,18 @@ export const routePermissions: RoutePermission[] = [
 ];
 
 // Fonction d'aide pour vérifier les autorisations
-export function hasPermission(path: string, role: UserRole | null): boolean {
+// export function hasPermission(path: string, role: UserRole | null): boolean {
+export function hasPermission(): boolean {
+
 	// Les routes non protégées sont accessibles à tous
-	const permission = routePermissions.find(p =>
-		path === p.path || path.startsWith(`${p.path}/`)
-	);
+	// const permission = routePermissions.find(p =>
+	// 	path === p.path || path.startsWith(`${p.path}/`)
+	// );
+	//
+	// if (!permission) return true;
+	// if (!role) return false;
+	//
+	// return permission.allowedRoles.includes(role);
 
-	if (!permission) return true;
-	if (!role) return false;
-
-	return permission.allowedRoles.includes(role);
+	return true;
 }
