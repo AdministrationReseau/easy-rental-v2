@@ -3,6 +3,7 @@ import ProfileTabsPageLayout from "@/components/layout/ProfileTabsPageLauyout";
 import { useTranslation } from "react-i18next";
 import { Camera, Pencil } from 'lucide-react'
 import { useState } from "react";
+import Image from "next/image";
 
 export default function PersonalInfo() {
   const { t } = useTranslation('client');
@@ -73,7 +74,7 @@ const renderRow = (label: string, key: keyof typeof form, placeholder = '') => {
           <label htmlFor="avatar-upload">
             <div className="w-24 h-24 rounded-full border-2 border-dashed border-gray-300 flex items-center justify-center overflow-hidden relative bg-gray-50">
               {form.avatar ? (
-                <img
+                <Image
                   src={form.avatar}
                   alt="Avatar"
                   className="object-cover w-full h-full"
