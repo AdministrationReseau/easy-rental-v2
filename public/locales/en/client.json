@@ -204,7 +204,8 @@
             "favorites": "Favorites",
             "payments": "Payment Methods",
             "preferences": "Preferences",
-            "settings": "Settings"
+            "settings": "Settings",
+            "account": " Manage Account"
         },
         "personal": {
             "title": "Personal Information",
@@ -248,6 +249,12 @@
             "email_booking": "Booking confirmations",
             "sms_alerts": "SMS alerts",
             "save": "Save Preferences"
+        },
+         "help": {
+            "title": "Help & Support",
+            "contact_support": "Contact Support",
+            "terms": "Terms of Service",
+            "privacy_policy": "Privacy Policy"
         },
         "logout": "Log Out"
     },

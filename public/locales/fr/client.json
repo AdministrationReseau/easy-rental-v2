@@ -204,7 +204,8 @@
             "favorites": "Favoris",
             "payments": "Méthodes de Paiement",
             "preferences": "Préférences",
-            "settings": "Paramètres"
+            "settings": "Paramètres",
+            "account": "Gestion du Compte"
         },
         "personal": {
             "title": "Informations Personnelles",
@@ -248,6 +249,12 @@
             "email_booking": "Confirmations de réservation",
             "sms_alerts": "Alertes SMS",
             "save": "Enregistrer les Préférences"
+        },
+        "help": {
+            "title": "Aide et Support",
+            "contact_support": "Contacter le Service Client",
+            "terms": "Conditions Générales",
+            "privacy_policy": "Politique de Confidentialité"
         },
         "logout": "Déconnexion"
     },

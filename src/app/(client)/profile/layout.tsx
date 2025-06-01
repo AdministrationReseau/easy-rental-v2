@@ -1,6 +1,5 @@
 import ClientNavbar from '@/components/navbar/ClientNavbar';
 import Image  from 'next/image';
-import { Gift } from 'lucide-react';
 import Footer from '@/components/footer/footer';
 
 

@@ -1,22 +1,25 @@
 'use client';
 
 import Link from "next/link";
-import { ChevronRight, LucideIcon, CreditCard, Lock, HelpCircle, UserCircle, Heart, MessageCircle, ArrowLeftRight, KeyRound, ShieldCheck, Wallet } from "lucide-react";
+import { ChevronRight, LucideIcon, CreditCard, Lock, HelpCircle, UserCircle, Heart, ArrowLeftRight, KeyRound, ShieldCheck } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function ClientProfile() {
+  
+  const { t } = useTranslation('client');
   const options = [
     
        {
-      title: "Gérer mon compte",
+      title: t('profile.tabs.account'),
       items :[
         {
           icon: UserCircle,
-          title: "Informations personnelles",
+          title: t('profile.tabs.personal'),
           link: "/profile/personal-info",
         },
         {
           icon: Lock,
-          title: "Paramètres de sécurité",
+          title: t('profile.tabs.settings'),
           link: "/profile/security-settings",
         }
       ]
@@ -25,13 +28,8 @@ export default function ClientProfile() {
       title: "Paiement",
       items :[
         {
-          icon: Wallet,
-          title: "Récompenses et Portefeuille",
-          link: "/profile/rewards",
-        },
-        {
           icon: CreditCard,
-          title: "Moyens de paiement",
+          title: t('profile.tabs.payments'),
           link: "/profile/payment-methods",
         },
          {
@@ -46,32 +44,27 @@ export default function ClientProfile() {
       items :[
         {
           icon: KeyRound,
-          title: "Locations et Réservations",
+          title: t('navbar.bookings'),
           link: "/profile/reservations",
         },
         {
           icon: Heart,
-          title: "Favoris",
+          title: t('profile.tabs.favorites'),
           link: "/profile/payment-methods",
-        },
-         {
-          icon: MessageCircle,
-          title: "Mes commentaires",
-          link: "/profile/comments",
-        },
+        }
       ]
     },
     {
-      title: "Aide",
+      title: t('profile.help.title'),
       items :[
         {
           icon: HelpCircle,
-          title: "Contacter le Service Clients",
+          title: t('profile.help.contact_support'),
           link: '/client/help',
         },
         {
           icon: ShieldCheck,
-          title: "Confidentialité et gestion des données",
+          title: t('profile.help.privacy_policy'),
           link: "/profile/security-settings",
         }
       ]
