@@ -195,7 +195,7 @@ const renderRow = (label: string, key: keyof typeof form, placeholder = '') => {
             {handleInput()}
             {key === 'email' && (
               <p className="text-xs text-gray-500 mt-1">
-                We’ll send a verification link to your new email address — check your inbox.
+                We will send a verification link to your new email address — check your inbox.
               </p>
             )}
             <div className="mt-2 flex gap-2">
@@ -225,7 +225,7 @@ console.log('form', form);
     <ProfileTabsPageLayout title={t('profile.personal.title')}>
      
         <p className="text-sm mb-6">
-            Ces informations doivent correspondre à votre pièce d'identité officielle.
+            Ces données nous permettent de mieux vous connaître et de sécuriser votre compte.
         </p>
         {renderRow('Avatar', 'avatar')}
         {renderRow(t('profile.personal.name'), 'name')}
