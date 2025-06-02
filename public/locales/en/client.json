@@ -199,12 +199,13 @@
         "title": "My Profile",
         "subtitle": "Manage your account information",
         "tabs": {
-            "personal": "Personal Info",
+            "personal": "Personal Information",
             "bookings": "Booking History",
             "favorites": "Favorites",
             "payments": "Payment Methods",
             "preferences": "Preferences",
-            "settings": "Settings"
+            "settings": "Settings",
+            "account": " Manage Account"
         },
         "personal": {
             "title": "Personal Information",
@@ -217,7 +218,10 @@
             "date_of_birth": "Date of Birth",
             "driving_license": "Driving License",
             "save": "Save Changes",
-            "change_password": "Change Password"
+            "change_password": "Change Password",
+            "edit": "Edit",
+            "cancel": "Cancel",
+            "add":"Add your "
         },
         "favorites": {
             "title": "Favorite Vehicles",
@@ -245,6 +249,15 @@
             "email_booking": "Booking confirmations",
             "sms_alerts": "SMS alerts",
             "save": "Save Preferences"
+        },
+         "help": {
+            "title": "Help & Support",
+            "contact_support": "Contact Support",
+            "terms": "Terms of Service",
+            "privacy_policy": {
+                "title":"Privacy Policy",
+                "content": "Your privacy is important to us. Please read our privacy policy to understand how we collect, use, and protect your information."
+            }
         },
         "logout": "Log Out"
     },

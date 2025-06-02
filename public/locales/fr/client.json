@@ -204,7 +204,8 @@
             "favorites": "Favoris",
             "payments": "Méthodes de Paiement",
             "preferences": "Préférences",
-            "settings": "Paramètres"
+            "settings": "Paramètres",
+            "account": "Gestion du Compte"
         },
         "personal": {
             "title": "Informations Personnelles",
@@ -217,7 +218,10 @@
             "date_of_birth": "Date de Naissance",
             "driving_license": "Permis de Conduire",
             "save": "Enregistrer les Modifications",
-            "change_password": "Changer le Mot de Passe"
+            "change_password": "Changer le Mot de Passe",
+            "edit": "Modifier",
+            "cancel": "Annuler",
+            "add":"Ajouter votre "
         },
         "favorites": {
             "title": "Véhicules Favoris",
@@ -245,6 +249,15 @@
             "email_booking": "Confirmations de réservation",
             "sms_alerts": "Alertes SMS",
             "save": "Enregistrer les Préférences"
+        },
+        "help": {
+            "title": "Aide et Support",
+            "contact_support": "Contacter le Service Client",
+            "terms": "Conditions Générales",
+            "privacy_policy": {
+                "title":"Politique de Confidentialité",
+                "content": "Nous nous engageons à protéger votre vie privée. Cette politique explique comment nous collectons, utilisons et partageons vos informations personnelles."
+            } 
         },
         "logout": "Déconnexion"
     },
