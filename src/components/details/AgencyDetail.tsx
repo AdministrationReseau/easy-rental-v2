@@ -1,9 +1,7 @@
 // components/AgencyDetail.tsx
 import React, { useState, useEffect } from "react";
 import { AgencyProps } from '@/types/models/agency';
-// import Stars from "../Stars";
 import Link from "next/link";
-// import Reviews from "../Reviews";
 import { CarProps } from "@/types/models/car";
 import { RatingStars } from "@/components/ui/ratingStars";
 import { CarCard } from "@/components/cards/CarCard";
@@ -62,7 +60,6 @@ const AgencyInfo: React.FC<{ agency: AgencyProps }> = ({ agency }) => {
       {/* Description */}
       <p className="text-secondary-text"><i>{agency.slogan}</i></p>
       <p className="text-sm text-gray-500 py-2">{agency.description}</p>
-
 
       {/* Description et Évaluation */}
       <div className="space-y-2">

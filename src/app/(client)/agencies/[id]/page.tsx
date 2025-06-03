@@ -50,7 +50,7 @@ const AgencyDetails: React.FC = () => {
   }, [id]);
 
   if (!agency) {
-    return <p className='text-center text-text-light dark:text-text-dark'> Cette Agence n'existe pas</p>;
+    return <p className='text-center text-text-light dark:text-text-dark'> Cette Agence est introuvable</p>;
   }
 
 

@@ -230,7 +230,7 @@ const SidebarAgencyFilter: React.FC<{ agencies: AgencyProps[]; onFilter: (filter
           </div>
           <div className="m-4 w-[80%]">
             <h3 className="text-md font-medium mb-2">Followers</h3>
-            <RangeSlider max={followersRange[1]}/>
+            <RangeSlider max={followersRange[1]} fonction={handleFollowersRangeChange}/>
             <div className="flex justify-between text-sm">
               <span>Min: {followersRange[0]}</span>
               <span>Max: {followersRange[1]}</span>
@@ -327,7 +327,7 @@ const SidebarAgencyFilter: React.FC<{ agencies: AgencyProps[]; onFilter: (filter
 
           <div className="m-4 w-[80%]">
             <h3 className="text-md font-medium mb-2">Followers</h3>
-            <RangeSlider max={followersRange[1]}/>
+            <RangeSlider max={followersRange[1]} fonction={handleFollowersRangeChange}/>
             <div className="flex justify-between text-sm">
               <span>Min: {followersRange[0]}</span>
               <span>Max: {followersRange[1]}</span>
@@ -354,10 +354,18 @@ export default SidebarAgencyFilter;
 
 
 
+interface RangeSliderProps {
+  max: number;
+  fonction: (event: Event, newValue: number | number[]) => void;
+}
 
-
-export const RangeSlider = ({max}:{max:number}) => {
+export const RangeSlider = ({max,fonction}:RangeSliderProps) => {
   const [value, setValue] = useState(max); // valeur par défaut
+   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = Number(e.target.value);
+    setValue(newValue);
+    fonction(e.nativeEvent, newValue); // on passe un `Event` natif comme attendu
+  };
 
   return (
     <div className="w-full max-w-md mx-auto py-4">
@@ -371,7 +379,7 @@ export const RangeSlider = ({max}:{max:number}) => {
         min="0"
         max={max}
         value={value}
-        onChange={(e) => setValue(Number(e.target.value))}
+        onChange={handleChange}
         className="w-full h-2 bg-blue-200 rounded-lg appearance-none cursor-pointer range-sm accent-blue-500"
       />
     </div>

@@ -135,7 +135,6 @@ const AgencyCard: React.FC<AgencyProps> = ({
                     <p className="text-xl font-semibold text-gray-800">{city}</p>
                     <p className='text-sm'>{quater}</p>
                 </span>
-                {/* <Link href={`/car-details/${id}`}> */}
                 <Link
                     href={`/agencies/${id}`}
                     className="text-primary-blue mt-2 inline-block"

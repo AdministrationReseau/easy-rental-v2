@@ -7,7 +7,7 @@ export default function Help() {
 
   return (
     <div>
-            
+            {t('help.title')}
             help
     </div>
   
