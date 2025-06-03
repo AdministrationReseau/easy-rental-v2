@@ -212,7 +212,7 @@ const renderRow = (label: string, key: keyof typeof form, placeholder = '') => {
 
       {editing !== key && (
         <button onClick={() => setEditing(key)} className="text-blue-600 text-sm flex items-center gap-1 hover:underline">
-          <Pencil size={12} /> Edit
+          <Pencil size={12} /> {t('profile.personal.edit')}
         </button>
       )}
     </div>

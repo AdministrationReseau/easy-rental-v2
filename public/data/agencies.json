@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "name": "SunRide Agency",
+    "description": "Location de véhicules de luxe et services personnalisés pour entreprises et particuliers.",
+    "slogan": "Roulez sous le soleil, vivez l'expérience.",
+    "city": "Douala",
+    "quater": "Bonapriso",
+    "openingTime": "08:00",
+    "closingTime": "20:00",
+    "followers": 1250,
+    "rating": 4.7,
+    "type": "Luxe",
+    "createdAt": "2024-10-01T09:00:00Z",
+    "updatedAt": "2025-05-30T10:00:00Z",
+    "images": [
+      "/luxury-car.jpg",
+      "/rental-car.jpg"
+    ],
+    "reviews": [
+      {
+        "reviewer": "Alice Mbarga",
+        "comment": "Service impeccable, voitures propres et modernes.",
+        "rating": 5
+      },
+      {
+        "reviewer": "Jean-Claude N.",
+        "comment": "Un peu cher, mais ça vaut le coup.",
+        "rating": 4
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "EcoDrive CM",
+    "description": "Agence spécialisée en location de voitures économiques et écologiques.",
+    "slogan": "Conduisez vert, vivez mieux.",
+    "city": "Yaoundé",
+    "quater": "Bastos",
+    "openingTime": "07:30",
+    "closingTime": "19:00",
+    "followers": 860,
+    "rating": 4.3,
+    "type": "Éco",
+    "createdAt": "2023-06-10T08:15:00Z",
+    "updatedAt": "2025-04-22T14:45:00Z",
+    "images": [
+      "/eco-car.jpg",
+      "/green-vehicle.jpg"
+    ],
+    "reviews": [
+      {
+        "reviewer": "Marthe T.",
+        "comment": "Bonne alternative économique pour les trajets courts.",
+        "rating": 4
+      },
+      {
+        "reviewer": "Kevin Lobe",
+        "comment": "Le personnel est sympathique et réactif.",
+        "rating": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "CityMove",
+    "description": "Location rapide de véhicules urbains avec livraison à domicile.",
+    "slogan": "Votre mobilité, notre priorité.",
+    "city": "Buea",
+    "quater": "Molyko",
+    "openingTime": "08:30",
+    "closingTime": "18:00",
+    "followers": 540,
+    "rating": 4.0,
+    "type": "Standard",
+    "createdAt": "2022-11-03T11:00:00Z",
+    "updatedAt": "2025-05-25T16:30:00Z",
+    "images": [
+      "/city-car.jpg",
+      "/vehicle-delivery.jpg"
+    ],
+    "reviews": [
+      {
+        "reviewer": "Francine D.",
+        "comment": "Livraison rapide, voiture en bon état.",
+        "rating": 4
+      },
+      {
+        "reviewer": "Samuel Eko",
+        "comment": "Manque un peu de choix pour les SUV.",
+        "rating": 3
+      }
+    ]
+  }
+]

@@ -1,9 +1,8 @@
-import ClientNavbar from '@/components/navbar/ClientNavbar';
 import Image  from 'next/image';
 import Footer from '@/components/footer/footer';
 
 
-export default function ClientLayout({
+export default function ClientProfileLayout({
   children,
 }: {
   children: React.ReactNode
@@ -19,7 +18,7 @@ export default function ClientLayout({
   }
   return (
     <div className="pt-8 bg-primary-700 min-h-screen text-text-primary dark:text-text-primary-dark dark:bg-primary-900">
-      <ClientNavbar/>
+      
       <div className="pt-8 px-8 lg:px-32 md:px-16 sm:px-8 flex flex-col gap-8">
           <div >
               <h1 className=" profil text-2xl text-text-dark dark:text-text-dark font-bold my-4">Profil</h1>
