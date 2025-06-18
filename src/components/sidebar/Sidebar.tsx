@@ -64,7 +64,6 @@ const Sidebar: React.FC<SidebarProps> = ({
     const hasSubItems = item.children && item.children.length > 0;
     const isLogout = isLastBottomItem;
 
-    // Diagnostic code removed.
 
     return (
       <div key={index} className="mb-3">
@@ -102,7 +101,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     onClick={() => { // Assuming child.onClick might exist as per user's code
                       if (child.onClick) child.onClick();
                     }}
-                    className={`flex items-center px-4 py-3 rounded-lg dark:text-text-dark-secondary  ${isItemOrChildActive(child) ? 'bg-primary-200 dark:bg-primary-200/50 text-primary dark:text-primary-300' : 'text-text-light-secondary'}`}
+                    className={`flex items-center px-4 py-3 rounded-lg dark:text-text-dark-secondary  ${isItemOrChildActive(child) ? 'bg-primary-100 dark:bg-primary-200/50 text-primary dark:text-primary-300' : 'text-text-light-secondary'}`}
                   >
                     {child.icon && <span className="mr-3">{child.icon}</span>} {/* Kept child icon simple as per user's general structure */}
                     {child.label}
