@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
 
     setExpandedItems(newExpandedItems);
-  }, [pathname, items, bottomItems, expandedItems]); // Corrected useEffect dependencies
+  }, [pathname, items, bottomItems]); // Corrected useEffect dependencies
 
   const renderSidebarItem = (item: SidebarItem, index: number, isLastBottomItem: boolean = false) => {
     const isActive = isItemOrChildActive(item);
