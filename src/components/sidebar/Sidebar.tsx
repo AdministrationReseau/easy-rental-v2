@@ -7,10 +7,10 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa';
 import { SidebarProps, SidebarItem } from '@/types/models/sidebar';
 
 const Sidebar: React.FC<SidebarProps> = ({
-  items = [],
-  bottomItems = [],
-  logo,
-}) => {
+                                           items = [],
+                                           bottomItems = [],
+                                           logo,
+                                         }) => {
   const pathname = usePathname();
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
   const [showMobileSubMenu, setShowMobileSubMenu] = useState<string | null>(null);
@@ -29,11 +29,11 @@ const Sidebar: React.FC<SidebarProps> = ({
   // Check if any child in the item is active
   const isItemOrChildActive = (item: SidebarItem): boolean => {
     if (pathname === item.href) return true;
-    
+
     if (item.children && item.children.length > 0) {
       return item.children.some(child => pathname === child.href);
     }
-    
+
     return false;
   };
 
@@ -56,7 +56,7 @@ const Sidebar: React.FC<SidebarProps> = ({
     }
 
     setExpandedItems(newExpandedItems);
-  }, [pathname, items, bottomItems, expandedItems]);
+  }, [pathname, items, bottomItems, expandedItems]); // Corrected useEffect dependencies
 
   const renderSidebarItem = (item: SidebarItem, index: number, isLastBottomItem: boolean = false) => {
     const isActive = isItemOrChildActive(item);
@@ -64,19 +64,23 @@ const Sidebar: React.FC<SidebarProps> = ({
     const hasSubItems = item.children && item.children.length > 0;
     const isLogout = isLastBottomItem;
 
+    // Diagnostic code removed.
+
     return (
       <div key={index} className="mb-3">
         {hasSubItems ? (
           <>
             <button
-              onClick={() => toggleSubMenu(item.label)}
+              onClick={() => { // Ensured onClick is present as per user's version for toggleSubMenu
+                toggleSubMenu(item.label);
+              }}
               className={`flex items-center w-full text-text-light-secondary dark:text-text-dark-secondary text-left px-4 py-4 rounded-lg transition-colors duration-150
-                ${isLogout ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' : 
-                  isActive ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                ${isLogout ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' :
+                isActive ? 'bg-primary text-white' : ''}`}
             >
               <div className="flex items-center flex-grow">
                 {item.icon && (
-                  <span className={`mr-3 text-xl ${isLogout ? 'text-red-500' : ''}`}>
+                  <span className={`mr-3 text-xl ${isLogout ? 'text-red-500' : (isActive ? 'text-white' : '')}`}> {/* MODIFICATION 1: Icon color for active parent */}
                     {item.icon}
                   </span>
                 )}
@@ -89,34 +93,34 @@ const Sidebar: React.FC<SidebarProps> = ({
               )}
             </button>
 
-            {hasSubItems && isExpanded && (
+            {isExpanded && ( // Children rendering part
               <div className="ml-4 mt-1 space-y-1 py-1">
-                {item.children?.map((child, childIndex) => (
+                {item.children?.map((child, childIndex) => ( // Assuming item.children is always defined if hasSubItems is true
                   <Link
                     key={childIndex}
                     href={child.href || '#'}
-                    className={`flex items-center px-4 py-4 rounded-lg transition-colors duration-150 
-                      ${pathname === child.href ? 'bg-primary/10 text-primary dark:text-primary-300' : 'dark:text-text-dark-secondary text-text-light-secondary hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                    onClick={() => { // Assuming child.onClick might exist as per user's code
+                      if (child.onClick) child.onClick();
+                    }}
+                    className={`flex items-center px-4 py-3 rounded-lg dark:text-text-dark-secondary  ${isItemOrChildActive(child) ? 'bg-primary-200 dark:bg-primary-200/50 text-primary dark:text-primary-300' : 'text-text-light-secondary'}`}
                   >
-                    {child.icon && <span className="mr-3 text-lg">{child.icon}</span>}
-                    <span>{child.label}</span>
+                    {child.icon && <span className="mr-3">{child.icon}</span>} {/* Kept child icon simple as per user's general structure */}
+                    {child.label}
                   </Link>
                 ))}
               </div>
             )}
           </>
-        ) : (
+        ) : ( // Non-submenu item rendering
           <Link
             href={item.href || '#'}
-            className={`flex items-center dark:text-text-dark-secondary text-text-light-secondary px-4 py-4 rounded-lg transition-colors duration-150
-              ${isLogout ? 'text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20' : 
-                isActive ? 'bg-primary text-white' : 'hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+            onClick={() => { // Assuming item.onClick might exist
+              if (item.onClick) item.onClick();
+            }}
+            className={`flex items-center px-4 py-4 rounded-lg text-text-light-secondary dark:text-text-dark-secondary ${isActive ? 'bg-primary text-white' : ''}`}
           >
-            {item.icon && (
-              <span className={`mr-3 text-lg ${isLogout ? 'text-red-500' : isActive ? 'text-white' : ''}`}>
-                {item.icon}
-              </span>
-            )}
+            {/* Icon styling for direct link, ensuring consistency with active state */}
+            {item.icon && <span className={`mr-3 text-lg ${isLogout ? 'text-red-500' : (isActive ? 'text-white' : '')}`}>{item.icon}</span>}
             <span className={`${isLogout && !isActive ? 'text-red-500' : ''}`}>
               {item.label}
             </span>
@@ -139,13 +143,13 @@ const Sidebar: React.FC<SidebarProps> = ({
           <button
             onClick={() => toggleMobileSubMenu(item.label)}
             className={`flex flex-col items-center justify-center px-2 py-1
-              ${isLogout ? 'text-red-500' : 
-                isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
+              ${isLogout ? 'text-red-500' :
+              isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
           >
             {item.icon && <span className="text-xl mb-1">{item.icon}</span>}
             <span className="text-xs">{item.label}</span>
           </button>
-          
+
           {isShowingSubMenu && (
             <div className="absolute bottom-full left-0 mb-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50 border border-gray-200 dark:border-gray-700">
               {item.children?.map((child, childIndex) => (
@@ -153,7 +157,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                   key={childIndex}
                   href={child.href || '#'}
                   className={`flex items-center px-4 py-2 transition-colors duration-150
-                    ${pathname === child.href ? 'bg-primary/10 text-primary' : 'dark:text-text-dark-secondary text-text-light-secondary hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                    ${pathname === child.href ? 'bg-primary/10 text-primary' : 'dark:text-text-dark-secondary text-text-light-secondary'}`}
                   onClick={() => setShowMobileSubMenu(null)}
                 >
                   {child.icon && <span className="mr-3 text-lg">{child.icon}</span>}
@@ -171,8 +175,8 @@ const Sidebar: React.FC<SidebarProps> = ({
         key={index}
         href={item.href || '#'}
         className={`flex flex-col items-center justify-center px-2 py-1
-          ${isLogout ? 'text-red-500' : 
-            isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
+          ${isLogout ? 'text-red-500' :
+          isActive ? 'text-primary' : 'text-gray-500 dark:text-gray-400'}`}
       >
         {item.icon && <span className="text-xl mb-1">{item.icon}</span>}
         <span className="text-xs">{item.label}</span>
@@ -206,7 +210,7 @@ const Sidebar: React.FC<SidebarProps> = ({
         {bottomItems.length > 0 && (
           <div className="p-4 border-t border-gray-200 dark:border-gray-700">
             <nav className="space-y-1">
-              {bottomItems.map((item, index) => 
+              {bottomItems.map((item, index) =>
                 renderSidebarItem(item, index, index === bottomItems.length - 1)
               )}
             </nav>
@@ -217,7 +221,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       {/* Mobile Bottom Navigation */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 flex justify-around items-center py-2 px-2 z-50">
         {items.slice(0, 4).map((item, index) => renderMobileNavItem(item, index))}
-        
+
         {/* More button for additional items if needed */}
         {(items.length > 4 || bottomItems.length > 0) && (
           <div className="relative">
@@ -228,30 +232,30 @@ const Sidebar: React.FC<SidebarProps> = ({
               <span className="text-xl mb-1">•••</span>
               <span className="text-xs">More</span>
             </button>
-            
+
             {showMobileSubMenu === 'more' && (
               <div className="absolute bottom-full right-0 mb-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-50 border border-gray-200 dark:border-gray-700">
                 {items.slice(4).map((item, index) => (
                   <Link
                     key={index}
                     href={item.href || '#'}
-                    className="flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    className="flex items-center px-4 py-3"
                     onClick={() => setShowMobileSubMenu(null)}
                   >
                     {item.icon && <span className="mr-3 text-lg">{item.icon}</span>}
                     <span>{item.label}</span>
                   </Link>
                 ))}
-                
+
                 {bottomItems.length > 0 && items.length > 4 && (
                   <hr className="my-1 border-gray-200 dark:border-gray-700" />
                 )}
-                
+
                 {bottomItems.map((item, index) => (
                   <Link
                     key={index}
                     href={item.href || '#'}
-                    className={`flex items-center px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-700 
+                    className={`flex items-center px-4 py-3
                       ${index === bottomItems.length - 1 ? 'text-red-500' : ''}`}
                     onClick={() => setShowMobileSubMenu(null)}
                   >

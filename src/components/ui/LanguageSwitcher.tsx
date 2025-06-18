@@ -1,58 +1,3 @@
-// // src/components/common/LanguageSwitcher.tsx
-// 'use client';
-//
-// import React from 'react';
-// import { useTranslation } from 'react-i18next';
-// import Flag from 'react-world-flags';
-//
-// const LanguageSwitcher: React.FC = () => {
-// 	const { i18n } = useTranslation();
-//
-// 	const languages = [
-// 		{ code: 'en', name: 'EN', flag: 'gb' },
-// 		{ code: 'fr', name: 'FR', flag: 'fr' }
-// 	];
-//
-// 	const changeLanguage = (lng: string) => {
-// 		// Change i18n language
-// 		i18n.changeLanguage(lng);
-//
-// 		// Set language cookie
-// 		document.cookie = `lng=${lng}; path=/; max-age=31536000`; // 1 year expiry
-//
-// 		// Optional: Reload the page to ensure server-side language change
-// 		window.location.reload();
-// 	};
-//
-// 	return (
-// 		<div className="flex items-center space-x-2">
-// 			{languages.map((lang) => (
-// 				<button
-// 					key={lang.code}
-// 					onClick={() => changeLanguage(lang.code)}
-// 					className={`
-//             flex items-center space-x-1
-//             px-2 py-1 rounded
-//             ${i18n.language === lang.code
-// 						? 'bg-primary-100 text-primary'
-// 						: 'hover:bg-neutral-100'}
-//           `}
-// 				>
-// 					<Flag
-// 						code={lang.flag}
-// 						height="16"
-// 						width="24"
-// 						className="rounded-sm"
-// 					/>
-// 					<span className="text-sm">{lang.name}</span>
-// 				</button>
-// 			))}
-// 		</div>
-// 	);
-//
-// export default LanguageSwitcher;
-
-// src/components/common/LanguageSwitcher.tsx
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
@@ -75,13 +20,13 @@ const LanguageSwitcher: React.FC = () => {
 		i18n.changeLanguage(lng);
 
 		// Set language cookie
-		document.cookie = `lng=${lng}; path=/; max-age=31536000`; // 1 year expiry
+		// document.cookie = `lng=${lng}; path=/; max-age=31536000`; // 1 year expiry
 
 		// Close dropdown
 		setIsOpen(false);
 
 		// Optional: Reload the page to ensure server-side language change
-		window.location.reload();
+		// window.location.reload();
 	};
 
 	// Find current language
