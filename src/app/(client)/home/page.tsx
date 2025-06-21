@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import ClientNavbar from '@/components/navbar/ClientNavbar';
+import LoadingSpinner from '@/components/ui/loadingSpinner';
 import { FaCar, FaMapMarkerAlt, FaCalendarAlt, FaStar } from 'react-icons/fa';
 import Image from "next/image";
 
@@ -26,7 +27,7 @@ const ClientHome = () => {
     if (isLoading) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-background-dark">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500"></div>
+                <LoadingSpinner size="lg" showText={true} fullScreen={false} />
             </div>
         );
     }

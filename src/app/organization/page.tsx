@@ -6,9 +6,9 @@ import { useAuth } from '@/hooks/auth/useAuth';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
 import OrganizationNavbar from '@/components/navbar/OrganizationNavbar';
+import LoadingSpinner from '@/components/ui/loadingSpinner'; // Corrected to default import
+import dynamic from 'next/dynamic'; // Added dynamic
 
 interface OrganizationData {
 	id?: string;
@@ -23,6 +23,10 @@ interface OrganizationData {
 	planId: string;
 	transactionId: string;
 }
+
+const OrganizationCreationModal = dynamic(() => import('@/components/organization/OrganizationCreationModal'), {
+  loading: () => <LoadingSpinner size="md" />,
+});
 
 const Organization = () => {
 	const router = useRouter();
@@ -115,7 +119,7 @@ const Organization = () => {
 	if (isLoading) {
 		return (
 			<div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-background-dark">
-				<div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary-500"></div>
+				<LoadingSpinner size="lg" showText={true} fullScreen={false} />
 			</div>
 		);
 	}
@@ -300,48 +304,18 @@ const Organization = () => {
 				</div>
 			</main>
 
-			{/* Organization Creation Modal */}
-			<Dialog open={showOrganizationModal} onOpenChange={setShowOrganizationModal}>
-				<DialogContent className="max-w-md">
-					<DialogHeader>
-						<DialogTitle>{t('modal.create_organization.title')}</DialogTitle>
-					</DialogHeader>
-					<div className="space-y-4">
-						<Input
-							label={t('register.fields.org_name')}
-							name="name"
-							value={formData.name}
-							onChange={handleInputChange}
-							required
-						/>
-						<Input
-							label={t('register.fields.org_email')}
-							name="email"
-							type="email"
-							value={formData.email}
-							onChange={handleInputChange}
-							required
-						/>
-						<Input
-							label={t('register.fields.org_phone')}
-							name="phone"
-							type="tel"
-							value={formData.phone}
-							onChange={handleInputChange}
-							required
-						/>
-						<div className="mt-6">
-							<Button
-								onClick={handleCreateOrganization}
-								disabled={isSubmitting}
-								className="w-full bg-primary-600 hover:bg-primary-700 text-white"
-							>
-								{isSubmitting ? t('modal.create_organization.creating') : t('modal.create_organization.create_button')}
-							</Button>
-						</div>
-					</div>
-				</DialogContent>
-			</Dialog>
+			{/* Dynamically loaded Organization Creation Modal */}
+			{showOrganizationModal && (
+				<OrganizationCreationModal
+					showOrganizationModal={showOrganizationModal}
+					setShowOrganizationModal={setShowOrganizationModal}
+					formData={formData}
+					handleInputChange={handleInputChange}
+					handleCreateOrganization={handleCreateOrganization}
+					isSubmitting={isSubmitting}
+					t={t}
+				/>
+			)}
 		</div>
 	);
 };
