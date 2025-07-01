@@ -1,0 +1,7 @@
+export enum VehicleStatus {
+	AVAILABLE, 
+	BOOKED,
+	MAINTENANCE,
+	OUT_OF_SERVICE,
+	BLOCKED
+}

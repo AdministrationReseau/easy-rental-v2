@@ -1,0 +1,63 @@
+[
+  {
+    "id": "pay-001",
+    "bookingId": "bkg-001",
+    "amount": {
+      "amount": 235000,
+      "currency": "XAF"
+    },
+    "method": "CREDIT_CARD",
+    "status": "COMPLETED",
+    "transactionId": "TX-2025-06-10-001",
+    "processedAt": "2025-06-10T15:30:45Z"
+  },
+  {
+    "id": "pay-002",
+    "bookingId": "bkg-002",
+    "amount": {
+      "amount": 60000,
+      "currency": "XAF"
+    },
+    "method": "MOBILE_MONEY",
+    "status": "PENDING",
+    "transactionId": "TX-2025-06-20-001",
+    "processedAt": "2025-06-20T11:20:30Z"
+  },
+  {
+    "id": "pay-003",
+    "bookingId": "bkg-003",
+    "amount": {
+      "amount": 115000,
+      "currency": "XAF"
+    },
+    "method": "MOBILE_MONEY",
+    "status": "COMPLETED",
+    "transactionId": "TX-2025-06-08-001",
+    "processedAt": "2025-06-08T14:45:10Z"
+  },
+  {
+    "id": "pay-004",
+    "bookingId": "bkg-005",
+    "amount": {
+      "amount": 100000,
+      "currency": "XAF"
+    },
+    "method": "BANK_TRANSFER",
+    "status": "COMPLETED",
+    "transactionId": "TX-2025-05-18-001",
+    "processedAt": "2025-05-18T09:15:22Z"
+  },
+  {
+    "id": "pay-005",
+    "bookingId": "bkg-005",
+    "amount": {
+      "amount": 30000,
+      "currency": "XAF"
+    },
+    "method": "CASH",
+    "status": "COMPLETED",
+    "transactionId": "TX-2025-05-22-001",
+    "processedAt": "2025-05-22T17:30:00Z"
+  }
+]
+

@@ -1,0 +1,171 @@
+[
+  {
+    "id": "bkg-001",
+    "clientId": "usr-001",
+    "agencyId": "agc-001",
+    "vehicleId": "veh-001",
+    "driverId": "drv-001",
+    "startDateTime": "2025-06-15T08:00:00Z",
+    "endDateTime": "2025-06-18T18:00:00Z",
+    "pickupLocation": {
+      "address": "45 Boulevard de la République",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0435,
+      "longitude": 9.7678
+    },
+    "dropoffLocation": {
+      "address": "123 Avenue Charles de Gaulle",
+      "city": "Yaoundé",
+      "state": "Centre",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 3.8689,
+      "longitude": 11.5214
+    },
+    "rentalType": "WITH_DRIVER",
+    "totalAmount": {
+      "amount": 235000,
+      "currency": "XAF"
+    },
+    "status": "CONFIRMED",
+    "specialRequests": "Besoin d'un siège enfant"
+  },
+  {
+    "id": "bkg-002",
+    "clientId": "usr-001",
+    "agencyId": "agc-001",
+    "vehicleId": "veh-002",
+    "startDateTime": "2025-06-25T10:00:00Z",
+    "endDateTime": "2025-06-27T10:00:00Z",
+    "pickupLocation": {
+      "address": "45 Boulevard de la République",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0435,
+      "longitude": 9.7678
+    },
+    "dropoffLocation": {
+      "address": "45 Boulevard de la République",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0435,
+      "longitude": 9.7678
+    },
+    "rentalType": "SELF_DRIVE",
+    "totalAmount": {
+      "amount": 120000,
+      "currency": "XAF"
+    },
+    "status": "PENDING",
+    "specialRequests": ""
+  },
+  {
+    "id": "bkg-003",
+    "clientId": "usr-002",
+    "agencyId": "agc-002",
+    "vehicleId": "veh-005",
+    "driverId": "drv-003",
+    "startDateTime": "2025-06-10T09:00:00Z",
+    "endDateTime": "2025-06-12T18:00:00Z",
+    "pickupLocation": {
+      "address": "123 Avenue Charles de Gaulle",
+      "city": "Yaoundé",
+      "state": "Centre",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 3.8689,
+      "longitude": 11.5214
+    },
+    "dropoffLocation": {
+      "address": "123 Avenue Charles de Gaulle",
+      "city": "Yaoundé",
+      "state": "Centre",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 3.8689,
+      "longitude": 11.5214
+    },
+    "rentalType": "WITH_DRIVER",
+    "totalAmount": {
+      "amount": 115000,
+      "currency": "XAF"
+    },
+    "status": "ACTIVE",
+    "specialRequests": "Véhicule avec GPS nécessaire"
+  },
+  {
+    "id": "bkg-004",
+    "clientId": "usr-001",
+    "agencyId": "agc-003",
+    "vehicleId": "veh-007",
+    "startDateTime": "2025-07-05T08:00:00Z",
+    "endDateTime": "2025-07-10T18:00:00Z",
+    "pickupLocation": {
+      "address": "78 Rue Bebey Eyidi",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0609,
+      "longitude": 9.7185
+    },
+    "dropoffLocation": {
+      "address": "78 Rue Bebey Eyidi",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0609,
+      "longitude": 9.7185
+    },
+    "rentalType": "SELF_DRIVE",
+    "totalAmount": {
+      "amount": 210000,
+      "currency": "XAF"
+    },
+    "status": "PENDING",
+    "specialRequests": "Départ tôt le matin souhaité"
+  },
+  {
+    "id": "bkg-005",
+    "clientId": "usr-002",
+    "agencyId": "agc-001",
+    "vehicleId": "veh-001",
+    "driverId": "drv-002",
+    "startDateTime": "2025-05-20T09:00:00Z",
+    "endDateTime": "2025-05-22T17:00:00Z",
+    "pickupLocation": {
+      "address": "45 Boulevard de la République",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0435,
+      "longitude": 9.7678
+    },
+    "dropoffLocation": {
+      "address": "45 Boulevard de la République",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0435,
+      "longitude": 9.7678
+    },
+    "rentalType": "WITH_DRIVER",
+    "totalAmount": {
+      "amount": 130000,
+      "currency": "XAF"
+    },
+    "status": "COMPLETED",
+    "specialRequests": ""
+  }
+]
+

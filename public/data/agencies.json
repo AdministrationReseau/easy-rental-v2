@@ -1,0 +1,136 @@
+[
+  {
+    "id": "agc-001",
+    "organizationId": "org-001",
+    "name": "TransLoc Douala Central",
+    "location": {
+      "address": "45 Boulevard de la République",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0435,
+      "longitude": 9.7678
+    },
+    "contactInfo": {
+      "email": "douala@transloc.cm",
+      "phone": "+237233456790",
+      "address": {
+        "address": "45 Boulevard de la République",
+        "city": "Douala",
+        "state": "Littoral",
+        "zipCode": "00237",
+        "country": "Cameroun",
+        "latitude": 4.0435,
+        "longitude": 9.7678
+      },
+      "website": "https://www.transloc.cm/douala"
+    },
+    "businessHours": {
+      "monday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "tuesday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "wednesday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "thursday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "friday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "saturday": {"startTime": "2025-01-01T09:00:00Z", "endTime": "2025-01-01T16:00:00Z"},
+      "holidaySchedule": ["2025-01-01T00:00:00Z", "2025-05-01T00:00:00Z", "2025-12-25T00:00:00Z"]
+    },
+    "settings": {
+      "defaultRentalDuration": 24,
+      "minimumDriverExperience": 3,
+      "requireDriverValidation": true
+    },
+    "status": "ACTIVE",
+    "createdAt": "2024-12-15T11:30:00Z"
+  },
+  {
+    "id": "agc-002",
+    "organizationId": "org-001",
+    "name": "TransLoc Yaoundé",
+    "location": {
+      "address": "123 Avenue Charles de Gaulle",
+      "city": "Yaoundé",
+      "state": "Centre",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 3.8689,
+      "longitude": 11.5214
+    },
+    "contactInfo": {
+      "email": "yaounde@transloc.cm",
+      "phone": "+237233456791",
+      "address": {
+        "address": "123 Avenue Charles de Gaulle",
+        "city": "Yaoundé",
+        "state": "Centre",
+        "zipCode": "00237",
+        "country": "Cameroun",
+        "latitude": 3.8689,
+        "longitude": 11.5214
+      },
+      "website": "https://www.transloc.cm/yaounde"
+    },
+    "businessHours": {
+      "monday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "tuesday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "wednesday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "thursday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "friday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "saturday": {"startTime": "2025-01-01T09:30:00Z", "endTime": "2025-01-01T15:30:00Z"},
+      "holidaySchedule": ["2025-01-01T00:00:00Z", "2025-05-01T00:00:00Z", "2025-12-25T00:00:00Z"]
+    },
+    "settings": {
+      "defaultRentalDuration": 48,
+      "minimumDriverExperience": 2,
+      "requireDriverValidation": true
+    },
+    "status": "ACTIVE",
+    "createdAt": "2025-01-10T10:45:00Z"
+  },
+  {
+    "id": "agc-003",
+    "organizationId": "org-002",
+    "name": "ExpressMove Douala",
+    "location": {
+      "address": "78 Rue Bebey Eyidi",
+      "city": "Douala",
+      "state": "Littoral",
+      "zipCode": "00237",
+      "country": "Cameroun",
+      "latitude": 4.0609,
+      "longitude": 9.7185
+    },
+    "contactInfo": {
+      "email": "douala@expressmove.cm",
+      "phone": "+237222345679",
+      "address": {
+        "address": "78 Rue Bebey Eyidi",
+        "city": "Douala",
+        "state": "Littoral",
+        "zipCode": "00237",
+        "country": "Cameroun",
+        "latitude": 4.0609,
+        "longitude": 9.7185
+      },
+      "website": "https://www.expressmove.cm/douala"
+    },
+    "businessHours": {
+      "monday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T19:00:00Z"},
+      "tuesday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T19:00:00Z"},
+      "wednesday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T19:00:00Z"},
+      "thursday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T19:00:00Z"},
+      "friday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T19:00:00Z"},
+      "saturday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "sunday": {"startTime": "2025-01-01T09:00:00Z", "endTime": "2025-01-01T15:00:00Z"},
+      "holidaySchedule": ["2025-12-25T00:00:00Z"]
+    },
+    "settings": {
+      "defaultRentalDuration": 24,
+      "minimumDriverExperience": 1,
+      "requireDriverValidation": false
+    },
+    "status": "ACTIVE",
+    "createdAt": "2025-01-20T08:15:00Z"
+  }
+]
+

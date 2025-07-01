@@ -1,0 +1,134 @@
+[
+  {
+    "id": "drv-001",
+    "agencyId": "agc-001",
+    "employeeId": "EMP-D-001",
+    "firstName": "Etienne",
+    "lastName": "Mbappé",
+    "phone": "+237655123456",
+    "email": "etienne.mbappe@transloc.cm",
+    "licenseNumber": "CMRTL12345678",
+    "licenseExpiry": "2027-05-15T00:00:00Z",
+    "status": "AVAILABLE",
+    "hourlyRate": {
+      "amount": 2500,
+      "currency": "XAF"
+    },
+    "workingHours": {
+      "monday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "tuesday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "wednesday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "thursday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "friday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "saturday": {"startTime": "2025-01-01T09:00:00Z", "endTime": "2025-01-01T16:00:00Z"}
+    },
+    "hireDate": "2022-03-10T00:00:00Z",
+    "experience": 5,
+    "imageUrl": "/images/drivers/driver-001.jpg"
+  },
+  {
+    "id": "drv-002",
+    "agencyId": "agc-001",
+    "employeeId": "EMP-D-002",
+    "firstName": "Marie",
+    "lastName": "Tchuente",
+    "phone": "+237655234567",
+    "email": "marie.tchuente@transloc.cm",
+    "licenseNumber": "CMRTL23456789",
+    "licenseExpiry": "2026-08-20T00:00:00Z",
+    "status": "AVAILABLE",
+    "hourlyRate": {
+      "amount": 2200,
+      "currency": "XAF"
+    },
+    "workingHours": {
+      "monday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "tuesday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "wednesday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "thursday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"},
+      "friday": {"startTime": "2025-01-01T08:00:00Z", "endTime": "2025-01-01T18:00:00Z"}
+    },
+    "hireDate": "2022-06-15T00:00:00Z",
+    "experience": 3,
+    "imageUrl": "/images/drivers/driver-002.jpg"
+  },
+  {
+    "id": "drv-003",
+    "agencyId": "agc-002",
+    "employeeId": "EMP-D-003",
+    "firstName": "Paul",
+    "lastName": "Biya",
+    "phone": "+237655345678",
+    "email": "paul.biya@transloc.cm",
+    "licenseNumber": "CMRTL34567890",
+    "licenseExpiry": "2026-11-05T00:00:00Z",
+    "status": "ON_DUTY",
+    "hourlyRate": {
+      "amount": 2800,
+      "currency": "XAF"
+    },
+    "workingHours": {
+      "monday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "tuesday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "wednesday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "thursday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"},
+      "friday": {"startTime": "2025-01-01T08:30:00Z", "endTime": "2025-01-01T17:30:00Z"}
+    },
+    "hireDate": "2021-09-05T00:00:00Z",
+    "experience": 7,
+    "imageUrl": "/images/drivers/driver-003.jpg"
+  },
+  {
+    "id": "drv-004",
+    "agencyId": "agc-003",
+    "employeeId": "EMP-D-004",
+    "firstName": "Samuel",
+    "lastName": "Eto'o",
+    "phone": "+237655456789",
+    "email": "samuel.etoo@expressmove.cm",
+    "licenseNumber": "CMRTL45678901",
+    "licenseExpiry": "2027-02-10T00:00:00Z",
+    "status": "AVAILABLE",
+    "hourlyRate": {
+      "amount": 3000,
+      "currency": "XAF"
+    },
+    "workingHours": {
+      "monday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T15:00:00Z"},
+      "tuesday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T15:00:00Z"},
+      "wednesday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T15:00:00Z"},
+      "thursday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T15:00:00Z"},
+      "friday": {"startTime": "2025-01-01T07:00:00Z", "endTime": "2025-01-01T15:00:00Z"}
+    },
+    "hireDate": "2022-01-20T00:00:00Z",
+    "experience": 10,
+    "imageUrl": "/images/drivers/driver-004.jpg"
+  },
+  {
+    "id": "drv-005",
+    "agencyId": "agc-003",
+    "employeeId": "EMP-D-005",
+    "firstName": "Françoise",
+    "lastName": "Mbango",
+    "phone": "+237655567890",
+    "email": "francoise.mbango@expressmove.cm",
+    "licenseNumber": "CMRTL56789012",
+    "licenseExpiry": "2026-07-12T00:00:00Z",
+    "status": "ON_LEAVE",
+    "hourlyRate": {
+      "amount": 2600,
+      "currency": "XAF"
+    },
+    "workingHours": {
+      "monday": {"startTime": "2025-01-01T15:00:00Z", "endTime": "2025-01-01T23:00:00Z"},
+      "tuesday": {"startTime": "2025-01-01T15:00:00Z", "endTime": "2025-01-01T23:00:00Z"},
+      "wednesday": {"startTime": "2025-01-01T15:00:00Z", "endTime": "2025-01-01T23:00:00Z"},
+      "thursday": {"startTime": "2025-01-01T15:00:00Z", "endTime": "2025-01-01T23:00:00Z"},
+      "friday": {"startTime": "2025-01-01T15:00:00Z", "endTime": "2025-01-01T23:00:00Z"}
+    },
+    "hireDate": "2023-02-15T00:00:00Z",
+    "experience": 4,
+    "imageUrl": "/images/drivers/driver-005.jpg"
+  }
+]
+

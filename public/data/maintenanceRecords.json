@@ -1,0 +1,61 @@
+[
+  {
+    "id": "mnt-001",
+    "vehicleId": "veh-003",
+    "type": "PREVENTIVE",
+    "description": "Révision des 5000 km, changement d'huile et filtres",
+    "cost": {
+      "amount": 75000,
+      "currency": "XAF"
+    },
+    "scheduledDate": "2025-06-12T09:00:00Z",
+    "completedDate": "2025-06-12T14:30:00Z",
+    "performedBy": "stf-002",
+    "status": "COMPLETED",
+    "createdAt": "2025-06-01T10:15:00Z"
+  },
+  {
+    "id": "mnt-002",
+    "vehicleId": "veh-001",
+    "type": "PREVENTIVE",
+    "description": "Révision périodique, vérification des pneus et freins",
+    "cost": {
+      "amount": 50000,
+      "currency": "XAF"
+    },
+    "scheduledDate": "2025-06-20T08:30:00Z",
+    "performedBy": "stf-002",
+    "status": "SCHEDULED",
+    "createdAt": "2025-06-05T11:30:00Z"
+  },
+  {
+    "id": "mnt-003",
+    "vehicleId": "veh-005",
+    "type": "CORRECTIVE",
+    "description": "Réparation du système de climatisation",
+    "cost": {
+      "amount": 120000,
+      "currency": "XAF"
+    },
+    "scheduledDate": "2025-06-15T10:00:00Z",
+    "completedDate": "2025-06-15T16:45:00Z",
+    "performedBy": "stf-002",
+    "status": "COMPLETED",
+    "createdAt": "2025-06-13T09:20:00Z"
+  },
+  {
+    "id": "mnt-004",
+    "vehicleId": "veh-002",
+    "type": "MANDATORY",
+    "description": "Contrôle technique obligatoire",
+    "cost": {
+      "amount": 25000,
+      "currency": "XAF"
+    },
+    "scheduledDate": "2025-07-05T09:30:00Z",
+    "performedBy": "stf-002",
+    "status": "SCHEDULED",
+    "createdAt": "2025-06-20T08:15:00Z"
+  }
+]
+

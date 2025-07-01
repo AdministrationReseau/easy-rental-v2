@@ -1,0 +1,84 @@
+[
+  {
+    "id": "org-001",
+    "name": "TransLoc Cameroun",
+    "businessLicense": "BL12345678",
+    "subscriptionPlan": "PREMIUM",
+    "contactInfo": {
+      "email": "contact@transloc.cm",
+      "phone": "+237233456789",
+      "address": {
+        "address": "123 Avenue Kennedy",
+        "city": "Douala",
+        "state": "Littoral",
+        "zipCode": "00237",
+        "country": "Cameroun",
+        "latitude": 4.0511,
+        "longitude": 9.7679
+      },
+      "website": "https://www.transloc.cm"
+    },
+    "settings": {
+      "maxAgencies": 10,
+      "allowDriverReallocation": true,
+      "enforceVehicleChecks": true
+    },
+    "status": "ACTIVE",
+    "createdAt": "2024-12-01T10:00:00Z"
+  },
+  {
+    "id": "org-002",
+    "name": "ExpressMove",
+    "businessLicense": "BL87654321",
+    "subscriptionPlan": "STANDARD",
+    "contactInfo": {
+      "email": "info@expressmove.cm",
+      "phone": "+237222345678",
+      "address": {
+        "address": "456 Rue Ahmadou Ahidjo",
+        "city": "Yaoundé",
+        "state": "Centre",
+        "zipCode": "00237",
+        "country": "Cameroun",
+        "latitude": 3.8667,
+        "longitude": 11.5167
+      },
+      "website": "https://www.expressmove.cm"
+    },
+    "settings": {
+      "maxAgencies": 5,
+      "allowDriverReallocation": false,
+      "enforceVehicleChecks": true
+    },
+    "status": "ACTIVE",
+    "createdAt": "2025-01-15T14:30:00Z"
+  },
+  {
+    "id": "org-003",
+    "name": "SafeRide Afrique",
+    "businessLicense": "BL98765432",
+    "subscriptionPlan": "BASIC",
+    "contactInfo": {
+      "email": "hello@saferide.cm",
+      "phone": "+237244567890",
+      "address": {
+        "address": "789 Boulevard de la Liberté",
+        "city": "Bafoussam",
+        "state": "Ouest",
+        "zipCode": "00237",
+        "country": "Cameroun",
+        "latitude": 5.4667,
+        "longitude": 10.4167
+      },
+      "website": "https://www.saferide.cm"
+    },
+    "settings": {
+      "maxAgencies": 2,
+      "allowDriverReallocation": false,
+      "enforceVehicleChecks": false
+    },
+    "status": "ACTIVE",
+    "createdAt": "2025-02-20T09:15:00Z"
+  }
+]
+
