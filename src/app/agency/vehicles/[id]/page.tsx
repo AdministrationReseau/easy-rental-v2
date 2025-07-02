@@ -52,6 +52,7 @@ const sampleVehicleActivity: VehicleActivityData = {
 export default function AgencyVehicleProfilePage() {
   const [vehicle, setVehicle] = useState<VehicleProps | null>(null);
   const [vehicleActivity, setVehicleActivity] = useState<VehicleActivityData>(sampleVehicleActivity);
+  const update = false;
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [activeTab, setActiveTab] = useState('details');
@@ -97,9 +98,10 @@ export default function AgencyVehicleProfilePage() {
         setIsLoading(false);
       }
     };
+    if (update) setVehicleActivity(sampleVehicleActivity)
 
     fetchVehicleDetails();
-  }, [id]);
+  }, [id, update]);
 
   if (isLoading) return <div className="p-6 text-center">Loading vehicle details...</div>;
   if (hasError || !vehicle) return <div className="p-6 text-center text-red-500">Error loading vehicle or vehicle not found.</div>;

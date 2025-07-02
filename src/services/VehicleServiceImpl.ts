@@ -1,23 +1,14 @@
 import {
     VehicleService,
-    Vehicle as VehicleInterfaceType,
     SchedulingData,
     ReviewData,
-    AgencyBasicData
+    AgencyBasicData, VehicleProps,
+    VehicleFunctionalities,
+    // AgencyBasicData,
+    FilterVehicleProps,
 } from '@/types/classes/Vehicle'; // Original interfaces
 import { MaintenanceRecord } from '@/types/classes/MaintenanceRecord';
-import { Review as ReviewClassType } from '@/types/classes/Review';
 import { VehicleStatus } from '@/types/enums/VehicleStatus';
-import {
-    VehicleProps,
-    VehicleFunctionalities,
-    VehicleService,
-    // ReviewData,
-    // AgencyBasicData,
-    // SchedulingData
-    // FilterVehicleProps, // Not directly used by VehicleServiceImpl but good to note it's now in classes/Vehicle.ts
-} from '@/types/classes/Vehicle';
-// import {Money} from "@/types/classes/Money"; // Updated import path
 
 // Helper to transform raw vehicle data from JSON to VehicleProps
 function transformRawVehicleToVehicleProps(raw: any): VehicleProps {
@@ -130,7 +121,7 @@ export class VehicleServiceImpl implements VehicleService {
         try {
             const response = await fetch('/data/vehicles.json');
             if (!response.ok) throw new Error(`HTTP error fetching vehicles.json! status: ${response.status}`);
-            const rawVehicles: any[] = await response.json();
+            const rawVehicles: VehicleProps[] = await response.json();
             const rawVehicle = rawVehicles.find(v => v.id === id);
             if (!rawVehicle) return null;
 
@@ -145,7 +136,7 @@ export class VehicleServiceImpl implements VehicleService {
         try {
             const response = await fetch('/data/vehicles.json');
             if (!response.ok) throw new Error(`HTTP error fetching vehicles.json! status: ${response.status}`);
-            const rawVehicles: any[] = await response.json();
+            const rawVehicles: VehicleProps[] = await response.json();
 
             return rawVehicles.map(vehicle => transformRawVehicleToVehicleProps(vehicle));
         } catch (error) {
@@ -176,35 +167,40 @@ export class VehicleServiceImpl implements VehicleService {
 
     async createVehicle(vehicleData: Partial<Omit<VehicleProps, 'id'|'available'|'pricePerDay'|'images'|'fonctionnalities'|'status'|'dailyRate'>>): Promise<VehicleProps | null> {
         // This would require a backend API in a real application
+        console.log(vehicleData);
         console.warn('Create vehicle operation would require a backend API');
         return null;
     }
 
     async updateVehicle(id: string, vehicleData: Partial<Omit<VehicleProps, 'id'|'available'|'pricePerDay'|'images'|'fonctionnalities'|'status'|'dailyRate'>>): Promise<VehicleProps | null> {
         // This would require a backend API in a real application
+        console.log(id, vehicleData);
         console.warn('Update vehicle operation would require a backend API');
         return null;
     }
 
     async deleteVehicle(id: string): Promise<boolean> {
         // This would require a backend API in a real application
+        console.log(id);
         console.warn('Delete vehicle operation would require a backend API');
         return false;
     }
 
     async updateVehicleStatus(id: string, status: VehicleStatus): Promise<VehicleProps | null> {
         // This would require a backend API in a real application
+        console.log(id, status);
         console.warn('Update vehicle status operation would require a backend API');
         return null;
     }
 
     async updateMileage(id: string, mileage: number): Promise<VehicleProps | null> {
         // This would require a backend API in a real application
+        console.log(id, mileage);
         console.warn('Update mileage operation would require a backend API');
         return null;
     }
 
-    async searchVehicles(filters: any): Promise<VehicleProps[]> {
+    async searchVehicles(filters: FilterVehicleProps): Promise<VehicleProps[]> {
         try {
             const allVehicles = await this.getAllVehicles();
 
@@ -237,16 +233,19 @@ export class VehicleServiceImpl implements VehicleService {
 
     async getVehicleAvailability(id: string, startDate: Date, endDate: Date): Promise<boolean> {
         // In a real implementation, this would check against reservations/bookings
+        console.log(id, startDate, endDate);
         return true; // Placeholder implementation
     }
 
     async getVehicleMaintenanceHistory(vehicleId: string): Promise<MaintenanceRecord[]> {
         // Would fetch from maintenance records API/endpoint in a real implementation
+        console.log(vehicleId);
         return []; // Placeholder implementation
     }
 
     async scheduleVehicleMaintenance(vehicleId: string, maintenance: Partial<MaintenanceRecord>): Promise<MaintenanceRecord> {
         // Would create a maintenance record via API in a real implementation
+        console.log(vehicleId, maintenance);
         throw new Error('Not implemented');
     }
 
@@ -267,16 +266,19 @@ export class VehicleServiceImpl implements VehicleService {
 
     async getVehicleReviews(vehicleId: string): Promise<ReviewData[]> {
         // Would fetch from reviews API/endpoint in a real implementation
+        console.log(vehicleId);
         return []; // Placeholder implementation
     }
 
     async getVehicleSchedule(vehicleId: string): Promise<SchedulingData | null> {
         // Would fetch from scheduling API/endpoint in a real implementation
+        console.log(vehicleId);
         return null; // Placeholder implementation
     }
 
     async getVehicleAgency(vehicleId: string): Promise<AgencyBasicData | null> {
         // Would fetch from agency API/endpoint in a real implementation
+        console.log(vehicleId);
         return null; // Placeholder implementation
     }
 }
