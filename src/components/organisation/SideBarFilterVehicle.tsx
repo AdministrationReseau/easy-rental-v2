@@ -62,8 +62,19 @@ const SidebarVehicleFilter: React.FC<SidebarVehicleFilterProps> = ({
     });
   };
 
+  // Constante pour représenter "aucune sélection"
+  const ANY_CAPACITY = "any_capacity";
+  
+  // Ajoutons une fonction pour traiter la valeur du sélecteur de passagers
+  const handlePassengerChange = (value: string) => {
+    setTempFilters(prev => ({
+      ...prev, 
+      passenger: value === ANY_CAPACITY ? null : parseInt(value)
+    }));
+  };
+
   const uniqueCategories = Array.from(new Set(vehicles.map(v => v.category).filter(Boolean)));
-  const uniqueCapacities = Array.from(new Set(vehicles.map(v => v.passenger).filter(p => p != null && p > 0))).sort((a,b) => a-b);
+  const uniqueCapacities = Array.from(new Set(vehicles.map(v => v.passenger).filter(p => p != null && p > 0))).sort((a,b) => (a || 0)-(b || 0));
 
   return (
     <div className={`p-4 rounded-lg shadow-md ${isPopupOpen ? 'bg-white' : 'bg-gray-50 dark:bg-gray-800'}`}>
@@ -94,15 +105,15 @@ const SidebarVehicleFilter: React.FC<SidebarVehicleFilterProps> = ({
         <div>
           <Label htmlFor="passenger-select" className="text-sm font-medium text-gray-700 dark:text-gray-300">Minimum Passengers</Label>
           <Select
-            value={tempFilters.passenger?.toString() ?? ""}
-            onValueChange={(value) => setTempFilters(prev => ({...prev, passenger: value ? parseInt(value) : null}))}
+            value={tempFilters.passenger?.toString() ?? ANY_CAPACITY}
+            onValueChange={handlePassengerChange}
           >
             <SelectTrigger id="passenger-select" className="w-full mt-1 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
               <SelectValue placeholder="Any capacity" />
             </SelectTrigger>
             <SelectContent className="dark:bg-gray-700 dark:text-white">
-              <SelectItem value="">Any</SelectItem>
-              {uniqueCapacities.map(cap => <SelectItem key={cap} value={cap.toString()}>{cap} Passengers</SelectItem>)}
+              <SelectItem value={ANY_CAPACITY}>Any</SelectItem>
+              {uniqueCapacities.map(cap => <SelectItem key={cap} value={cap?.toString() || "Hello"}>{cap} Passengers</SelectItem>)}
             </SelectContent>
           </Select>
         </div>
@@ -116,7 +127,7 @@ const SidebarVehicleFilter: React.FC<SidebarVehicleFilterProps> = ({
                 placeholder="Min"
                 value={minPriceInput}
                 onChange={(e) => setMinPriceInput(e.target.value)}
-                className="w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                // className="w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             />
             <span className="text-gray-500 dark:text-gray-400">-</span>
             <Input
@@ -124,7 +135,7 @@ const SidebarVehicleFilter: React.FC<SidebarVehicleFilterProps> = ({
                 placeholder="Max"
                 value={maxPriceInput}
                 onChange={(e) => setMaxPriceInput(e.target.value)}
-                className="w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+                // className="w-1/2 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
             />
           </div>
            {/* Basic Slider - can be enhanced with a proper range slider component */}

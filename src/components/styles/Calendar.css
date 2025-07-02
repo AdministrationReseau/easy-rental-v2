@@ -1,0 +1,47 @@
+/* Customize the calendar container */
+.react-calendar {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    border-color: #555555;
+}
+
+.react-calendar__tile {
+    width: 5px;
+    transition: background-color 0.2s ease;
+}
+
+/* Customize the today tile */
+.today {
+    background-color: #ffeb3b !important; /* Light Yellow */
+    border: 2px solid #ffc107 !important;
+}
+
+/* Customize the day-off tile */
+.day-off {
+    background-color: #fecaca !important;
+}
+
+/* Customize the scheduled-range tile */
+.scheduled-range {
+    background-color: #bbf7d0 !important;
+}
+
+
+.react-calendar__month-view {
+    padding: 1rem;
+}
+
+
+.react-calendar__month-view__days .react-calendar__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grayed-out {
+    background-color: #f0f0f0; /* Light gray background */
+    color: #aaaaaa; /* Gray text color */
+    pointer-events: none; /* Disable interactions */
+}
+

@@ -6,8 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
-
-import { VehicleProps as ImportedVehicleProps } from '@/types/classes/Vehicle'; // <<<< UPDATED IMPORT PATH
+import { VehicleProps as ImportedVehicleProps } from '@/types/classes/Vehicle';
+import { VehicleStatus } from '@/types/enums/VehicleStatus';
 
 // Use the imported VehicleProps as the component's props
 export interface VehicleCardProps extends ImportedVehicleProps {
@@ -25,10 +25,10 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
                                                             year,
                                                             passenger = 0, // ensure default
                                                             pricePerDay,
-                                                            available,
                                                             favorite = false,
                                                             rating = 0,
                                                             category, // was type
+                                                            status, // Utilisation du statut directement
                                                             onLike,
                                                             onDislike,
                                                             onEdit, // onEdit in VehicleProps takes string id
@@ -36,6 +36,42 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
                                                             isAdmin = false,
                                                         }) => {
     const { t } = useTranslation('common');
+
+    // Fonction pour déterminer la variante de badge en fonction du statut
+    const getStatusBadgeVariant = (status: VehicleStatus | string): "default" | "success" | "warning" | "destructive" | "error" | "outline" | "secondary" => {
+        if (typeof status === 'string') {
+            switch (status) {
+                case 'AVAILABLE': return 'success';
+                case 'MAINTENANCE': return 'warning';
+                case 'RENTED': return 'secondary';
+                case 'BOOKED': return 'default';
+                case 'BLOCKED': return 'destructive';
+                case 'OUT_OF_SERVICE': return 'error';
+                case 'UNKNOWN': return 'outline';
+                default: return 'outline';
+            }
+        }
+
+        // Si c'est un enum VehicleStatus
+        switch (status) {
+            case VehicleStatus.AVAILABLE: return 'success';
+            case VehicleStatus.MAINTENANCE: return 'warning';
+            case VehicleStatus.RENTED: return 'secondary';
+            case VehicleStatus.BOOKED: return 'default';
+            case VehicleStatus.BLOCKED: return 'destructive';
+            case VehicleStatus.OUT_OF_SERVICE: return 'error';
+            default: return 'outline';
+        }
+    };
+
+    // Fonction pour obtenir le texte du statut
+    const getStatusText = (status: VehicleStatus | string | undefined): string => {
+        if (status === undefined) return t('vehicle_status.unknown');
+
+        // Si c'est une chaîne ou un enum avec des valeurs de chaîne, on peut l'utiliser directement
+        const statusKey = (typeof status === 'string') ? status.toLowerCase() : String(status).toLowerCase();
+        return t(`vehicle_status.${statusKey}`, { defaultValue: String(status) });
+    };
 
     const handleLikeClick = (e: React.MouseEvent) => {
         e.preventDefault();
@@ -63,7 +99,6 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
     // For now, assuming a client-facing link. This might need adjustment.
     const vehicleLink = isAdmin ? `/agency/vehicles/${id}` : `/client/vehicles/${id}`;
 
-
     return (
         <Link href={vehicleLink} passHref>
             <div className="bg-card-light dark:bg-card-dark rounded-card shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col h-full overflow-hidden border border-border-light dark:border-border-dark">
@@ -75,12 +110,12 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
                         fill
                         className="object-cover transition-transform duration-300 hover:scale-105"
                     />
-                    {/* Badge de disponibilité */}
+                    {/* Badge de statut */}
                     <Badge
-                        variant={available ? 'success' : 'error'}
+                        variant={getStatusBadgeVariant(status)}
                         className="absolute top-3 left-3"
                     >
-                        {available ? t('vehicle_card.available') : t('vehicle_card.unavailable')}
+                        {getStatusText(status)}
                     </Badge>
 
                     {/* Badge de category de véhicule */}
@@ -101,7 +136,7 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
                     >
                         <Heart
                             fill={favorite ? 'var(--error-500)' : 'none'}
-                            color={favorite ? 'var(--error-500)' : 'var(--text-light-secondary)'} {/* Ensure these CSS variables are defined */}
+                            color={favorite ? 'var(--error-500)' : 'var(--text-light-secondary)'}
                             size={18}
                         />
                     </button>

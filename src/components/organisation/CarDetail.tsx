@@ -4,7 +4,7 @@ import React from 'react';
 import { VehicleProps } from '@/types/classes/Vehicle'; // <<<< UPDATED IMPORT PATH
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import Image from 'next/image';
-import { CheckCircle, XCircle, Settings, Users, Calendar, Droplet, Zap, Info, ShieldCheck, FileText, UserCircle, Building } from 'lucide-react'; // Added more icons
+import { CheckCircle, XCircle, Settings, Users, CreditCard, Droplet, Zap, Info, ShieldCheck, FileText, UserCircle, Building } from 'lucide-react'; // Added more icons
 
 const DetailItem: React.FC<{ label: string; value?: string | number | boolean | null; icon?: React.ReactNode }> = ({ label, value, icon }) => (
   <div className="flex items-start py-2">

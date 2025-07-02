@@ -96,7 +96,7 @@ export interface VehicleProps {
     year: number;
     category: string; // Use 'category' from new data, maps to 'type' from old.
 
-    status: VehicleStatus | "AVAILABLE" | "MAINTENANCE" | "RENTED" | "UNKNOWN"; // Allow string literals for flexibility if VehicleStatus enum is strict
+    status: VehicleStatus;
     available: boolean;
 
     mileage?: number;
@@ -164,31 +164,45 @@ export interface VehicleModalProps {
     title: string;
 }
 
-// --- Original content from src/types/classes/Vehicle.ts ---
+// --- Modified Vehicle interface to include all VehicleProps properties ---
 
-// This 'Vehicle' interface represents the expected raw structure from the backend/new vehicles.json
-export interface Vehicle { // Renaming this to RawVehicle to avoid conflict with Vehicle class name later
+// This 'Vehicle' interface represents the expected raw structure from the backend/vehicles.json
+export interface Vehicle {
   id: string;
   agencyId: string;
-  make: string; // Will be mapped to 'brand' in VehicleProps
+  brand: string;        // Renamed from 'make' to align with VehicleProps
   model: string;
   year: number;
   plateNumber: string;
   vin: string;
   category: string;
   features: string[];
-  status: VehicleStatus; // Enum
+  status: VehicleStatus | "AVAILABLE" | "MAINTENANCE" | "RENTED" | "UNKNOWN";
   mileage: number;
-  dailyRate: Money; // { amount: number, currency: string }
-  imageUrl?: string; // New data has imageUrl, VehicleProps will have images: string[]
-}
+  dailyRate: Money;     // { amount: number, currency: string }
 
-export interface VehicleMethods {
-  updateStatus(status: VehicleStatus): Promise<void>;
-  updateMileage(newMileage: number): Promise<void>;
-  scheduleMaintenance(date: Date, description: string): Promise<void>;
-  isAvailable(startDate: Date, endDate: Date): Promise<boolean>;
-  calculateRentalCost(days: number): Money;
+  // Properties added from VehicleProps
+  description: string;
+  rating?: number;
+  passenger?: number;
+  color?: string;
+  transmission: string;
+  images: string[];     // Renamed from imageUrl to align with VehicleProps
+
+  fonctionnalities: VehicleFunctionalities;
+  engine: VehicleEngine;
+  fuelEfficiency?: VehicleFuelEfficiency;
+  documents?: VehicleDocuments;
+  registration?: VehicleRegistration;
+  owner?: VehicleOwner;
+  serviceHistory?: VehicleServiceHistoryItem[];
+  insurance?: VehicleInsurance;
+
+  reviews?: ReviewData[];
+  agency?: AgencyBasicData;
+  scheduling?: SchedulingData;
+
+  driverRequired?: boolean;
 }
 
 export interface VehicleService {

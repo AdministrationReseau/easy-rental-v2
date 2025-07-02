@@ -1,36 +1,51 @@
-import { VehicleService, Vehicle as VehicleInterfaceType } from '@/types/classes/Vehicle'; // Original interfaces
+import {
+    VehicleService,
+    Vehicle as VehicleInterfaceType,
+    SchedulingData,
+    ReviewData,
+    AgencyBasicData
+} from '@/types/classes/Vehicle'; // Original interfaces
 import { MaintenanceRecord } from '@/types/classes/MaintenanceRecord';
 import { Review as ReviewClassType } from '@/types/classes/Review';
-import { Agency as AgencyClassType } from '@/types/classes/Agency';
-import { Schedule as ScheduleClassType } from '@/types/classes/Schedule';
 import { VehicleStatus } from '@/types/enums/VehicleStatus';
 import {
     VehicleProps,
     VehicleFunctionalities,
-    ReviewData,
-    AgencyBasicData,
-    SchedulingData
+    VehicleService,
+    // ReviewData,
+    // AgencyBasicData,
+    // SchedulingData
     // FilterVehicleProps, // Not directly used by VehicleServiceImpl but good to note it's now in classes/Vehicle.ts
-} from '@/types/classes/Vehicle'; // Updated import path
+} from '@/types/classes/Vehicle';
+// import {Money} from "@/types/classes/Money"; // Updated import path
 
 // Helper to transform raw vehicle data from JSON to VehicleProps
 function transformRawVehicleToVehicleProps(raw: any): VehicleProps {
     const featuresArray = raw.features || [];
 
-    const extractPassengerCount = (feats: string[]): number => {
+    // Fonction d'extraction du nombre de passagers, utilise la valeur explicite si disponible
+    const extractPassengerCount = (feats: string[], passengerValue?: number): number => {
+        if (passengerValue !== undefined) return passengerValue;
+
         for (const feature of feats) {
             const match = feature.match(/(\d+)\s*places?/i);
             if (match && match[1]) return parseInt(match[1], 10);
         }
-        return raw.passenger || 2; // Default from old CarProps or a sensible default
+        return 2; // Valeur par défaut si rien n'est trouvé
     };
 
-    const transformFeaturesToFonctionnalities = (feats: string[]): VehicleFunctionalities => {
+    // Fonction de transformation des fonctionnalités. Maintenant, utilise les fonctionnalités pré-définies si disponibles
+    const transformFeaturesToFonctionnalities = (feats: string[], existingFuncs?: VehicleFunctionalities): VehicleFunctionalities => {
+        // Si les fonctionnalités sont déjà définies dans le JSON, les utiliser directement
+        if (existingFuncs) return existingFuncs;
+
+        // Sinon, inférer à partir des fonctionnalités
         const funcs: VehicleFunctionalities = {
             air_condition: false, usb_input: false, seat_belt: true, audio_input: false,
             child_seat: false, bluetooth: false, sleeping_bed: false, onboard_computer: false,
             gps: false, luggage: false, water: false, additional_covers: false,
         };
+
         (feats || []).forEach(feature => {
             const lowerFeature = feature.toLowerCase();
             if (lowerFeature.includes('gps')) funcs.gps = true;
@@ -42,17 +57,35 @@ function transformRawVehicleToVehicleProps(raw: any): VehicleProps {
         return funcs;
     };
 
+    // Génère une description si elle n'est pas fournie
     const generateDescription = (brand: string, model: string, year: number, feats: string[]): string => {
+        if (raw.description) return raw.description; // Utiliser la description si elle existe
+
         if (feats.length > 0) {
             return `This ${year} ${brand} ${model} comes with features like: ${feats.slice(0, 3).join(', ')}${feats.length > 3 ? ' and more' : ''}.`;
         }
         return `A reliable ${year} ${brand} ${model}.`;
     };
 
-    const brand = raw.make || 'N/A';
+    // Utilise 'brand' si disponible, sinon revient à 'make' pour la rétrocompatibilité
+    const brand = raw.brand || raw.make || 'N/A';
     const model = raw.model || 'N/A';
     const year = raw.year || new Date().getFullYear();
 
+    // Conversion des statuts string en enum VehicleStatus si nécessaire
+    const normalizeStatus = (status: string | VehicleStatus): VehicleStatus => {
+        if (typeof status === 'string') {
+            switch (status.toUpperCase()) {
+                case 'AVAILABLE': return VehicleStatus.AVAILABLE;
+                case 'MAINTENANCE': return VehicleStatus.MAINTENANCE;
+                case 'RENTED': return VehicleStatus.RENTED;
+                default: return VehicleStatus.BLOCKED;
+            }
+        }
+        return status || VehicleStatus.BLOCKED;
+    };
+
+    // Création de l'objet VehicleProps à partir des données brutes
     return {
         id: raw.id,
         agencyId: raw.agencyId,
@@ -63,20 +96,20 @@ function transformRawVehicleToVehicleProps(raw: any): VehicleProps {
         plateNumber: raw.plateNumber || 'N/A',
         vin: raw.vin,
         features: featuresArray,
-        fonctionnalities: transformFeaturesToFonctionnalities(featuresArray),
-        status: raw.status as VehicleProps['status'] || VehicleStatus.UNKNOWN,
-        available: raw.status === VehicleStatus.AVAILABLE,
+        fonctionnalities: transformFeaturesToFonctionnalities(featuresArray, raw.fonctionnalities),
+        status: normalizeStatus(raw.status),
+        available: normalizeStatus(raw.status) === VehicleStatus.AVAILABLE,
         mileage: raw.mileage || 0,
         dailyRate: raw.dailyRate ? { amount: raw.dailyRate.amount, currency: raw.dailyRate.currency } : { amount: 0, currency: 'XAF' },
         pricePerDay: raw.dailyRate?.amount || 0,
-        images: raw.imageUrl ? [raw.imageUrl] : (raw.images || ['/images/vehicles/placeholder.png']),
-        description: raw.description || generateDescription(brand, model, year, featuresArray),
+        images: raw.images || (raw.imageUrl ? [raw.imageUrl] : ['/images/vehicles/placeholder.png']),
+        description: generateDescription(brand, model, year, featuresArray),
         rating: raw.rating || 0,
-        passenger: extractPassengerCount(featuresArray),
-        engine: {
-            type: raw.engine?.type || 'Petrol',
-            horsepower: raw.engine?.horsepower,
-            capacity: raw.engine?.capacity,
+        passenger: extractPassengerCount(featuresArray, raw.passenger),
+        engine: raw.engine || {
+            type: 'Petrol',
+            horsepower: undefined,
+            capacity: undefined,
         },
         transmission: raw.transmission || 'Manual',
         color: raw.color,
@@ -101,16 +134,9 @@ export class VehicleServiceImpl implements VehicleService {
             const rawVehicle = rawVehicles.find(v => v.id === id);
             if (!rawVehicle) return null;
 
-            const vehicleProps = transformRawVehicleToVehicleProps(rawVehicle);
-
-            // Optionally, fetch and attach related data here
-            // vehicleProps.reviews = await this.getVehicleReviews(id);
-            // vehicleProps.agency = await this.getVehicleAgency(id);
-            // vehicleProps.scheduling = await this.getVehicleSchedule(id);
-
-            return vehicleProps;
+            return transformRawVehicleToVehicleProps(rawVehicle);
         } catch (error) {
-            console.error(`Error in getVehicleById(${id}):`, error);
+            console.error('Error fetching vehicle by ID:', error);
             return null;
         }
     }
@@ -121,206 +147,139 @@ export class VehicleServiceImpl implements VehicleService {
             if (!response.ok) throw new Error(`HTTP error fetching vehicles.json! status: ${response.status}`);
             const rawVehicles: any[] = await response.json();
 
-            // Potentially fetch all related data for all vehicles if needed for list view,
-            // or do it on demand. For now, just transforming.
-            return rawVehicles.map(transformRawVehicleToVehicleProps);
+            return rawVehicles.map(vehicle => transformRawVehicleToVehicleProps(vehicle));
         } catch (error) {
-            console.error('Error in getAllVehicles:', error);
+            console.error('Error fetching all vehicles:', error);
             return [];
         }
-    }
-
-    async createVehicle(vehicleData: Partial<VehicleInterfaceType>): Promise<VehicleProps | null> {
-        console.warn("Mock createVehicle called. Data is not persisted.", vehicleData);
-        const newId = `veh-${Date.now()}`;
-        const completeVehicleData = {
-            ...vehicleData,
-            id: newId,
-            make: vehicleData.brand, // Assuming brand maps to make for raw data
-            category: vehicleData.type, // Assuming type maps to category
-            status: VehicleStatus.AVAILABLE, // Default status
-            dailyRate: vehicleData.pricePerDay ? { amount: vehicleData.pricePerDay, currency: 'XAF' } : {amount: 0, currency: 'XAF'},
-            imageUrl: vehicleData.images?.[0]
-        };
-        return transformRawVehicleToVehicleProps(completeVehicleData);
-    }
-
-    async updateVehicle(id: string, vehicleData: Partial<VehicleInterfaceType>): Promise<VehicleProps | null> {
-        console.warn(`Mock updateVehicle for ${id}. Data is not persisted.`, vehicleData);
-        const currentVehiclesResponse = await fetch('/data/vehicles.json');
-        const currentVehicles: any[] = await currentVehiclesResponse.json();
-        const existingVehicle = currentVehicles.find(v => v.id === id);
-        if (!existingVehicle) return null;
-
-        const updatedRawData = {
-            ...existingVehicle,
-            ...vehicleData,
-            make: vehicleData.brand || existingVehicle.make,
-            category: vehicleData.type || existingVehicle.category,
-            dailyRate: vehicleData.pricePerDay ? { amount: vehicleData.pricePerDay, currency: existingVehicle.dailyRate?.currency || 'XAF' } : existingVehicle.dailyRate,
-            imageUrl: vehicleData.images?.[0] || existingVehicle.imageUrl
-        };
-        return transformRawVehicleToVehicleProps(updatedRawData);
-    }
-
-    async deleteVehicle(id: string): Promise<boolean> {
-        console.warn(`Mock deleteVehicle for ${id}. Data is not actually deleted.`);
-        return true;
     }
 
     async getVehiclesByAgency(agencyId: string): Promise<VehicleProps[]> {
-        const allVehicles = await this.getAllVehicles();
-        return allVehicles.filter(v => v.agencyId === agencyId);
+        try {
+            const allVehicles = await this.getAllVehicles();
+            return allVehicles.filter(v => v.agencyId === agencyId);
+        } catch (error) {
+            console.error('Error getting vehicles by agency:', error);
+            return [];
+        }
     }
 
     async getVehiclesByCategory(category: string): Promise<VehicleProps[]> {
-        const allVehicles = await this.getAllVehicles();
-        return allVehicles.filter(v => v.category === category);
-    }
-
-    async searchVehicles(filters: any): Promise<VehicleProps[]> {
-        console.warn("Mock searchVehicles called with filters:", filters);
-        let vehicles = await this.getAllVehicles();
-        if (filters.brand) vehicles = vehicles.filter(v => v.brand.toLowerCase().includes(filters.brand.toLowerCase()));
-        if (filters.model) vehicles = vehicles.filter(v => v.model.toLowerCase().includes(filters.model.toLowerCase()));
-        // Add more filter logic here
-        return vehicles;
-    }
-
-    async getVehicleMaintenanceHistory(vehicleId: string): Promise<MaintenanceRecord[]> {
-        console.warn(`Mock getVehicleMaintenanceHistory for ${vehicleId}`);
-        // Fetch from public/data/maintenanceRecords.json and filter by vehicleId
         try {
-            const response = await fetch('/data/maintenanceRecords.json');
-            const allRecords: MaintenanceRecord[] = await response.json();
-            return allRecords.filter(record => record.vehicleId === vehicleId);
-        } catch (e) {
+            const allVehicles = await this.getAllVehicles();
+            return allVehicles.filter(v => v.category.toLowerCase() === category.toLowerCase());
+        } catch (error) {
+            console.error('Error getting vehicles by category:', error);
             return [];
         }
     }
 
-    async scheduleVehicleMaintenance(vehicleId: string, maintenance: Partial<MaintenanceRecord>): Promise<MaintenanceRecord> {
-        console.warn(`Mock scheduleVehicleMaintenance for ${vehicleId}`, maintenance);
-        const newRecord: MaintenanceRecord = {
-            id: `maint-${Date.now()}`,
-            vehicleId: vehicleId,
-            agencyId: maintenance.agencyId || "unknown-agency", // Default if not provided
-            date: maintenance.date || new Date(),
-            type: maintenance.type || "Routine",
-            description: maintenance.description || "Scheduled maintenance",
-            cost: maintenance.cost || {amount:0, currency: 'XAF'},
-            status: maintenance.status || "SCHEDULED",
-            provider: maintenance.provider,
-            notes: maintenance.notes
-        };
-        return newRecord; // Does not persist
+    async createVehicle(vehicleData: Partial<Omit<VehicleProps, 'id'|'available'|'pricePerDay'|'images'|'fonctionnalities'|'status'|'dailyRate'>>): Promise<VehicleProps | null> {
+        // This would require a backend API in a real application
+        console.warn('Create vehicle operation would require a backend API');
+        return null;
     }
 
-
-    async getVehicleReviews(vehicleId: string): Promise<ReviewData[]> {
-        console.warn(`Mock getVehicleReviews for ${vehicleId}`);
-        try {
-            const response = await fetch('/data/reviews.json');
-            if (!response.ok) return [];
-            const allReviews: any[] = await response.json();
-            // Assuming reviews.json items have a vehicleId or bookingId that can be linked
-            return allReviews
-                .filter(r => r.vehicleId === vehicleId /* crude filter, adapt to your reviews.json structure */)
-                .map(r => ({
-                    id: r.id,
-                    reviewer_name: r.clientId || "Anonymous", // Map from clientId or default
-                    comment: r.comment,
-                    rating: r.vehicleRating || r.rating || 0, // Prioritize vehicleRating
-                    date: r.createdAt || new Date().toISOString(),
-                }));
-        } catch (e) {
-            console.error("Error fetching mock reviews:", e);
-            return [];
-        }
+    async updateVehicle(id: string, vehicleData: Partial<Omit<VehicleProps, 'id'|'available'|'pricePerDay'|'images'|'fonctionnalities'|'status'|'dailyRate'>>): Promise<VehicleProps | null> {
+        // This would require a backend API in a real application
+        console.warn('Update vehicle operation would require a backend API');
+        return null;
     }
 
-    async addReviewToVehicle(vehicleId: string, reviewData: Omit<ReviewClassType, 'id' | 'createdAt' | 'bookingId' | 'clientId' | 'serviceRating'>): Promise<ReviewData | null> {
-        console.warn(`Mock addReviewToVehicle for ${vehicleId}`, reviewData);
-        const newReview: ReviewData = {
-            id: `rev-${Date.now()}`,
-            reviewer_name: "Mock User", // Or take from reviewData if available
-            comment: reviewData.comment,
-            rating: reviewData.vehicleRating,
-            date: new Date().toISOString()
-        };
-        return newReview; // Does not persist
+    async deleteVehicle(id: string): Promise<boolean> {
+        // This would require a backend API in a real application
+        console.warn('Delete vehicle operation would require a backend API');
+        return false;
     }
 
-    async getVehicleSchedule(vehicleId: string): Promise<SchedulingData | null> {
-        console.warn(`Mock getVehicleSchedule for ${vehicleId}`);
-        // This needs to align with how schedules are stored, possibly from bookings.json
-        // For now, returning a default empty schedule.
-        // A real implementation might fetch bookings for the vehicle and derive days_off/scheduled_ranges.
-        return { days_off: [], scheduled_ranges: [] };
-    }
-
-    async updateVehicleSchedule(vehicleId: string, scheduleData: SchedulingData): Promise<SchedulingData | null> {
-        console.warn(`Mock updateVehicleSchedule for ${vehicleId}`, scheduleData);
-        return scheduleData; // Does not persist
-    }
-
-    async getVehicleAgency(vehicleId: string): Promise<AgencyBasicData | null> {
-        console.warn(`Mock getVehicleAgency for vehicle ${vehicleId}`);
-        const vehicle = await this.getVehicleById(vehicleId); // Get the vehicle to find its agencyId
-        if (!vehicle || !vehicle.agencyId) return null;
-        try {
-            const response = await fetch('/data/agencies.json');
-            if(!response.ok) return null;
-            const allAgencies: any[] = await response.json();
-            const agency = allAgencies.find(a => a.id === vehicle.agencyId);
-            return agency ? { id: agency.id, name: agency.name } : null;
-        } catch (e) {
-            console.error("Error fetching mock agency for vehicle:", e);
-            return null;
-        }
-    }
-
-    // Implement other methods from VehicleService interface similarly, fetching from mock JSONs
-    // and transforming data to VehicleProps or other relevant model props.
-    // For example:
-    // updateVehicleStatus, updateMileage, getVehicleAvailability, calculateRentalPrice
     async updateVehicleStatus(id: string, status: VehicleStatus): Promise<VehicleProps | null> {
-        console.warn(`Mock updateVehicleStatus for ${id} to ${status}`);
-        const vehicle = await this.getVehicleById(id);
-        if(vehicle) {
-            vehicle.status = status;
-            vehicle.available = status === VehicleStatus.AVAILABLE;
-            return vehicle;
-        }
+        // This would require a backend API in a real application
+        console.warn('Update vehicle status operation would require a backend API');
         return null;
     }
 
     async updateMileage(id: string, mileage: number): Promise<VehicleProps | null> {
-        console.warn(`Mock updateMileage for ${id} to ${mileage}`);
-        const vehicle = await this.getVehicleById(id);
-        if(vehicle) {
-            vehicle.mileage = mileage;
-            return vehicle;
-        }
+        // This would require a backend API in a real application
+        console.warn('Update mileage operation would require a backend API');
         return null;
     }
 
+    async searchVehicles(filters: any): Promise<VehicleProps[]> {
+        try {
+            const allVehicles = await this.getAllVehicles();
+
+            return allVehicles.filter(vehicle => {
+                let matches = true;
+
+                if (filters.category && filters.category.length > 0) {
+                    matches = matches && filters.category.includes(vehicle.category);
+                }
+
+                if (filters.passenger && filters.passenger > 0) {
+                    matches = matches && (vehicle.passenger || 0) >= filters.passenger;
+                }
+
+                if (filters.priceRange && filters.priceRange.length === 2) {
+                    const [min, max] = filters.priceRange;
+                    matches = matches && vehicle.pricePerDay >= min && vehicle.pricePerDay <= max;
+                }
+
+                // Add more filter criteria as needed
+
+                return matches;
+            });
+
+        } catch (error) {
+            console.error('Error searching vehicles:', error);
+            return [];
+        }
+    }
+
     async getVehicleAvailability(id: string, startDate: Date, endDate: Date): Promise<boolean> {
-        console.warn(`Mock getVehicleAvailability for ${id} from ${startDate} to ${endDate}`);
-        // Basic mock: assume available if status is AVAILABLE. Real logic would check schedules.
-        const vehicle = await this.getVehicleById(id);
-        return vehicle?.available || false;
+        // In a real implementation, this would check against reservations/bookings
+        return true; // Placeholder implementation
+    }
+
+    async getVehicleMaintenanceHistory(vehicleId: string): Promise<MaintenanceRecord[]> {
+        // Would fetch from maintenance records API/endpoint in a real implementation
+        return []; // Placeholder implementation
+    }
+
+    async scheduleVehicleMaintenance(vehicleId: string, maintenance: Partial<MaintenanceRecord>): Promise<MaintenanceRecord> {
+        // Would create a maintenance record via API in a real implementation
+        throw new Error('Not implemented');
     }
 
     async calculateRentalPrice(vehicleId: string, startDate: Date, endDate: Date): Promise<number> {
-        console.warn(`Mock calculateRentalPrice for ${vehicleId}`);
-        const vehicle = await this.getVehicleById(vehicleId);
-        if (!vehicle) return 0;
-        const days = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 3600 * 24)) || 1;
-        return days * vehicle.pricePerDay;
+        try {
+            const vehicle = await this.getVehicleById(vehicleId);
+            if (!vehicle) throw new Error('Vehicle not found');
+
+            const days = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+            if (days <= 0) throw new Error('End date must be after start date');
+
+            return days * vehicle.pricePerDay;
+        } catch (error) {
+            console.error('Error calculating rental price:', error);
+            return 0;
+        }
     }
 
+    async getVehicleReviews(vehicleId: string): Promise<ReviewData[]> {
+        // Would fetch from reviews API/endpoint in a real implementation
+        return []; // Placeholder implementation
+    }
+
+    async getVehicleSchedule(vehicleId: string): Promise<SchedulingData | null> {
+        // Would fetch from scheduling API/endpoint in a real implementation
+        return null; // Placeholder implementation
+    }
+
+    async getVehicleAgency(vehicleId: string): Promise<AgencyBasicData | null> {
+        // Would fetch from agency API/endpoint in a real implementation
+        return null; // Placeholder implementation
+    }
 }
 
-// Export an instance of the service
 export const vehicleService = new VehicleServiceImpl();
+

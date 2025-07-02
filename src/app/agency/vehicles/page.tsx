@@ -5,7 +5,7 @@ import { vehicleService } from '@/services/VehicleServiceImpl'; // Import the se
 import { VehicleProps, FilterVehicleProps as NewFilterVehicleProps } from '@/types/classes/Vehicle'; // <<<< UPDATED IMPORT PATH
 
 import OrgVehicleListComponent from '@/components/organisation/OrgVehicleList';
-import SidebarVehicleFilter from '@/components/organisation/SideBarFilterVehicle'; // Use the actual component
+import SidebarVehicleFilter from '@/components/organisation/SideBarFilterVehicle';
 
 import { Filter, X } from 'lucide-react';
 
