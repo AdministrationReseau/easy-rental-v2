@@ -74,7 +74,7 @@
         }
     },
     "vehicles": {
-        "title": "Browse Vehicles",
+        "title": "Browse Availables Vehicles",
         "subtitle": "Find the perfect vehicle for your needs",
         "search": "Search vehicles...",
         "sort": {
@@ -98,6 +98,7 @@
         "per_day": "/day",
         "view_details": "View Details",
         "book_now": "Book Now",
+        "no_vehicles":"No vehicles available",
         "no_results": "No vehicles found matching your criteria",
         "try_again": "Try adjusting your filters",
         "pagination": {

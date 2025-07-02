@@ -1,5 +1,5 @@
 'use client';
-
+import { useTranslation } from "react-i18next";
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -48,11 +48,12 @@ const CarCard: React.FC<CarProps> = ({
             }  
     };
 
+    const { t } = useTranslation('common');
     return (
-        <div className="bg-white text-secondary-text rounded-lg shadow-md overflow-hidden w-[280px]">
+        <div className="bg-white dark:bg-background-dark text-secondary-text dark:text-text-dark rounded-lg shadow-md overflow-hidden w-[280px]">
             {/* Header - Brand, Model, Like Button */}
             <div className="flex justify-between items-center p-4 h-[50px]">
-                <h2 className="text-md font-semibold text-gray-800">
+                <h2 className="text-md font-semibold ">
                     {brand} {model}
                 </h2>
                 <LikeButton isLiked={isLiked} onClick={toggleLike} />
@@ -72,7 +73,7 @@ const CarCard: React.FC<CarProps> = ({
             </div>
 
             {/* Details Section */}
-            <div className="flex justify-between items-center px-4 py-2 text-sm text-gray-600">
+            <div className="flex justify-between items-center px-4 py-2 text-sm">
                 <div className="flex items-center gap-1">
                     <Fuel className="w-5 h-5 text-gray-500" />
                     <p>{engine.capacity}L</p>
@@ -90,14 +91,14 @@ const CarCard: React.FC<CarProps> = ({
             {/* Footer Section */}
             <div className="px-4 py-2 flex justify-between items-center">
                 <div>
-                    <span className="text-xl font-semibold text-gray-800">
+                    <span className="text-xl font-semibold">
                         {pricePerDay} CFA
                     </span>
-                    <span className="text-gray-500 text-sm ml-1">/ jour</span>
+                    <span className="text-gray-500 text-sm ml-1">{t('vehicle_card.per_day')}</span>
                 </div>
-                <Link href={`/customer/cars/${id}`}>
-                    <button className="text-sm py-2 px-4 bg-primary-blue text-white rounded-md transition duration-200 transform hover:scale-105 hover:bg-blue-600">
-                        View More
+                <Link href={`/vehicles/${id}`}>
+                    <button className="py-2 px-4 text-sm bg-primary dark:bg-primary-700 text-white rounded-md transition duration-200 hover:scale-105 hover:bg-primary-800 w-[116px] h-[44px]">
+                        {t('buttons.view_more')}
                     </button>
                 </Link>
             </div>

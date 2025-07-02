@@ -56,23 +56,24 @@ const AgencyDetails: React.FC = () => {
 
   return (
     <div >
-      <main className="flex text-text-light dark:text-text-dark ">
+      <main className="flex text-text-light dark:text-text- justify-center items-center flex-col p-4">
         
         <div className='flex justify-center items-center flex-col'>
           <AgencyDetail agency={agency} />
        
-          <Link href="/customer/cars">
-          <button className='m-4 p-4 text-white bg-primary-blue rounded-lg'>
+          <Link href="/vehicles">
+          <button className='m-4 p-4 text-white bg-primary dark:bg-primary-700 rounded-lg'>
               See More Vehicles
           </button>
           </Link>
-             {/* Recommendations Section */}
-             <div className="w-full rounded-lg p-6">
-            <h4 className="font-bold text-lg">You would also like</h4>
+          
+          {/* Recommendations Section */}
+          <div className="w-full rounded-lg p-6">
+            <h4 className="font-bold text-2xl dark:text-text-dark text-center">You would also like</h4>
             <AgencyList agencies={agencies} filters={filters} />
           </div>
           
-          <Link href="/customer/agencies">
+          <Link href="/agencies">
           <button className='m-4 p-4 text-white bg-primary dark:bg-primary-700 rounded-lg'>
               See More Agencies
           </button>

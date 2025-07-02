@@ -1,4 +1,11 @@
 const nextConfig = {
+    reactStrictMode: true,
+    swcMinify: true,
+    experimental: {
+        turbo:  {
+            loaders: {}
+        }
+    },
     async rewrites() {
         return [
             {

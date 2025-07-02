@@ -61,9 +61,9 @@ const AgencyCard: React.FC<AgencyProps> = ({
     const toggleLike = () => {
         setIsLiked(!isLiked);
         if (!isLiked) {
-            if (onLike) onLike(id); // Appel de la fonction onLike si le véhicule est aimé
+            if (onLike) onLike(Number(id)); // Appel de la fonction onLike si le véhicule est aimé
         } else {
-            if(onDislike) onDislike(id); // Appel de la fonction onDislike si le véhicule est non aimé
+            if(onDislike) onDislike(Number(id)); // Appel de la fonction onDislike si le véhicule est non aimé
         }
     };
     const agency = {
@@ -88,16 +88,16 @@ const AgencyCard: React.FC<AgencyProps> = ({
     const isOpen = isAgencyOpen(agency);
 
     return (
-        <div className="bg-white dark:bg-background-dark text-secondary-text rounded-lg shadow-md overflow-hidden w-[280px]">
+        <div className="bg-white dark:bg-background-dark text-secondary-text dark:text-gray-400 rounded-lg shadow-md overflow-hidden w-[280px]">
             {/* Première ligne - Nom et Like/Dislike */}
             <div className="flex justify-between items-center p-4">
-                <h2 className="text-xl font-semibold text-primary-text">{name}</h2>
+                <h2 className="text-xl font-semibold text-primary-text dark:text-text-dark">{name}</h2>
                 <p className='text-sm text-secondary-text'><i>({type})</i></p>
                 <LikeButton isLiked={isLiked} onClick={toggleLike} />
             </div>
 
             {/* Deuxième ligne - Marque */}
-            <div className="px-4 py-2 text-sm text-secondary-text h-[70px]">
+            <div className="px-4 py-2 text-sm text-secondary-text dark:text-gray-400 h-[70px]">
                 <p>{slogan}</p>
             </div>
 
@@ -132,7 +132,7 @@ const AgencyCard: React.FC<AgencyProps> = ({
             {/* Prix de location et bouton Rent Now */}
             <div className="px-4 py-2 flex justify-between items-center">
                 <span className='m-2'>
-                    <p className="text-xl font-semibold text-gray-800">{city}</p>
+                    <p className="text-xl font-semibold text-gray-800 dark:text-text-dark">{city}</p>
                     <p className='text-sm'>{quater}</p>
                 </span>
                 <Link

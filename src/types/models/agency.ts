@@ -1,5 +1,5 @@
 export interface AgencyProps {
-    id: number;
+    id: string;
     name: string;
     description:string;
     slogan: string;

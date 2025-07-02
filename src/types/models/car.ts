@@ -1,5 +1,6 @@
 export interface CarProps {
-    id: number;
+    id: string;
+    agencyId: string;
     type?: string;                // Optional
     brand?: string;               // Optional
     model?: string;               // Optional
@@ -91,4 +92,39 @@ export interface FilterVehicleProps {
 export interface VehicleListProps {
     vehicles: CarProps[];
     filters: FilterVehicleProps;
+}
+
+type TypeVehicule = 'berline' | 'SUV' | 'utilitaire' | string; // Autres types possibles
+type Transmission = 'manuelle' | 'automatique';
+type Carburant = 'essence' | 'diesel' | 'électrique' | 'hybride';
+type EtatVehicule = 'DISPONIBLE' | 'LOUÉ' | 'MAINTENANCE' | 'HORS_SERVICE' | 'RETIRÉ';
+
+interface DocumentVehicule {
+  nom: string;
+  fichier: string; // URL ou chemin du fichier
+  dateExpiration?: Date;
+}
+
+interface Tarification {
+  heure: number;
+  jour: number;
+  semaine: number;
+}
+
+export interface Vehicule {
+  marque: string;
+  modele: string;
+  annee: number;
+  numeroImmatriculation: string;
+  type: TypeVehicule;
+  nombrePlaces: number;
+  transmission: Transmission;
+  carburant: Carburant;
+  kilometrage: number;
+  etatGeneral: string; 
+  galerieImages: string[]; 
+  documents: DocumentVehicule[];
+  tarification: Tarification;
+  agenceAppartenance: string;
+  etat: EtatVehicule;
 }

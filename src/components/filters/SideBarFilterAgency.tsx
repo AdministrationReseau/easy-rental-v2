@@ -18,7 +18,7 @@ const SidebarAgencyFilter: React.FC<{ agencies: AgencyProps[]; onFilter: (filter
     
 
     if (agencies.length === 0) {
-      return [0, 100]; // Défaut si aucune donnée n'est disponible
+      return [0, 1000]; // Défaut si aucune donnée n'est disponible
     }
     return [
       Math.min(...agencies.map((agency) => agency.followers)),

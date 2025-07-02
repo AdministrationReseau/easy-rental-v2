@@ -36,7 +36,9 @@ const Hero = () => {
 						whileHover={{ scale: 1.05 }}
 						whileTap={{ scale: 0.95 }}
 						className="mx-auto w-fit sm:mx-0 px-8 py-4 text-lg bg-primary hover:bg-primary-700 text-white font-semibold rounded-full shadow-md transition-all duration-300">
-						{t('components.landing.hero.rentNowButton')}
+						<Link href="/booking-process/start">
+							{t('components.landing.hero.rentNowButton')}
+						</Link>
 					</motion.button>
 					<div className="flex mx-auto md:mx-0 items-center gap-4">
 						<div className="flex space-x-4">

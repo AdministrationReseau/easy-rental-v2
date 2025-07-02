@@ -24,17 +24,17 @@ const ClientNavbar: React.FC = () => {
 
   const links: NavLink[] = [
     {
-      href: '/client',
+      href: '/',
       label: t('components.navbar.client_navbar.home'),
       icon: <FaHome />
     },
     {
-      href: '/client/vehicles',
+      href: '/vehicles',
       label: t('components.navbar.client_navbar.vehicles'),
       icon: <FaCar />
     },
     {
-      href: '/client/agencies',
+      href: '/agencies',
       label: t('components.navbar.client_navbar.agencies'),
       icon: <FaBuilding />
     }
@@ -45,14 +45,14 @@ const ClientNavbar: React.FC = () => {
       type: 'icon',
       icon: <FaHeart />,
       badge: 3,
-      href: '/client/favorites',
+      href: '/favorites',
       label: t('components.navbar.client_navbar.favorites')
     },
     {
       type: 'icon',
       icon: <FaBell />,
       badge: 2,
-      href: '/client/notifications',
+      href: '/notifications',
       label: t('components.navbar.client_navbar.notifications')
     },
     {
@@ -62,22 +62,22 @@ const ClientNavbar: React.FC = () => {
       items: [
         { 
           label: t('components.navbar.client_navbar.account'),
-          href: '/client/profile',
+          href: '/profile',
           icon: <FaUserCircle />
         },
         { 
           label: t('components.navbar.client_navbar.rentals'),
-          href: '/client/rentals',
+          href: '/rentals',
           icon: <FaExchangeAlt />
         },
         { 
           label: t('components.navbar.client_navbar.transactions'),
-          href: '/client/transactions',
+          href: '/transactions',
           icon: <FaMoneyBillWave />
         },
         { 
           label: t('components.navbar.client_navbar.help'),
-          href: '/client/help',
+          href: '/help',
           icon: <FaQuestionCircle />
         },
         { 

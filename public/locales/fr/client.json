@@ -74,7 +74,7 @@
         }
     },
     "vehicles": {
-        "title": "Parcourir les Véhicules",
+        "title": "Parcourir les Véhicules Disponibles",
         "subtitle": "Trouvez le véhicule parfait pour vos besoins",
         "search": "Rechercher des véhicules...",
         "sort": {
@@ -98,6 +98,7 @@
         "per_day": "/jour",
         "view_details": "Voir les Détails",
         "book_now": "Réserver Maintenant",
+        "no_vehicles":"Aucun véhicule disponible",
         "no_results": "Aucun véhicule trouvé correspondant à vos critères",
         "try_again": "Essayez d'ajuster vos filtres",
         "pagination": {
