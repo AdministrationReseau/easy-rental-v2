@@ -111,7 +111,7 @@ export const VehicleSearchForm: React.FC<VehicleSearchFormProps> = ({ onSearch, 
   // --- JSX : LE MEILLEUR DES DEUX MONDES ---
 
   return (
-    <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-2xl rounded-xl p-6 sm:p-8">
+    <div className="w-full max-w-4xl bg-white dark:bg-gray-800 shadow-2xl rounded-xl p-6 sm:p-8 justify-center">
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">
         Trouvez le véhicule parfait
       </h2>

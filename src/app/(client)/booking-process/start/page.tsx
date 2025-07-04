@@ -72,7 +72,7 @@ export default function ReservationStartPage() {
   return (
     <div className="min-h-screen container mx-auto p-4 md:p-8">
       {/* Le formulaire de recherche */}
-      <section className="mb-12">
+      <section className="mb-12 justify-center">
         <VehicleSearchForm onSearch={handleVehicleSearch} />
       </section>
 

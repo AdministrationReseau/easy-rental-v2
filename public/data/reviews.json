@@ -1,0 +1,33 @@
+[
+  {
+    "id": "rev-001",
+    "bookingId": "bkg-005",
+    "clientId": "usr-002",
+    "vehicleRating": 4,
+    "driverRating": 5,
+    "serviceRating": 4,
+    "comment": "Très bonne expérience avec TransLoc. La Land Cruiser était impeccable et Marie était une excellente chauffeure, très professionnelle et ponctuelle. Je recommande vivement.",
+    "createdAt": "2025-05-23T10:20:00Z"
+  },
+  {
+    "id": "rev-002",
+    "bookingId": "bkg-003",
+    "clientId": "usr-002",
+    "vehicleRating": 5,
+    "driverRating": 4,
+    "serviceRating": 5,
+    "comment": "Excellente voiture, très confortable. Le chauffeur connaissait bien les routes de Yaoundé, ce qui nous a fait gagner beaucoup de temps. Je ferai à nouveau appel à vos services.",
+    "createdAt": "2025-06-13T08:45:00Z"
+  },
+  {
+    "id": "rev-003",
+    "bookingId": "bkg-001",
+    "clientId": "usr-001",
+    "vehicleRating": 5,
+    "driverRating": 5,
+    "serviceRating": 5,
+    "comment": "Service impeccable! La Land Cruiser était parfaite pour notre voyage et Etienne est un chauffeur exceptionnel. Je recommande à 100%.",
+    "createdAt": "2025-06-19T14:30:00Z"
+  }
+]
+

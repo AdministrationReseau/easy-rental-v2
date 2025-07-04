@@ -1,16 +1,68 @@
 [
   {
-    "id": "1",
-    "name": "Admin User",
-    "email": "admin@easyrental.com",
-    "role": "admin",
-    "createdAt": "2023-01-01T00:00:00.000Z"
+    "id": "usr-001",
+    "email": "john.doe@example.com",
+    "password": "hashed_password_1",
+    "role": "CLIENT",
+    "status": "ACTIVE",
+    "firstName": "John",
+    "lastName": "Doe",
+    "phone": "+237698765432",
+    "createdAt": "2025-01-15T09:30:00Z",
+    "updatedAt": "2025-06-10T14:20:00Z"
   },
   {
-    "id": "2",
-    "name": "Regular User",
-    "email": "user@easyrental.com",
-    "role": "user",
-    "createdAt": "2023-01-02T00:00:00.000Z"
+    "id": "usr-002",
+    "email": "jane.smith@example.com",
+    "password": "hashed_password_2",
+    "role": "ORGANIZATION_ADMIN",
+    "organizationId": "org-001",
+    "status": "ACTIVE",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "phone": "+237699876543",
+    "createdAt": "2025-01-20T11:45:00Z",
+    "updatedAt": "2025-06-12T16:30:00Z"
+  },
+  {
+    "id": "usr-003",
+    "email": "michael.brown@example.com",
+    "password": "hashed_password_3",
+    "role": "AGENCY_ADMIN",
+    "organizationId": "org-001",
+    "agencyId": "agc-001",
+    "status": "ACTIVE",
+    "firstName": "Michael",
+    "lastName": "Brown",
+    "phone": "+237695432109",
+    "createdAt": "2025-01-25T13:15:00Z",
+    "updatedAt": "2025-06-15T10:45:00Z"
+  },
+  {
+    "id": "usr-004",
+    "email": "sarah.wilson@example.com",
+    "password": "hashed_password_4",
+    "role": "STAFF",
+    "organizationId": "org-001",
+    "agencyId": "agc-001",
+    "status": "ACTIVE",
+    "firstName": "Sarah",
+    "lastName": "Wilson",
+    "phone": "+237691234567",
+    "createdAt": "2025-02-05T10:00:00Z",
+    "updatedAt": "2025-06-18T15:20:00Z"
+  },
+  {
+    "id": "usr-005",
+    "email": "robert.johnson@example.com",
+    "password": "hashed_password_5",
+    "role": "SYSTEM_ADMIN",
+    "status": "ACTIVE",
+    "firstName": "Robert",
+    "lastName": "Johnson",
+    "phone": "+237690123456",
+    "createdAt": "2025-01-10T08:00:00Z",
+    "updatedAt": "2025-06-05T11:30:00Z"
   }
 ]
+

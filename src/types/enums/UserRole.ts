@@ -1,0 +1,5 @@
+export enum UserRole {
+	CLIENT,
+	AGENCY_USER,
+	ORGANIZATION_USER
+}
