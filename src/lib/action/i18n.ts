@@ -1,4 +1,3 @@
-// src/lib/i18n.ts
 'use client';
 
 import i18n from 'i18next';
@@ -34,3 +33,4 @@ i18n
 	});
 
 export default i18n;
+

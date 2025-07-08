@@ -24,7 +24,7 @@ interface OrganizationData {
 	transactionId: string;
 }
 
-const OrganizationCreationModal = dynamic(() => import('@/components/organization/OrganizationCreationModal'), {
+const OrganizationCreationModal = dynamic(() => import('@/components/organisation/OrganizationCreationModal'), {
   loading: () => <LoadingSpinner size="md" />,
 });
 

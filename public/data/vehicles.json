@@ -2,128 +2,393 @@
   {
     "id": "veh-001",
     "agencyId": "agc-001",
-    "make": "Toyota",
+    "brand": "Toyota",
     "model": "Land Cruiser",
     "year": 2023,
     "plateNumber": "CE-254-RT",
     "vin": "JTMHV05J604123456",
     "category": "SUV",
     "features": ["GPS", "Climatisation", "Bluetooth", "Caméra de recul", "Sièges en cuir"],
-    "status": "AVAILABLE",
+    "status": "BOOKED",
     "mileage": 15200,
     "dailyRate": {
       "amount": 45000,
       "currency": "XAF"
     },
-    "imageUrl": "/images/vehicles/toyota-landcruiser.jpg"
+    "description": "Le Toyota Land Cruiser est un véhicule tout-terrain robuste, fiable et luxueux. Parfait pour les voyages longue distance.",
+    "rating": 4.7,
+    "passenger": 7,
+    "color": "Noir",
+    "transmission": "Automatique",
+    "images": ["/assets/organisation/cars/camry.jpeg"],
+    "fonctionnalities": {
+      "air_condition": true,
+      "usb_input": true,
+      "seat_belt": true,
+      "audio_input": true,
+      "child_seat": false,
+      "bluetooth": true,
+      "sleeping_bed": false,
+      "onboard_computer": true,
+      "gps": true,
+      "luggage": true,
+      "water": false,
+      "additional_covers": false
+    },
+    "engine": {
+      "type": "Diesel",
+      "horsepower": 204,
+      "capacity": 2.8
+    },
+    "fuelEfficiency": {
+      "city": "10.5 L/100km",
+      "highway": "8.2 L/100km"
+    },
+    "documents": {
+      "registration_certificate": "RC-LC-2023-001",
+      "technical_inspection": "TI-2023-001",
+      "insurance": "IN-2023-001"
+    },
+    "registration": {
+      "state": "Centre",
+      "expiry": "2025-06-30"
+    },
+    "driverRequired": false
   },
   {
     "id": "veh-002",
     "agencyId": "agc-001",
-    "make": "Mercedes",
+    "brand": "Mercedes",
     "model": "Sprinter",
     "year": 2022,
     "plateNumber": "LT-781-SC",
     "vin": "WD3PE8CC2GP123456",
     "category": "VAN",
     "features": ["GPS", "Climatisation", "12 places", "Coffre spacieux", "Bluetooth"],
-    "status": "AVAILABLE",
+    "status": "UNKNOWN",
     "mileage": 28500,
     "dailyRate": {
       "amount": 60000,
       "currency": "XAF"
     },
-    "imageUrl": "/images/vehicles/mercedes-sprinter.jpg"
+    "description": "Le Mercedes Sprinter est un van spacieux et confortable, idéal pour les groupes ou le transport de bagages volumineux.",
+    "rating": 4.5,
+    "passenger": 12,
+    "color": "Blanc",
+    "transmission": "Manuelle",
+    "images": ["/assets/organisation/cars/car.png"],
+    "fonctionnalities": {
+      "air_condition": true,
+      "usb_input": true,
+      "seat_belt": true,
+      "audio_input": true,
+      "child_seat": true,
+      "bluetooth": true,
+      "sleeping_bed": false,
+      "onboard_computer": false,
+      "gps": true,
+      "luggage": true,
+      "water": false,
+      "additional_covers": false
+    },
+    "engine": {
+      "type": "Diesel",
+      "horsepower": 163,
+      "capacity": 2.1
+    },
+    "fuelEfficiency": {
+      "city": "11.2 L/100km",
+      "highway": "8.7 L/100km"
+    },
+    "documents": {
+      "registration_certificate": "RC-SP-2022-001",
+      "technical_inspection": "TI-2022-001",
+      "insurance": "IN-2022-001"
+    },
+    "registration": {
+      "state": "Littoral",
+      "expiry": "2024-09-15"
+    },
+    "driverRequired": true
   },
   {
     "id": "veh-003",
     "agencyId": "agc-001",
-    "make": "Hyundai",
-    "model": "Tucson",
-    "year": 2024,
-    "plateNumber": "CE-872-LT",
-    "vin": "KM8J3CA28PU123456",
-    "category": "SUV",
-    "features": ["GPS", "Climatisation", "Bluetooth", "Sièges chauffants", "Apple CarPlay"],
+    "brand": "Hyundai",
+    "model": "Accent",
+    "year": 2021,
+    "plateNumber": "AD-123-BH",
+    "vin": "KMHCT4AE1CU123456",
+    "category": "SEDAN",
+    "features": ["Climatisation", "Bluetooth", "Radio", "USB"],
     "status": "MAINTENANCE",
-    "mileage": 5200,
+    "mileage": 19500,
     "dailyRate": {
-      "amount": 35000,
+      "amount": 25000,
       "currency": "XAF"
     },
-    "imageUrl": "/images/vehicles/hyundai-tucson.jpg"
+    "description": "La Hyundai Accent est une berline économique, parfaite pour la ville avec un bon rendement de carburant.",
+    "rating": 4.2,
+    "passenger": 5,
+    "color": "Gris",
+    "transmission": "Automatique",
+    "images": ["/assets/organisation/cars/car2.png"],
+    "fonctionnalities": {
+      "air_condition": true,
+      "usb_input": true,
+      "seat_belt": true,
+      "audio_input": true,
+      "child_seat": false,
+      "bluetooth": true,
+      "sleeping_bed": false,
+      "onboard_computer": false,
+      "gps": false,
+      "luggage": true,
+      "water": false,
+      "additional_covers": false
+    },
+    "engine": {
+      "type": "Essence",
+      "horsepower": 120,
+      "capacity": 1.6
+    },
+    "fuelEfficiency": {
+      "city": "7.5 L/100km",
+      "highway": "5.6 L/100km"
+    },
+    "documents": {
+      "registration_certificate": "RC-AC-2021-001",
+      "technical_inspection": "TI-2023-003",
+      "insurance": "IN-2023-003"
+    },
+    "registration": {
+      "state": "Adamaoua",
+      "expiry": "2025-02-20"
+    },
+    "driverRequired": false
   },
   {
     "id": "veh-004",
     "agencyId": "agc-002",
-    "make": "Toyota",
-    "model": "Hiace",
-    "year": 2023,
-    "plateNumber": "CE-123-YA",
-    "vin": "JTFSS22P8H0123456",
-    "category": "VAN",
-    "features": ["Climatisation", "15 places", "Bluetooth"],
-    "status": "AVAILABLE",
-    "mileage": 32400,
-    "dailyRate": {
-      "amount": 55000,
-      "currency": "XAF"
-    },
-    "imageUrl": "/images/vehicles/toyota-hiace.jpg"
-  },
-  {
-    "id": "veh-005",
-    "agencyId": "agc-002",
-    "make": "Peugeot",
-    "model": "3008",
-    "year": 2023,
-    "plateNumber": "CE-456-YA",
-    "vin": "VF3PUHNZPKS123456",
+    "brand": "Kia",
+    "model": "Sorento",
+    "year": 2022,
+    "plateNumber": "SW-908-KL",
+    "vin": "5XYKT3A66EG123456",
     "category": "SUV",
-    "features": ["GPS", "Climatisation", "Toit panoramique", "Caméra 360°", "Android Auto"],
-    "status": "RENTED",
-    "mileage": 18700,
+    "features": ["Caméra", "Climatisation", "Bluetooth", "GPS"],
+    "status": "MAINTENANCE",
+    "mileage": 17200,
     "dailyRate": {
       "amount": 40000,
       "currency": "XAF"
     },
-    "imageUrl": "/images/vehicles/peugeot-3008.jpg"
+    "description": "Un SUV familial avec de bonnes performances et des technologies modernes.",
+    "rating": 3.6,
+    "passenger": 7,
+    "color": "Bleu",
+    "transmission": "Automatique",
+    "images": ["/assets/organisation/cars/f-150.jpeg"],
+    "fonctionnalities": {
+      "air_condition": true,
+      "usb_input": true,
+      "seat_belt": true,
+      "audio_input": true,
+      "child_seat": true,
+      "bluetooth": true,
+      "sleeping_bed": false,
+      "onboard_computer": true,
+      "gps": true,
+      "luggage": true,
+      "water": false,
+      "additional_covers": false
+    },
+    "engine": {
+      "type": "Diesel",
+      "horsepower": 200,
+      "capacity": 2.2
+    },
+    "fuelEfficiency": {
+      "city": "9.8 L/100km",
+      "highway": "7.5 L/100km"
+    },
+    "documents": {
+      "registration_certificate": "RC-SO-2022-001",
+      "technical_inspection": "TI-2022-004",
+      "insurance": "IN-2022-004"
+    },
+    "registration": {
+      "state": "Sud-Ouest",
+      "expiry": "2024-12-10"
+    },
+    "driverRequired": false
+  },
+  {
+    "id": "veh-005",
+    "agencyId": "agc-002",
+    "brand": "Nissan",
+    "model": "Navara",
+    "year": 2023,
+    "plateNumber": "EN-445-ZX",
+    "vin": "MNTCBND23A0012345",
+    "category": "PICKUP",
+    "features": ["4x4", "Bluetooth", "Caméra", "Climatisation"],
+    "status": "OUT_OF_SERVICE",
+    "mileage": 10200,
+    "dailyRate": {
+      "amount": 55000,
+      "currency": "XAF"
+    },
+    "description": "Le Nissan Navara est un pickup robuste idéal pour les routes difficiles et les charges lourdes.",
+    "rating": 4.4,
+    "passenger": 5,
+    "color": "Rouge",
+    "transmission": "Manuelle",
+    "images": ["/assets/organisation/cars/metris.jpeg"],
+    "fonctionnalities": {
+      "air_condition": true,
+      "usb_input": true,
+      "seat_belt": true,
+      "audio_input": true,
+      "child_seat": false,
+      "bluetooth": true,
+      "sleeping_bed": false,
+      "onboard_computer": true,
+      "gps": false,
+      "luggage": true,
+      "water": false,
+      "additional_covers": true
+    },
+    "engine": {
+      "type": "Diesel",
+      "horsepower": 190,
+      "capacity": 2.5
+    },
+    "fuelEfficiency": {
+      "city": "10.2 L/100km",
+      "highway": "8.0 L/100km"
+    },
+    "documents": {
+      "registration_certificate": "RC-NA-2023-001",
+      "technical_inspection": "TI-2023-005",
+      "insurance": "IN-2023-005"
+    },
+    "registration": {
+      "state": "Extrême-Nord",
+      "expiry": "2025-01-05"
+    },
+    "driverRequired": false
   },
   {
     "id": "veh-006",
     "agencyId": "agc-003",
-    "make": "Kia",
-    "model": "Sportage",
-    "year": 2024,
-    "plateNumber": "LT-789-DO",
-    "vin": "KNDPMCAC2L7123456",
-    "category": "SUV",
-    "features": ["GPS", "Climatisation", "Caméra de recul", "Bluetooth", "Sièges en cuir"],
-    "status": "AVAILABLE",
-    "mileage": 7800,
+    "brand": "Peugeot",
+    "model": "3008",
+    "year": 2020,
+    "plateNumber": "NO-349-PK",
+    "vin": "VF3M45FVXFS123456",
+    "category": "CROSSOVER",
+    "features": ["GPS", "Bluetooth", "Climatisation", "Toit panoramique"],
+    "status": "BLOCKED",
+    "mileage": 22000,
     "dailyRate": {
-      "amount": 38000,
+      "amount": 37000,
       "currency": "XAF"
     },
-    "imageUrl": "/images/vehicles/kia-sportage.jpg"
+    "description": "Un crossover moderne, élégant et confortable pour la ville comme pour les routes.",
+    "rating": 4.3,
+    "passenger": 5,
+    "color": "Argent",
+    "transmission": "Automatique",
+    "images": ["/assets/organisation/cars/sportster.jpeg"],
+    "fonctionnalities": {
+      "air_condition": true,
+      "usb_input": true,
+      "seat_belt": true,
+      "audio_input": true,
+      "child_seat": true,
+      "bluetooth": true,
+      "sleeping_bed": false,
+      "onboard_computer": true,
+      "gps": true,
+      "luggage": true,
+      "water": false,
+      "additional_covers": false
+    },
+    "engine": {
+      "type": "Essence",
+      "horsepower": 130,
+      "capacity": 1.2
+    },
+    "fuelEfficiency": {
+      "city": "6.8 L/100km",
+      "highway": "5.1 L/100km"
+    },
+    "documents": {
+      "registration_certificate": "RC-3008-2020-001",
+      "technical_inspection": "TI-2022-006",
+      "insurance": "IN-2022-006"
+    },
+    "registration": {
+      "state": "Nord-Ouest",
+      "expiry": "2024-10-01"
+    },
+    "driverRequired": false
   },
   {
     "id": "veh-007",
     "agencyId": "agc-003",
-    "make": "Ford",
-    "model": "Ranger",
-    "year": 2023,
-    "plateNumber": "LT-421-DO",
-    "vin": "WF0LMRE60D9123456",
-    "category": "PICKUP",
-    "features": ["4x4", "Climatisation", "Bluetooth", "Hard top", "Barre de remorquage"],
+    "brand": "Renault",
+    "model": "Logan",
+    "year": 2020,
+    "plateNumber": "NW-666-GJ",
+    "vin": "VF14SRKR456123456",
+    "category": "SEDAN",
+    "features": ["Radio", "Climatisation"],
     "status": "AVAILABLE",
-    "mileage": 21500,
+    "mileage": 31000,
     "dailyRate": {
-      "amount": 42000,
+      "amount": 20000,
       "currency": "XAF"
     },
-    "imageUrl": "/images/vehicles/ford-ranger.jpg"
+    "description": "Une berline simple et fiable à prix abordable.",
+    "rating": 4.0,
+    "passenger": 5,
+    "color": "Blanc",
+    "transmission": "Manuelle",
+    "images": ["/assets/organisation/cars/x5.jpeg"],
+    "fonctionnalities": {
+      "air_condition": true,
+      "usb_input": false,
+      "seat_belt": true,
+      "audio_input": false,
+      "child_seat": false,
+      "bluetooth": false,
+      "sleeping_bed": false,
+      "onboard_computer": false,
+      "gps": false,
+      "luggage": true,
+      "water": false,
+      "additional_covers": false
+    },
+    "engine": {
+      "type": "Essence",
+      "horsepower": 85,
+      "capacity": 1.4
+    },
+    "fuelEfficiency": {
+      "city": "8.0 L/100km",
+      "highway": "6.5 L/100km"
+    },
+    "documents": {
+      "registration_certificate": "RC-LOG-2020-001",
+      "technical_inspection": "TI-2023-007",
+      "insurance": "IN-2023-007"
+    },
+    "registration": {
+      "state": "Nord",
+      "expiry": "2025-03-12"
+    },
+    "driverRequired": false
   }
 ]
-
